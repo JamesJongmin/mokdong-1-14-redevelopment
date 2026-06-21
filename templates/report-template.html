@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[리포트 제목] | YYYY년 M월 D일</title>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- =========================================================
+  REPORT_META : 이 블록만 정확히 채우면 홈 목록에 자동 등록됩니다.
+  - type 은 progress(진행상황) / in-depth(심층분석) / notice(공지) 중 하나
+  - date 는 반드시 YYYY-MM-DD
+  - 유효한 JSON 이어야 함(맨 끝 항목 뒤 쉼표 금지)
+========================================================= -->
+<!--REPORT_META
+{
+    "title": "리포트 제목을 입력",
+    "subtitle": "부제목(선택)",
+    "date": "2026-01-01",
+    "type": "progress",
+    "summary": "목록 카드에 보일 1~2문장 요약. 50~200자 권장.",
+    "tags": ["목동신시가지", "재건축", "키워드"],
+    "author": "Mokdong Redevelopment Watch"
+}
+REPORT_META-->
+
+<style>
+  :root{--ink:#16202c;--slate:#33475b;--mute:#6b7a8d;--line:#e2e8ef;--paper:#f7f9fb;--brand:#1f4e79;--brick:#c2410c}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Noto Sans KR',sans-serif;background:var(--paper);color:var(--ink);line-height:1.8;font-size:17px}
+  a{color:var(--brand)}
+  .bar{height:6px;background:linear-gradient(90deg,var(--brand),var(--brick))}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 22px 80px}
+  .back{font-size:.9rem;color:var(--mute);font-weight:500}
+  .meta{display:flex;gap:12px;flex-wrap:wrap;font-size:.85rem;color:var(--mute);margin:24px 0 10px}
+  .badge{font-size:.74rem;font-weight:700;color:#fff;background:var(--brand);padding:3px 10px;border-radius:999px}
+  h1{font-family:'Gowun Batang',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);line-height:1.25;margin:6px 0 10px}
+  .sub{font-size:1.1rem;color:var(--slate);margin-bottom:28px}
+  h2{font-family:'Gowun Batang',serif;font-size:1.5rem;margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--brick)}
+  h3{font-size:1.1rem;font-weight:700;color:var(--brand);margin:28px 0 10px}
+  p{margin-bottom:16px} ul{margin:0 0 16px 22px} li{margin-bottom:8px}
+  .box{background:#eef5ff;border-left:4px solid var(--brand);padding:18px 22px;border-radius:0 10px 10px 0;margin:24px 0}
+  .imp{background:#fff5ee;border-left:4px solid var(--brick);padding:18px 22px;border-radius:0 10px 10px 0;margin:24px 0}
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.92rem}
+  th{background:#eef2f7;text-align:left;padding:10px 12px;border-bottom:2px solid var(--brand)}
+  td{padding:10px 12px;border-bottom:1px solid var(--line)}
+  footer{border-top:1px solid var(--line);margin-top:50px;padding-top:20px;font-size:.82rem;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<div class="wrap">
+  <!-- Reports/연/월/ 안에 두면 홈은 3단계 위 -->
+  <a class="back" href="../../../index.html">← 목록으로</a>
+  <div class="meta">
+    <span class="badge">진행상황</span>
+    <span>YYYY년 M월 D일</span>
+    <span>Mokdong Redevelopment Watch</span>
+  </div>
+  <h1>리포트 제목</h1>
+  <p class="sub">부제목</p>
+
+  <h2>이번 주 핵심</h2>
+  <p>본문을 작성하세요.</p>
+
+  <div class="box"><strong>한눈에:</strong> 핵심 요약 박스.</div>
+
+  <h2>시사점 (Implications)</h2>
+  <div class="imp"><p><strong>1.</strong> 시사점 1.</p><p><strong>2.</strong> 시사점 2.</p></div>
+
+  <footer>본 리포트는 공개 정보 기반 비공식 정리이며, 투자 권유나 법적 자문이 아닙니다. 출처를 명시하세요.</footer>
+</div>
+</body>
+</html>

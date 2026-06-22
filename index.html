@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>목동 신시가지 1~14단지 재건축 | Mokdong Redevelopment Watch</title>
-<meta name="description" content="서울 양천구 목동 신시가지 1~14단지 재건축 진행상황 추적 · 정기 리포트 · 단지별 현황">
+<title>목동 신시가지 1~14단지 재건축 트래커 | Mokdong Redevelopment Watch</title>
+<meta name="description" content="목동 신시가지 1~14단지 재건축을 레이스·사업성·관심도 3축 점수로 매일 갱신하는 단일 대시보드.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
     --ink:#16202c; --slate:#33475b; --mute:#6b7a8d; --line:#e2e8ef;
     --paper:#f7f9fb; --card:#ffffff; --brand:#1f4e79; --brand2:#2f6db0;
     --brick:#c2410c; --gold:#b8860b; --ok:#15803d; --warn:#b45309;
+    --race:#2f6db0; --feas:#15803d; --intr:#c2410c;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -20,224 +21,308 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 
-  /* nav */
-  nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(247,249,251,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:50;display:flex;align-items:center}
+  nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(247,249,251,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:50;display:flex;align-items:center}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
   .brand{font-weight:900;color:var(--brand);font-size:1.05rem;letter-spacing:-.01em}
   .brand span{color:var(--brick)}
-  .nav-links{display:flex;gap:26px}
-  .nav-links a{font-size:.92rem;color:var(--slate);font-weight:500}
+  .nav-links{display:flex;gap:22px}
+  .nav-links a{font-size:.9rem;color:var(--slate);font-weight:500}
   .nav-links a:hover{color:var(--brand)}
-  @media(max-width:720px){.nav-links{display:none}}
+  @media(max-width:820px){.nav-links{display:none}}
 
-  /* hero */
-  header.hero{padding:120px 0 56px;background:linear-gradient(160deg,#16314e 0%,#1f4e79 55%,#2f6db0 100%);color:#fff}
-  .hero .tag{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.06em;background:rgba(255,255,255,.14);padding:6px 14px;border-radius:999px;margin-bottom:18px}
-  .hero h1{font-family:'Gowun Batang',serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:14px}
-  .hero p.lead{font-size:1.05rem;color:#dce8f4;max-width:680px}
-  .hero .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
-  .hero .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:18px}
-  .hero .stat .v{font-size:1.7rem;font-weight:900;line-height:1.1}
-  .hero .stat .l{font-size:.82rem;color:#cfe0f0;margin-top:4px}
-  @media(max-width:720px){.hero .stats{grid-template-columns:repeat(2,1fr)}}
+  header.hero{padding:108px 0 48px;background:linear-gradient(160deg,#16314e 0%,#1f4e79 55%,#2f6db0 100%);color:#fff}
+  .hero .tag{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.05em;background:rgba(255,255,255,.14);padding:6px 14px;border-radius:999px;margin-bottom:16px}
+  .hero h1{font-family:'Gowun Batang',serif;font-size:clamp(1.7rem,4.4vw,2.6rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:10px}
+  .hero p.lead{font-size:1rem;color:#dce8f4;max-width:680px}
+  .updated{font-size:.8rem;color:#bcd3ea;margin-top:10px}
+  .updated b{color:#fff}
 
-  section.block{padding:64px 0}
-  .eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.08em;color:var(--brick);text-transform:uppercase;margin-bottom:8px}
-  h2.sec{font-family:'Gowun Batang',serif;font-size:1.8rem;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
-  .sec-desc{color:var(--mute);margin-bottom:30px}
+  /* 오늘의 3줄 요약 */
+  .summary3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  .s3{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px 18px}
+  .s3 .k{font-size:.78rem;font-weight:700;letter-spacing:.04em;opacity:.9;display:flex;align-items:center;gap:6px}
+  .s3 .nm{font-family:'Gowun Batang',serif;font-size:1.45rem;font-weight:700;margin-top:6px;line-height:1.2}
+  .s3 .meta{font-size:.82rem;color:#cfe0f0;margin-top:3px}
+  @media(max-width:720px){.summary3{grid-template-columns:1fr}}
 
-  /* timeline */
-  .timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;position:relative}
-  .tl-step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center;position:relative}
-  .tl-step .n{font-size:.74rem;color:var(--mute);font-weight:700}
-  .tl-step .t{font-size:.92rem;font-weight:700;margin-top:6px;line-height:1.3}
-  .tl-step.done{background:#eef5ff;border-color:#bcd6f5}
-  .tl-step.now{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:0 10px 24px rgba(31,78,121,.28)}
-  .tl-step.now .n,.tl-step.now .t{color:#fff}
-  .tl-now-badge{display:inline-block;margin-top:8px;font-size:.7rem;background:var(--brick);color:#fff;padding:2px 8px;border-radius:999px;font-weight:700}
-  @media(max-width:860px){.timeline{grid-template-columns:repeat(2,1fr)}}
+  section.block{padding:54px 0}
+  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
+  h2.sec{font-family:'Gowun Batang',serif;font-size:1.65rem;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+  .sec-desc{color:var(--mute);margin-bottom:24px;font-size:.95rem}
 
-  /* complexes */
+  /* 랭킹 리스트 */
+  .rank{display:flex;flex-direction:column;gap:8px}
+  .row{display:grid;grid-template-columns:34px 1.2fr 2fr auto;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;transition:.15s}
+  .row:hover{box-shadow:0 6px 20px rgba(22,32,44,.08);transform:translateY(-1px)}
+  .rk{font-family:'Gowun Batang',serif;font-weight:700;font-size:1.15rem;color:var(--mute);text-align:center}
+  .row.top1 .rk{color:var(--brand)}
+  .nmwrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .nmwrap .dn{font-weight:700}
+  .pill{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+  .pill.union{background:#fef3e2;color:var(--brick)}
+  .pill.trust{background:#e8f1fb;color:var(--brand2)}
+  .pill.type{background:#eef2f7;color:var(--slate)}
+  .sub{font-size:.8rem;color:var(--mute)}
+  .bar{height:9px;background:#eef2f7;border-radius:999px;overflow:hidden}
+  .bar>i{display:block;height:100%;border-radius:999px}
+  .scoreN{font-weight:900;font-size:1.05rem;min-width:42px;text-align:right}
+  @media(max-width:720px){
+    .row{grid-template-columns:28px 1fr auto;gap:10px}
+    .row .barcell{display:none}
+  }
+  .tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+  .tab{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font-size:.88rem;font-weight:700;color:var(--slate);cursor:pointer}
+  .tab.active{color:#fff}
+  .tab.race.active{background:var(--race);border-color:var(--race)}
+  .tab.feas.active{background:var(--feas);border-color:var(--feas)}
+  .tab.intr.active{background:var(--intr);border-color:var(--intr)}
+
+  /* 캘린더 */
+  .cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .ev{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:14px 16px}
+  .ev .when{font-size:.78rem;font-weight:700;color:var(--brick)}
+  .ev .what{font-weight:700;margin-top:3px}
+  .ev .who{font-size:.82rem;color:var(--mute);margin-top:2px}
+
+  /* 뉴스 */
+  .news{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+  .na{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;transition:.15s}
+  .na:hover{box-shadow:0 6px 20px rgba(22,32,44,.08);transform:translateY(-1px)}
+  .na .nt{font-weight:700;font-size:.98rem;line-height:1.4;flex:1}
+  .na .nm{font-size:.78rem;color:var(--mute);margin-top:10px;display:flex;justify-content:space-between;gap:8px}
+  .tagrow{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+  .ctag{font-size:.68rem;font-weight:700;background:#eef5ff;color:var(--brand2);padding:1px 7px;border-radius:999px}
+
+  /* 14단지 카드 */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
   .cx{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.2s}
   .cx:hover{box-shadow:0 8px 26px rgba(22,32,44,.08);transform:translateY(-2px)}
   .cx .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-  .cx .num{font-family:'Gowun Batang',serif;font-size:1.5rem;font-weight:700;color:var(--brand)}
-  .pill{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px}
-  .pill.union{background:#fef3e2;color:var(--brick)}
-  .pill.trust{background:#e8f1fb;color:var(--brand2)}
-  .cx .stage{font-size:.9rem;font-weight:700;margin-bottom:4px}
-  .cx .note{font-size:.82rem;color:var(--mute)}
+  .cx .num{font-family:'Gowun Batang',serif;font-size:1.4rem;font-weight:700;color:var(--brand)}
+  .cx .stage{font-size:.88rem;font-weight:700;margin:6px 0 8px}
+  .mini{display:flex;gap:10px;margin-top:8px}
+  .mini .m{flex:1;text-align:center;background:#f7f9fb;border:1px solid var(--line);border-radius:9px;padding:6px 4px}
+  .mini .m .ml{font-size:.66rem;color:var(--mute);font-weight:700}
+  .mini .m .mv{font-size:.95rem;font-weight:900;margin-top:1px}
 
-  /* reports */
-  .featured{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--brick);border-radius:16px;padding:28px;margin-bottom:24px}
-  .featured .ftag{font-size:.78rem;font-weight:700;color:var(--brick);letter-spacing:.05em}
-  .featured h3{font-family:'Gowun Batang',serif;font-size:1.5rem;font-weight:700;margin:8px 0;line-height:1.3}
-  .featured .fmeta{font-size:.82rem;color:var(--mute);margin-bottom:12px}
-  .featured p{color:var(--slate)}
-  .featured a.more{display:inline-block;margin-top:14px;font-weight:700;color:var(--brand)}
-  .rlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-  .rcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;transition:.2s;display:flex;flex-direction:column}
-  .rcard:hover{box-shadow:0 8px 26px rgba(22,32,44,.08);transform:translateY(-2px)}
-  .rtype{align-self:flex-start;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;background:#eef2f7;color:var(--slate);margin-bottom:10px}
-  .rtype.progress{background:#e8f1fb;color:var(--brand2)}
-  .rtype.indepth{background:#eaf6ee;color:var(--ok)}
-  .rtype.notice{background:#fef3e2;color:var(--brick)}
-  .rcard h4{font-size:1.05rem;font-weight:700;line-height:1.35;margin-bottom:8px}
-  .rcard .rsum{font-size:.88rem;color:var(--mute);flex:1}
-  .rcard .rdate{font-size:.8rem;color:var(--mute);margin-top:12px}
-
-  footer{background:var(--ink);color:#c9d4df;padding:48px 0 28px;margin-top:40px}
-  footer .cols{display:grid;grid-template-columns:2fr 1fr;gap:30px;margin-bottom:24px}
-  footer b{color:#fff;font-size:1.05rem}
-  footer small{display:block;color:#8da0b3;font-size:.82rem;line-height:1.7;margin-top:10px}
-  .disc{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;font-size:.78rem;color:#7e91a6}
+  footer{background:var(--ink);color:#c9d4df;padding:44px 0 26px;margin-top:36px}
+  footer .cols{display:grid;grid-template-columns:2fr 1fr;gap:30px;margin-bottom:22px}
+  footer b{color:#fff;font-size:1.02rem}
+  footer small{display:block;color:#8da0b3;font-size:.8rem;line-height:1.7;margin-top:10px}
+  .disc{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;font-size:.76rem;color:#7e91a6}
   @media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+  .banner{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-size:.82rem;border-radius:10px;padding:10px 14px;margin-top:18px}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="brand" href="#top">목동 신시가지 <span>1~14단지</span> 재건축</a>
+  <a class="brand" href="#top">목동 <span>1~14단지</span> 재건축 트래커</a>
   <div class="nav-links">
-    <a href="#timeline">사업 단계</a>
-    <a href="#complexes">단지 현황</a>
-    <a href="#reports">리포트</a>
+    <a href="#rankings">랭킹</a>
+    <a href="#calendar">캘린더</a>
+    <a href="#news">뉴스</a>
+    <a href="#complexes">단지</a>
     <a href="#about">소개</a>
   </div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <span class="tag">MOKDONG REDEVELOPMENT WATCH · 비공식 정보 트래커</span>
-  <h1>목동 신시가지 1~14단지<br>재건축 진행상황 추적</h1>
-  <p class="lead">서울 양천구 목동 신시가지 14개 단지(총 26,629가구)의 재건축 사업 단계, 단지별 현황, 시공사 선정과 주요 이슈를 정기 리포트로 정리합니다.</p>
-  <div class="stats">
-    <div class="stat"><div class="v">14</div><div class="l">단지</div></div>
-    <div class="stat"><div class="v">26,629</div><div class="l">기존 가구수</div></div>
-    <div class="stat"><div class="v">100%</div><div class="l">정비구역 지정</div></div>
-    <div class="stat"><div class="v">진행중</div><div class="l">시공사 선정 단계</div></div>
-  </div>
+  <span class="tag">MOKDONG REDEVELOPMENT WATCH · 매일 자동 갱신</span>
+  <h1>오늘 기준, 목동 1~14단지<br>누가 앞서고 · 어디가 남는 장사인가</h1>
+  <p class="lead">레이스(진행 속도)·사업성·관심도 3축 점수로 14개 단지를 매일 줄 세웁니다. 정비 단계는 이벤트 발생 시, 뉴스·관심도는 매일 자동 갱신됩니다.</p>
+  <div class="updated" id="updated"></div>
+  <div class="summary3" id="summary3"></div>
 </div></header>
 
-<!-- 사업 단계 타임라인 -->
-<section class="block" id="timeline"><div class="wrap">
-  <div class="eyebrow">Project Stages</div>
-  <h2 class="sec">재건축 사업 단계</h2>
-  <p class="sec-desc">목동 신시가지 전 단지는 정비구역 지정을 마치고, 조합·신탁별로 시공사 선정 단계에 진입하고 있습니다. (단지별 진척은 아래 '단지 현황' 참고)</p>
-  <div class="timeline">
-    <div class="tl-step done"><div class="n">STEP 1</div><div class="t">안전진단</div></div>
-    <div class="tl-step done"><div class="n">STEP 2</div><div class="t">정비구역 지정</div></div>
-    <div class="tl-step done"><div class="n">STEP 3</div><div class="t">조합설립·신탁 지정</div></div>
-    <div class="tl-step now"><div class="n">STEP 4</div><div class="t">시공사 선정</div><span class="tl-now-badge">선두 단지 진행</span></div>
-    <div class="tl-step"><div class="n">STEP 5</div><div class="t">사업시행 인가</div></div>
-    <div class="tl-step"><div class="n">STEP 6</div><div class="t">관리처분 인가</div></div>
-    <div class="tl-step"><div class="n">STEP 7</div><div class="t">이주·철거·착공</div></div>
+<!-- 랭킹 -->
+<section class="block" id="rankings"><div class="wrap">
+  <div class="eyebrow" style="color:var(--brick)">Rankings</div>
+  <h2 class="sec">3축 랭킹</h2>
+  <p class="sec-desc">탭을 눌러 레이스 / 사업성 / 관심도 기준으로 정렬합니다. 점수 산출 방법은 하단 '방법론'에 공개되어 있습니다.</p>
+  <div class="tabs">
+    <button class="tab race active" data-metric="race_score">🏁 레이스</button>
+    <button class="tab feas" data-metric="feasibility_score">💰 사업성</button>
+    <button class="tab intr" data-metric="interest_score">🔥 관심도</button>
   </div>
+  <div class="rank" id="rankList"></div>
 </div></section>
 
-<!-- 단지 현황 -->
-<section class="block" id="complexes" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-  <div class="eyebrow">Complex Status</div>
-  <h2 class="sec">단지별 현황</h2>
-  <p class="sec-desc">조합 방식 6곳(3·4·6·7·8·12단지), 신탁 방식 8곳(1·2·5·9·10·11·13·14단지)으로 추진 중. ※ 아래 단계·비고는 공개 보도 기반의 개략값이며, 최신 수치는 각 조합/신탁 공지로 확인하세요.</p>
+<!-- 캘린더 -->
+<section class="block" id="calendar" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow" style="color:var(--brand)">Event Calendar</div>
+  <h2 class="sec">이벤트 캘린더</h2>
+  <p class="sec-desc">단지별 다음 마일스톤(총회·입찰·인가) 예정. 시점이 빠른 순으로 정렬됩니다.</p>
+  <div class="cal" id="calList"></div>
+</div></section>
+
+<!-- 뉴스 -->
+<section class="block" id="news"><div class="wrap">
+  <div class="eyebrow" style="color:var(--brick)">Today's News</div>
+  <h2 class="sec">오늘의 뉴스</h2>
+  <p class="sec-desc">구글 뉴스에서 '목동 재건축' 관련 최신 기사를 매일 자동 수집해 단지 태깅합니다.</p>
+  <div class="news" id="newsList"></div>
+</div></section>
+
+<!-- 단지 카드 -->
+<section class="block" id="complexes" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow" style="color:var(--brand)">Complexes</div>
+  <h2 class="sec">14개 단지</h2>
+  <p class="sec-desc">카드를 누르면 단지 상세(3축 점수·진행 타임라인·관련 뉴스)로 이동합니다.</p>
   <div class="grid" id="cxGrid"></div>
 </div></section>
 
-<!-- 리포트 -->
-<section class="block" id="reports"><div class="wrap">
-  <div class="eyebrow">Reports</div>
-  <h2 class="sec">진행상황 리포트</h2>
-  <p class="sec-desc">주간 진행 브리핑과 심층 분석을 정기적으로 발행합니다.</p>
-  <div id="featured"></div>
-  <div class="rlist" id="reportList"></div>
-</div></section>
-
-<!-- 소개 -->
-<section class="block" id="about" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
-  <div class="eyebrow">About</div>
-  <h2 class="sec">사이트 소개</h2>
-  <p class="sec-desc" style="max-width:760px">본 사이트는 목동 신시가지 1~14단지 재건축의 공개 정보를 모아 정리하는 <b>비공식 정보 트래커</b>입니다. 조합·신탁·관계기관의 공식 발표가 우선하며, 본 사이트의 내용은 투자 권유나 법적 자문이 아닙니다.</p>
+<!-- 소개/방법론 -->
+<section class="block" id="about" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow" style="color:var(--brick)">About · 방법론</div>
+  <h2 class="sec">점수는 이렇게 계산합니다</h2>
+  <p class="sec-desc" style="max-width:820px">
+    <b>레이스</b>: 정비사업 단계를 표준 점수로 환산(정비구역 지정 10 → 시공사 선정 60 → 사업시행인가 75 → … → 준공 100).
+    <b>사업성</b>: 대지지분(35%)·추정 비례율(25%)·현 용적률(15%,낮을수록↑)·입지 프리미엄(15%)·규모 효율(10%) 가중합. 구조값 미확정 단지는 잠정 시드값.
+    <b>관심도</b>: 뉴스 언급 빈도 기반(향후 네이버 검색지수·실거래량 추가 예정).
+    모든 수치는 <b>추정·비공식</b>이며 공식 고시문 기준 확인이 필요합니다.
+  </p>
+  <div class="banner">⚠️ 목동 일대는 토지거래허가구역으로 거래 제약이 있을 수 있습니다. 분담금·환급 추정치는 가정에 민감하므로 참고용으로만 활용하세요.</div>
 </div></section>
 
 <footer><div class="wrap">
   <div class="cols">
     <div>
       <b>목동 신시가지 1~14단지 재건축 Watch</b>
-      <small>공개 정보 기반 비공식 진행상황 트래커. 정기 리포트와 단지별 현황을 제공합니다.<br>문의/제보: your-email@example.com</small>
+      <small>공개 정보 기반 비공식 진행상황 트래커 · 매일 1회 자동 갱신.<br>문의/제보: your-email@example.com</small>
     </div>
     <div>
       <b>바로가기</b>
-      <small><a href="#timeline">사업 단계</a> · <a href="#complexes">단지 현황</a> · <a href="#reports">리포트</a></small>
+      <small><a href="#rankings">랭킹</a> · <a href="#calendar">캘린더</a> · <a href="#news">뉴스</a> · <a href="#complexes">단지</a></small>
     </div>
   </div>
-  <div class="disc">© 2026 Mokdong Redevelopment Watch. 본 사이트는 정보 제공 목적이며 정확성을 보장하지 않습니다. 모든 의사결정은 공식 자료와 전문가 자문에 근거하시기 바랍니다.</div>
+  <div class="disc">© 2026 Mokdong Redevelopment Watch. 정보 제공 목적이며 정확성을 보장하지 않습니다. 투자 권유·법적 자문이 아니며, 모든 의사결정은 공식 자료와 전문가 자문에 근거하시기 바랍니다.</div>
 </div></footer>
 
 <script>
-// ===== 단지별 현황 데이터 (공개 보도 기반 개략값 — 수정해서 사용하세요) =====
-const COMPLEXES = [
-  {n:1, method:'trust', stage:'정비구역 지정', note:'신탁 방식 추진'},
-  {n:2, method:'trust', stage:'정비구역 지정', note:'신탁 방식 추진'},
-  {n:3, method:'union', stage:'정비구역 지정', note:'조합 방식'},
-  {n:4, method:'union', stage:'조합설립 인가', note:'조합 방식'},
-  {n:5, method:'trust', stage:'정비구역 지정', note:'신탁 방식 · 입지 우수'},
-  {n:6, method:'union', stage:'시공사 선정', note:'진척 선두 · DL이앤씨 수의계약'},
-  {n:7, method:'union', stage:'정비구역 지정', note:'조합 방식 · 대장 단지'},
-  {n:8, method:'union', stage:'정비구역 지정', note:'조합 방식'},
-  {n:9, method:'trust', stage:'정비구역 지정', note:'신탁 방식'},
-  {n:10, method:'trust', stage:'시공사 선정', note:'시공사 선정 임박'},
-  {n:11, method:'trust', stage:'정비구역 지정', note:'신탁 방식'},
-  {n:12, method:'union', stage:'조합설립 인가', note:'조합 방식'},
-  {n:13, method:'trust', stage:'정비구역 지정', note:'신탁 방식'},
-  {n:14, method:'trust', stage:'정비구역 지정', note:'신탁 방식'},
-];
-const cxGrid = document.getElementById('cxGrid');
-cxGrid.innerHTML = COMPLEXES.map(c=>`
-  <div class="cx">
-    <div class="top"><div class="num">${c.n}단지</div>
-      <span class="pill ${c.method}">${c.method==='union'?'조합':'신탁'}</span></div>
-    <div class="stage">${c.stage}</div>
-    <div class="note">${c.note}</div>
-  </div>`).join('');
+const METHOD_KO = m => m==='조합'?'조합':'신탁';
+const METHOD_CLS = m => m==='조합'?'union':'trust';
+const BARCOLOR = {race_score:'var(--race)', feasibility_score:'var(--feas)', interest_score:'var(--intr)'};
 
-// ===== 리포트 로드 (reports.json) — 빌드 액션이 자동 생성 =====
-const FALLBACK = { reports: [] };
-function fmtDate(d){ if(!d) return ''; const p=d.split('-'); return p.length===3?`${p[0]}년 ${+p[1]}월 ${+p[2]}일`:d; }
-const TYPE_KO = {progress:'진행상황', 'in-depth':'심층분석', indepth:'심층분석', notice:'공지', weekly:'주간'};
-function typeClass(t){ return t==='in-depth'||t==='indepth'?'indepth':(t==='notice'?'notice':'progress'); }
+function fmtDateTime(iso){
+  if(!iso) return '데이터 준비 중';
+  const d = new Date(iso);
+  if(isNaN(d)) return iso;
+  const p = n => String(n).padStart(2,'0');
+  return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+function relDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso); if(isNaN(d)) return iso;
+  const diff = (Date.now()-d.getTime())/36e5;
+  if(diff < 1) return '방금';
+  if(diff < 24) return Math.floor(diff)+'시간 전';
+  return Math.floor(diff/24)+'일 전';
+}
 
-async function loadReports(){
-  let data = FALLBACK;
-  try{
-    const r = await fetch('reports.json', {cache:'no-store'});
-    if(r.ok) data = await r.json();
-  }catch(e){ /* file:// 로컬 열람 시 fetch 실패 가능 — GitHub Pages에서는 정상 */ }
-  let reports = (data.reports||[]).filter(x=>x.date && x.link && !x.link.includes('test'));
-  reports.sort((a,b)=> (a.date<b.date?1:-1));
+let DATA = null;
 
-  const featured = document.getElementById('featured');
-  const list = document.getElementById('reportList');
-  if(reports.length===0){
-    featured.innerHTML = `<div class="featured"><div class="ftag">아직 발행된 리포트가 없습니다</div>
-      <h3>첫 리포트를 추가해 보세요</h3>
-      <p>Reports/연/월/날짜.html 형식으로 리포트 HTML을 추가하고 GitHub에 push하면, 자동으로 이 목록에 등록됩니다. (templates/report-template.html 참고)</p></div>`;
+async function loadJSON(path){
+  try{ const r = await fetch(path,{cache:'no-store'}); if(r.ok) return await r.json(); }
+  catch(e){}
+  return null;
+}
+
+function renderSummary(meta){
+  const u = document.getElementById('updated');
+  u.innerHTML = `마지막 업데이트: <b>${fmtDateTime(meta.updated_at)}</b>`;
+  const s = meta.summary3 || {};
+  const card = (k,icon,obj,extra)=>`
+    <div class="s3"><div class="k">${icon} ${k}</div>
+      <div class="nm">${obj? obj.name : '—'}</div>
+      <div class="meta">${obj? extra(obj) : '데이터 준비 중'}</div></div>`;
+  document.getElementById('summary3').innerHTML =
+    card('레이스 1위','🏁',s.race, o=>`${o.label} · ${o.score}점`) +
+    card('사업성 1위','💰',s.feasibility, o=>`${o.type||''} · ${o.score}점`) +
+    card('관심도 급상승','🔥',s.interest, o=>`최근 언급 ${o.mentions}건 · ${o.score}점`);
+}
+
+function renderRank(metric){
+  const list = [...DATA.complexes].sort((a,b)=> (b[metric]||0)-(a[metric]||0));
+  const el = document.getElementById('rankList');
+  el.innerHTML = list.map((c,i)=>{
+    const score = c[metric]||0;
+    let sub = '';
+    if(metric==='race_score') sub = c.race_stage + (c.constructor?` · ${c.constructor}`:'');
+    else if(metric==='feasibility_score') sub = (c.feasibility_type||'') + (c.land_share_avg?` · 지분 ${c.land_share_avg}`:' · 구조값 잠정');
+    else sub = `최근 30일 뉴스 ${c.news_mentions_30d||0}건`;
+    return `<a class="row ${i===0?'top1':''}" href="complex.html?id=${c.complex_id}">
+      <div class="rk">${i+1}</div>
+      <div class="nmwrap"><span class="dn">${c.name}</span>
+        <span class="pill ${METHOD_CLS(c.method)}">${METHOD_KO(c.method)}</span></div>
+      <div class="barcell"><div class="sub">${sub}</div>
+        <div class="bar"><i style="width:${score}%;background:${BARCOLOR[metric]}"></i></div></div>
+      <div class="scoreN" style="color:${BARCOLOR[metric]}">${score}</div>
+    </a>`;
+  }).join('');
+}
+
+function renderCalendar(){
+  const order = {'2026-06':1,'2026 하반기':2,'2026':3,'미정':9};
+  const evs = DATA.complexes
+    .filter(c=>c.next_milestone && c.next_milestone.event)
+    .map(c=>({name:c.name, ...c.next_milestone}))
+    .sort((a,b)=> (order[a.target]||5)-(order[b.target]||5));
+  document.getElementById('calList').innerHTML = evs.map(e=>`
+    <div class="ev"><div class="when">${e.target}</div>
+      <div class="what">${e.event}</div>
+      <div class="who">${e.name}</div></div>`).join('');
+}
+
+function renderNews(news){
+  const el = document.getElementById('newsList');
+  const items = (news && news.items) ? news.items : [];
+  if(items.length===0){
+    el.innerHTML = `<div class="na"><div class="nt">아직 수집된 뉴스가 없습니다.</div>
+      <div class="nm">매일 자동 수집 작업이 처음 실행되면 이곳에 최신 기사가 표시됩니다.</div></div>`;
     return;
   }
-  const f = reports[0];
-  featured.innerHTML = `<div class="featured">
-    <div class="ftag">최신 리포트 · ${TYPE_KO[f.type]||f.type||''}</div>
-    <h3><a href="${f.link}">${f.title||''}</a></h3>
-    <div class="fmeta">${fmtDate(f.date)}${f.subtitle?' · '+f.subtitle:''}</div>
-    <p>${f.summary||''}</p>
-    <a class="more" href="${f.link}">전문 보기 →</a></div>`;
-  list.innerHTML = reports.slice(1).map(r=>`
-    <a class="rcard" href="${r.link}">
-      <span class="rtype ${typeClass(r.type)}">${TYPE_KO[r.type]||r.type||'리포트'}</span>
-      <h4>${r.title||''}</h4>
-      <div class="rsum">${(r.summary||'').slice(0,110)}${(r.summary||'').length>110?'…':''}</div>
-      <div class="rdate">${fmtDate(r.date)}</div>
+  el.innerHTML = items.slice(0,12).map(n=>`
+    <a class="na" href="${n.link}" target="_blank" rel="noopener">
+      <div class="nt">${n.title||''}</div>
+      <div class="tagrow">${(n.complexes||[]).map(id=>`<span class="ctag">${id}단지</span>`).join('')}</div>
+      <div class="nm"><span>${n.source||''}</span><span>${relDate(n.published)}</span></div>
     </a>`).join('');
 }
-loadReports();
+
+function renderComplexes(){
+  document.getElementById('cxGrid').innerHTML = DATA.complexes.map(c=>`
+    <a class="cx" href="complex.html?id=${c.complex_id}">
+      <div class="top"><div class="num">${c.complex_id}단지</div>
+        <span class="pill ${METHOD_CLS(c.method)}">${METHOD_KO(c.method)}</span></div>
+      <div class="stage">${c.race_stage||''}</div>
+      <div class="mini">
+        <div class="m"><div class="ml">레이스</div><div class="mv" style="color:var(--race)">${c.race_score||0}</div></div>
+        <div class="m"><div class="ml">사업성</div><div class="mv" style="color:var(--feas)">${c.feasibility_score||0}</div></div>
+        <div class="m"><div class="ml">관심도</div><div class="mv" style="color:var(--intr)">${c.interest_score||0}</div></div>
+      </div>
+    </a>`).join('');
+}
+
+async function init(){
+  DATA = await loadJSON('data.json');
+  if(!DATA){
+    document.getElementById('summary3').innerHTML =
+      '<div class="s3"><div class="nm">데이터를 불러올 수 없습니다</div><div class="meta">GitHub Pages에 배포된 뒤 정상 표시됩니다(로컬 file:// 에서는 fetch 제한).</div></div>';
+    return;
+  }
+  const news = await loadJSON('news.json');
+  renderSummary(DATA.meta||{});
+  renderRank('race_score');
+  renderCalendar();
+  renderNews(news);
+  renderComplexes();
+  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    renderRank(t.dataset.metric);
+  }));
+}
+init();
 </script>
 </body>
 </html>

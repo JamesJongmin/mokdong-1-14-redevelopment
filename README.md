@@ -1,7 +1,7 @@
-# 목동 신시가지 1~14단지 재건축 Watch
+# 목동 신시가지 1~14단지 재건축 트래커
 
-서울 양천구 목동 신시가지 1~14단지 재건축 **진행상황 추적 + 정기 리포트** 사이트.
-서버 없이 GitHub Pages로 무료 호스팅되는 정적 사이트입니다. (coffeemarket.info와 동일한 구조)
+레이스(진행 속도)·사업성·관심도 **3축 점수로 14개 단지를 매일 줄 세우는 단일 대시보드**.
+서버 없이 GitHub Pages로 호스팅되는 정적 사이트이며, **GitHub Action(cron)이 매일 1회 데이터를 자동 갱신**합니다.
 
 ---
 
@@ -9,79 +9,50 @@
 
 ```
 mokdong-1-14-redevelopment/
-├─ index.html                      # 홈페이지 (히어로·사업단계·단지현황·리포트 목록)
-├─ reports.json                    # 리포트 인덱스 (자동 생성 — 직접 수정하지 않음)
-├─ Reports/
-│  └─ 2026/06/2026-06-21-progress.html   # 개별 리포트(샘플)
-├─ templates/
-│  └─ report-template.html         # 새 리포트 만들 때 복사해서 사용
+├─ index.html                  # 대시보드(3줄 요약·3축 랭킹·캘린더·뉴스·단지 카드)
+├─ complex.html                # 단지 상세 템플릿 (complex.html?id=N, 14단지 공용)
+├─ data.json                   # 단지 데이터 + 점수(빌드 스크립트가 갱신)
+├─ news.json                   # 최근 30일 뉴스(자동 수집)
 ├─ scripts/
-│  └─ build_reports.py             # reports.json 자동 생성 스크립트
+│  ├─ fetch_news.py            # 구글 뉴스 RSS 수집 → news.json (API 키 불필요)
+│  └─ build_data.py            # 레이스·관심도·3줄요약 재계산 → data.json
 ├─ .github/workflows/
-│  └─ update-reports.yml           # push 시 reports.json 자동 갱신(GitHub Action)
+│  └─ daily-update.yml         # 매일 08:00 KST 자동 실행·커밋
 └─ README.md
 ```
 
-## 작동 방식 (한 문장)
+## 매일 자동 갱신 흐름
 
-리포트 HTML 상단의 **`REPORT_META`** 블록을 GitHub Action이 읽어 **`reports.json`** 을 자동으로 만들고, 홈페이지(`index.html`)가 그 JSON을 불러와 목록·최신글을 그립니다. → **리포트 파일만 추가/push 하면 홈에 자동 등록됩니다.**
+```
+매일 08:00 KST (cron)
+  → fetch_news.py : '목동 재건축' 뉴스 수집·단지 태깅 → news.json
+  → build_data.py : 점수 재계산 + "오늘의 3줄 요약" 생성 → data.json
+  → 변경분 자동 commit & push → Pages 재배포
+index.html / complex.html 이 data.json·news.json 을 읽어 화면을 그림
+```
 
----
+## 점수 방법론
 
-## 처음 1회: GitHub Pages로 배포하기
+- **레이스**: 정비 단계를 표준 점수로 환산(정비구역 지정 10 → 시공사 선정 60 → 사업시행인가 75 → 준공 100). `data.json`의 `stage_scores` 표 참고.
+- **사업성**: 대지지분(35%)·추정 비례율(25%)·현 용적률(15%, 낮을수록↑)·입지(15%)·규모 효율(10%) 가중합. 구조값 미확정 단지는 잠정 `feasibility_seed` 사용.
+- **관심도**: 최근 30일 뉴스 언급 빈도 기반(콜드스타트 시 `interest_seed`). 향후 네이버 검색지수·실거래량 추가 예정.
 
-1. GitHub에 로그인 → **New repository** → 이름 예: `mokdong-1-14-redevelopment` (Public).
-2. 이 폴더의 내용을 그 저장소에 올립니다.
-   - 가장 쉬운 방법: 저장소 페이지의 **Add file → Upload files** 로 폴더 내용을 드래그해서 업로드 → Commit.
-   - 또는 Git이 익숙하면:
-     ```bash
-     cd "이 폴더"
-     git init
-     git add .
-     git commit -m "first commit"
-     git branch -M main
-     git remote add origin https://github.com/<사용자명>/mokdong-1-14-redevelopment.git
-     git push -u origin main
-     ```
-3. 저장소 → **Settings → Pages** → Source를 **Deploy from a branch**, Branch를 **main / (root)** 로 지정 → Save.
-4. 1~2분 뒤 `https://<사용자명>.github.io/mokdong-1-14-redevelopment/` 에서 사이트가 열립니다.
+## 데이터 수정(반복 작업)
 
-> ⚠️ Action이 reports.json을 push 하려면: 저장소 **Settings → Actions → General → Workflow permissions** 에서 **"Read and write permissions"** 를 켜 주세요.
+- **단계 변동**(시공사 선정/사업시행인가 등): `data.json`의 해당 단지 `race_stage_key`만 바꾸면 점수·타임라인·랭킹이 자동 반영됩니다. (키 목록은 `stage_scores` 참고)
+- **구조값 확정**: `land_share_avg`·`far_current`·`expected_ratio` 등을 채우면 사업성 점수가 시드값 대신 가중합으로 계산됩니다.
+- **다음 마일스톤**: `next_milestone`의 `event`/`target` 수정 → 캘린더 반영.
 
----
+> 단계 변동은 오탐 방지를 위해 **뉴스 자동 감지 → 사람이 확정** 2단계 원칙을 권장합니다(현재는 수동 확정).
 
-## 새 리포트 추가하기 (반복 작업)
+## 로컬에서 미리 보기
 
-1. `templates/report-template.html` 을 복사해 `Reports/연/월/YYYY-MM-DD-제목.html` 로 저장.
-2. 파일 상단 **`REPORT_META`** 를 채웁니다(유효한 JSON):
-   - `title`, `date`(YYYY-MM-DD), `type`(`progress`/`in-depth`/`notice`), `summary`, `tags`.
-3. 본문(`<body>`)을 작성.
-4. GitHub에 push(또는 Upload files) → Action이 자동으로 `reports.json` 갱신 → 홈에 등록됨.
-
-> 로컬에서 미리 인덱스를 만들어 보려면: `python scripts/build_reports.py`
-
-### 리포트 유형(type)
-| type | 표시 | 용도 |
-|------|------|------|
-| `progress` | 진행상황 | 주간/수시 진행 브리핑 |
-| `in-depth` | 심층분석 | 분담금·사업성·조합 이슈 등 심층 |
-| `notice` | 공지 | 조합 공지·총회 결과·일정 |
-
----
-
-## 자주 손대는 곳
-
-- **단지별 현황 카드**: `index.html` 의 `COMPLEXES` 배열(단계/방식/비고)을 수정.
-- **사업 단계 타임라인**: `index.html` 의 `#timeline` 섹션에서 `done`/`now` 클래스로 현재 단계 표시.
-- **상단 통계·연락처·문구**: `index.html` 히어로/푸터.
-- **디자인 색상**: 각 파일 상단 `:root` 의 CSS 변수(`--brand`, `--brick` 등).
-
-## 나중에: 커스텀 도메인 연결
-
-도메인을 구매했다면 저장소 루트에 `CNAME` 파일(내용: `yourdomain.com` 한 줄)을 추가하고, 도메인 DNS에서 GitHub Pages IP/CNAME을 설정한 뒤 Settings → Pages → Custom domain에 입력하면 됩니다.
-
----
+```bash
+python scripts/fetch_news.py     # news.json 생성
+python scripts/build_data.py     # data.json 점수 재계산
+python -m http.server 8000       # http://localhost:8000 접속 (file:// 은 fetch 제한)
+```
 
 ## 면책
 
-본 사이트는 공개 정보를 정리하는 **비공식 정보 트래커**입니다. 정확성을 보장하지 않으며 투자 권유·법적 자문이 아닙니다. 정확한 사업 단계·일정·분담금은 각 조합/신탁 및 관계기관 공식 자료로 확인하세요.
+공개 정보를 정리하는 **비공식 정보 트래커**입니다. 모든 수치는 추정·비공식이며 투자 권유·법적 자문이 아닙니다. 정비 단계·분담금·일정은 각 조합/신탁 및 관계기관 공식 고시문으로 확인하세요. 목동 일대는 토지거래허가 등 거래 제약이 있을 수 있습니다.

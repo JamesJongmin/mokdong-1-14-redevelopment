@@ -1,0 +1,44 @@
+name: Daily Update
+
+# 매일 오전 8시(KST) = 전날 23:00 UTC 자동 실행 + 수동 실행 버튼
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch news (Google News RSS)
+        run: python scripts/fetch_news.py
+
+      - name: Rebuild scores & summary
+        run: python scripts/build_data.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json news.json
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore: daily auto-update ($(date -u +%Y-%m-%d))"
+            git push
+          fi

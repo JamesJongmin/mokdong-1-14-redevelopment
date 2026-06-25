@@ -3,323 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>목동 신시가지 1~14단지 재건축 트래커 | Mokdong Redevelopment Watch</title>
+<title>목동 신시가지 1~14단지 재건축 트래커</title>
 <meta name="description" content="목동 신시가지 1~14단지 재건축을 레이스·사업성·관심도 3축 점수로 매일 갱신하는 단일 대시보드.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   :root{
-    --ink:#16202c; --slate:#33475b; --mute:#6b7a8d; --line:#e2e8ef;
-    --paper:#f7f9fb; --card:#ffffff; --brand:#1f4e79; --brand2:#2f6db0;
-    --brick:#c2410c; --gold:#b8860b; --ok:#15803d; --warn:#b45309;
-    --race:#2f6db0; --feas:#15803d; --intr:#c2410c;
+    --blue:#3182F6; --blue-d:#1B64DA; --blue-bg:#EBF2FE;
+    --green:#15C47E; --green-bg:#E7F9F1;
+    --orange:#FF8A00; --orange-bg:#FFF3E2;
+    --ink:#191F28; --sub:#4E5968; --gray:#8B95A1; --faint:#B0B8C1;
+    --line:#F2F4F6; --line2:#E5E8EB; --bg:#F9FAFB; --card:#FFFFFF;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html{scroll-behavior:smooth}
-  body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+  body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 
-  nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(247,249,251,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:50;display:flex;align-items:center}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
-  .brand{font-weight:900;color:var(--brand);font-size:1.05rem;letter-spacing:-.01em}
-  .brand span{color:var(--brick)}
-  .nav-links{display:flex;gap:22px}
-  .nav-links a{font-size:.9rem;color:var(--slate);font-weight:500}
-  .nav-links a:hover{color:var(--brand)}
-  @media(max-width:820px){.nav-links{display:none}}
+  nav{position:sticky;top:0;z-index:50;background:rgba(249,250,251,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .brand{font-weight:800;font-size:1.05rem;letter-spacing:-.03em}
+  .brand b{color:var(--blue)}
+  .nav-links{display:flex;gap:18px}
+  .nav-links a{font-size:.92rem;color:var(--sub);font-weight:600}
+  .nav-links a:active{color:var(--blue)}
+  @media(max-width:680px){.nav-links{display:none}}
 
-  header.hero{padding:108px 0 48px;background:linear-gradient(160deg,#16314e 0%,#1f4e79 55%,#2f6db0 100%);color:#fff}
-  .hero .tag{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.05em;background:rgba(255,255,255,.14);padding:6px 14px;border-radius:999px;margin-bottom:16px}
-  .hero h1{font-family:'Gowun Batang',serif;font-size:clamp(1.7rem,4.4vw,2.6rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:10px}
-  .hero p.lead{font-size:1rem;color:#dce8f4;max-width:680px}
-  .updated{font-size:.8rem;color:#bcd3ea;margin-top:10px}
-  .updated b{color:#fff}
+  /* hero */
+  header.hero{padding:44px 0 8px}
+  .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--blue);background:var(--blue-bg);padding:6px 12px;border-radius:999px;letter-spacing:-.01em}
+  header.hero h1{font-size:2rem;font-weight:800;line-height:1.28;letter-spacing:-.035em;margin:16px 0 10px}
+  header.hero p{color:var(--sub);font-size:1.02rem;letter-spacing:-.02em;max-width:560px}
+  .updated{margin-top:14px;font-size:.84rem;color:var(--gray);font-weight:500;display:inline-flex;align-items:center;gap:6px}
+  .dot-live{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-bg)}
 
-  /* 오늘의 3줄 요약 */
-  .summary3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
-  .s3{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px 18px}
-  .s3 .k{font-size:.78rem;font-weight:700;letter-spacing:.04em;opacity:.9;display:flex;align-items:center;gap:6px}
-  .s3 .nm{font-family:'Gowun Batang',serif;font-size:1.45rem;font-weight:700;margin-top:6px;line-height:1.2}
-  .s3 .meta{font-size:.82rem;color:#cfe0f0;margin-top:3px}
-  @media(max-width:720px){.summary3{grid-template-columns:1fr}}
+  /* 오늘의 요약 카드 */
+  .summary3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+  .s3{background:var(--card);border-radius:20px;padding:18px 18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.04),0 1px 2px rgba(0,0,0,.03)}
+  .s3 .ic{width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+  .s3 .k{font-size:.8rem;font-weight:700;color:var(--gray);margin-top:14px;letter-spacing:-.01em}
+  .s3 .nm{font-size:1.18rem;font-weight:800;letter-spacing:-.03em;margin-top:3px}
+  .s3 .meta{font-size:.82rem;color:var(--sub);margin-top:4px;font-weight:500;letter-spacing:-.01em}
+  @media(max-width:680px){.summary3{grid-template-columns:1fr}.s3{display:flex;align-items:center;gap:16px;padding:16px}.s3 .ic{margin:0}.s3 .k{margin-top:0}.s3 .txt{flex:1}}
 
-  section.block{padding:54px 0}
-  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
-  h2.sec{font-family:'Gowun Batang',serif;font-size:1.65rem;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
-  .sec-desc{color:var(--mute);margin-bottom:24px;font-size:.95rem}
+  section.block{padding:38px 0 4px}
+  .sec-head{margin-bottom:18px}
+  h2.sec{font-size:1.4rem;font-weight:800;letter-spacing:-.035em}
+  .sec-desc{color:var(--gray);font-size:.92rem;margin-top:5px;letter-spacing:-.01em;font-weight:500}
 
-  /* 랭킹 리스트 */
-  .rank{display:flex;flex-direction:column;gap:8px}
-  .row{display:grid;grid-template-columns:34px 1.2fr 2fr auto;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;transition:.15s}
-  .row:hover{box-shadow:0 6px 20px rgba(22,32,44,.08);transform:translateY(-1px)}
-  .rk{font-family:'Gowun Batang',serif;font-weight:700;font-size:1.15rem;color:var(--mute);text-align:center}
-  .row.top1 .rk{color:var(--brand)}
-  .nmwrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .nmwrap .dn{font-weight:700}
-  .pill{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
-  .pill.union{background:#fef3e2;color:var(--brick)}
-  .pill.trust{background:#e8f1fb;color:var(--brand2)}
-  .pill.type{background:#eef2f7;color:var(--slate)}
-  .sub{font-size:.8rem;color:var(--mute)}
-  .bar{height:9px;background:#eef2f7;border-radius:999px;overflow:hidden}
-  .bar>i{display:block;height:100%;border-radius:999px}
-  .scoreN{font-weight:900;font-size:1.05rem;min-width:42px;text-align:right}
-  @media(max-width:720px){
-    .row{grid-template-columns:28px 1fr auto;gap:10px}
-    .row .barcell{display:none}
-  }
-  .tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-  .tab{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font-size:.88rem;font-weight:700;color:var(--slate);cursor:pointer}
-  .tab.active{color:#fff}
-  .tab.race.active{background:var(--race);border-color:var(--race)}
-  .tab.feas.active{background:var(--feas);border-color:var(--feas)}
-  .tab.intr.active{background:var(--intr);border-color:var(--intr)}
+  /* segmented control */
+  .seg{display:inline-flex;background:var(--line);border-radius:14px;padding:4px;gap:2px;margin-bottom:16px}
+  .seg button{border:0;background:transparent;font-family:inherit;font-size:.92rem;font-weight:700;color:var(--gray);padding:9px 18px;border-radius:11px;cursor:pointer;letter-spacing:-.02em;transition:.15s}
+  .seg button.active{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
 
-  /* 캘린더 */
-  .cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-  .ev{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:14px 16px}
-  .ev .when{font-size:.78rem;font-weight:700;color:var(--brick)}
-  .ev .what{font-weight:700;margin-top:3px}
-  .ev .who{font-size:.82rem;color:var(--mute);margin-top:2px}
+  /* ranking */
+  .rank{display:flex;flex-direction:column;gap:10px}
+  .row{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:14px;background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
+  .row:active{transform:scale(.99)}
+  .rk{font-size:1.05rem;font-weight:800;color:var(--faint);text-align:center;letter-spacing:-.02em}
+  .row.top1 .rk{color:var(--blue)}
+  .rmid{min-width:0}
+  .rname{display:flex;align-items:center;gap:7px}
+  .rname .dn{font-weight:700;font-size:1.02rem;letter-spacing:-.03em}
+  .chip{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:8px;letter-spacing:-.01em}
+  .chip.union{background:var(--orange-bg);color:#C2410C}
+  .chip.trust{background:var(--blue-bg);color:var(--blue-d)}
+  .rsub{font-size:.83rem;color:var(--gray);margin-top:7px;font-weight:500;letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .bar{height:6px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:9px}
+  .bar>i{display:block;height:100%;border-radius:999px;transition:width .4s ease}
+  .scoreN{font-size:1.3rem;font-weight:800;letter-spacing:-.04em;min-width:40px;text-align:right}
 
-  /* 뉴스 */
-  .news{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-  .na{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;transition:.15s}
-  .na:hover{box-shadow:0 6px 20px rgba(22,32,44,.08);transform:translateY(-1px)}
-  .na .nt{font-weight:700;font-size:.98rem;line-height:1.4;flex:1}
-  .na .nm{font-size:.78rem;color:var(--mute);margin-top:10px;display:flex;justify-content:space-between;gap:8px}
-  .tagrow{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
-  .ctag{font-size:.68rem;font-weight:700;background:#eef5ff;color:var(--brand2);padding:1px 7px;border-radius:999px}
+  /* calendar */
+  .cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+  .ev{background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .ev .when{display:inline-block;font-size:.76rem;font-weight:700;color:var(--blue-d);background:var(--blue-bg);padding:4px 10px;border-radius:8px;letter-spacing:-.01em}
+  .ev .what{font-weight:700;margin-top:10px;letter-spacing:-.02em}
+  .ev .who{font-size:.85rem;color:var(--gray);margin-top:2px;font-weight:500}
 
-  /* 14단지 카드 */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-  .cx{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.2s}
-  .cx:hover{box-shadow:0 8px 26px rgba(22,32,44,.08);transform:translateY(-2px)}
-  .cx .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-  .cx .num{font-family:'Gowun Batang',serif;font-size:1.4rem;font-weight:700;color:var(--brand)}
-  .cx .stage{font-size:.88rem;font-weight:700;margin:6px 0 8px}
-  .mini{display:flex;gap:10px;margin-top:8px}
-  .mini .m{flex:1;text-align:center;background:#f7f9fb;border:1px solid var(--line);border-radius:9px;padding:6px 4px}
-  .mini .m .ml{font-size:.66rem;color:var(--mute);font-weight:700}
-  .mini .m .mv{font-size:.95rem;font-weight:900;margin-top:1px}
+  /* news */
+  .news{display:flex;flex-direction:column;gap:10px}
+  .na{display:block;background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
+  .na:active{transform:scale(.99)}
+  .na .nt{font-weight:600;font-size:.98rem;line-height:1.45;letter-spacing:-.02em}
+  .tagrow{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+  .ctag{font-size:.7rem;font-weight:700;background:var(--blue-bg);color:var(--blue-d);padding:2px 8px;border-radius:7px}
+  .nmeta{font-size:.8rem;color:var(--faint);margin-top:9px;display:flex;justify-content:space-between;gap:8px;font-weight:500}
 
-  footer{background:var(--ink);color:#c9d4df;padding:44px 0 26px;margin-top:36px}
-  footer .cols{display:grid;grid-template-columns:2fr 1fr;gap:30px;margin-bottom:22px}
-  footer b{color:#fff;font-size:1.02rem}
-  footer small{display:block;color:#8da0b3;font-size:.8rem;line-height:1.7;margin-top:10px}
-  .disc{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;font-size:.76rem;color:#7e91a6}
-  @media(max-width:720px){footer .cols{grid-template-columns:1fr}}
-  .banner{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-size:.82rem;border-radius:10px;padding:10px 14px;margin-top:18px}
+  /* complex cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+  .cx{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
+  .cx:active{transform:scale(.98)}
+  .cx .top{display:flex;align-items:center;justify-content:space-between}
+  .cx .num{font-size:1.3rem;font-weight:800;letter-spacing:-.04em}
+  .cx .stage{font-size:.86rem;font-weight:600;color:var(--sub);margin:10px 0 14px;letter-spacing:-.02em;min-height:2.4em}
+  .mini{display:flex;gap:8px}
+  .mini .m{flex:1;text-align:center;background:var(--bg);border-radius:12px;padding:9px 4px}
+  .mini .ml{font-size:.66rem;color:var(--gray);font-weight:700}
+  .mini .mv{font-size:1.05rem;font-weight:800;letter-spacing:-.03em;margin-top:2px}
+
+  .note{background:var(--orange-bg);color:#9A3412;font-size:.84rem;border-radius:14px;padding:14px 16px;margin-top:18px;font-weight:500;letter-spacing:-.01em;line-height:1.55}
+
+  footer{margin-top:40px;padding:32px 0 40px;border-top:1px solid var(--line)}
+  footer b{font-weight:800;font-size:1rem;letter-spacing:-.03em}
+  footer small{display:block;color:var(--gray);font-size:.82rem;line-height:1.7;margin-top:8px;font-weight:500}
+  .method-row{margin-top:30px}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="brand" href="#top">목동 <span>1~14단지</span> 재건축 트래커</a>
+  <div class="brand">목동 재건축 <b>트래커</b></div>
   <div class="nav-links">
     <a href="#rankings">랭킹</a>
     <a href="#calendar">캘린더</a>
     <a href="#news">뉴스</a>
     <a href="#complexes">단지</a>
-    <a href="#about">소개</a>
   </div>
 </div></nav>
 
-<header class="hero" id="top"><div class="wrap">
-  <span class="tag">MOKDONG REDEVELOPMENT WATCH · 매일 자동 갱신</span>
-  <h1>오늘 기준, 목동 1~14단지<br>누가 앞서고 · 어디가 남는 장사인가</h1>
-  <p class="lead">레이스(진행 속도)·사업성·관심도 3축 점수로 14개 단지를 매일 줄 세웁니다. 정비 단계는 이벤트 발생 시, 뉴스·관심도는 매일 자동 갱신됩니다.</p>
-  <div class="updated" id="updated"></div>
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">● 매일 자동 업데이트</span>
+  <h1>목동 1~14단지,<br>오늘 누가 앞서고 있을까?</h1>
+  <p>레이스·사업성·관심도 3가지 점수로 14개 단지를 매일 줄 세웁니다.</p>
+  <div class="updated"><span class="dot-live"></span><span id="updated">불러오는 중…</span></div>
   <div class="summary3" id="summary3"></div>
 </div></header>
 
-<!-- 랭킹 -->
 <section class="block" id="rankings"><div class="wrap">
-  <div class="eyebrow" style="color:var(--brick)">Rankings</div>
-  <h2 class="sec">3축 랭킹</h2>
-  <p class="sec-desc">탭을 눌러 레이스 / 사업성 / 관심도 기준으로 정렬합니다. 점수 산출 방법은 하단 '방법론'에 공개되어 있습니다.</p>
-  <div class="tabs">
-    <button class="tab race active" data-metric="race_score">🏁 레이스</button>
-    <button class="tab feas" data-metric="feasibility_score">💰 사업성</button>
-    <button class="tab intr" data-metric="interest_score">🔥 관심도</button>
+  <div class="sec-head"><h2 class="sec">단지 랭킹</h2>
+    <p class="sec-desc">탭을 눌러 기준을 바꿔보세요. 행을 누르면 단지 상세로 이동해요.</p></div>
+  <div class="seg" id="seg">
+    <button class="active" data-metric="race_score" data-c="var(--blue)">🏁 레이스</button>
+    <button data-metric="feasibility_score" data-c="var(--green)">💰 사업성</button>
+    <button data-metric="interest_score" data-c="var(--orange)">🔥 관심도</button>
   </div>
   <div class="rank" id="rankList"></div>
 </div></section>
 
-<!-- 캘린더 -->
-<section class="block" id="calendar" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-  <div class="eyebrow" style="color:var(--brand)">Event Calendar</div>
-  <h2 class="sec">이벤트 캘린더</h2>
-  <p class="sec-desc">단지별 다음 마일스톤(총회·입찰·인가) 예정. 시점이 빠른 순으로 정렬됩니다.</p>
+<section class="block" id="calendar"><div class="wrap">
+  <div class="sec-head"><h2 class="sec">이벤트 캘린더</h2>
+    <p class="sec-desc">단지별 다음 마일스톤을 빠른 순으로 보여드려요.</p></div>
   <div class="cal" id="calList"></div>
 </div></section>
 
-<!-- 뉴스 -->
 <section class="block" id="news"><div class="wrap">
-  <div class="eyebrow" style="color:var(--brick)">Today's News</div>
-  <h2 class="sec">오늘의 뉴스</h2>
-  <p class="sec-desc">구글 뉴스에서 '목동 재건축' 관련 최신 기사를 매일 자동 수집해 단지 태깅합니다.</p>
+  <div class="sec-head"><h2 class="sec">오늘의 뉴스</h2>
+    <p class="sec-desc">'목동 재건축' 최신 기사를 매일 자동 수집해 단지별로 묶어드려요.</p></div>
   <div class="news" id="newsList"></div>
 </div></section>
 
-<!-- 단지 카드 -->
-<section class="block" id="complexes" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
-  <div class="eyebrow" style="color:var(--brand)">Complexes</div>
-  <h2 class="sec">14개 단지</h2>
-  <p class="sec-desc">카드를 누르면 단지 상세(3축 점수·진행 타임라인·관련 뉴스)로 이동합니다.</p>
+<section class="block" id="complexes"><div class="wrap">
+  <div class="sec-head"><h2 class="sec">14개 단지</h2>
+    <p class="sec-desc">카드를 누르면 점수·타임라인·관련 뉴스를 볼 수 있어요.</p></div>
   <div class="grid" id="cxGrid"></div>
-</div></section>
-
-<!-- 소개/방법론 -->
-<section class="block" id="about" style="border-top:1px solid var(--line)"><div class="wrap">
-  <div class="eyebrow" style="color:var(--brick)">About · 방법론</div>
-  <h2 class="sec">점수는 이렇게 계산합니다</h2>
-  <p class="sec-desc" style="max-width:820px">
-    <b>레이스</b>: 정비사업 단계를 표준 점수로 환산(정비구역 지정 10 → 시공사 선정 60 → 사업시행인가 75 → … → 준공 100).
-    <b>사업성</b>: 대지지분(35%)·추정 비례율(25%)·현 용적률(15%,낮을수록↑)·입지 프리미엄(15%)·규모 효율(10%) 가중합. 구조값 미확정 단지는 잠정 시드값.
-    <b>관심도</b>: 뉴스 언급 빈도 기반(향후 네이버 검색지수·실거래량 추가 예정).
-    모든 수치는 <b>추정·비공식</b>이며 공식 고시문 기준 확인이 필요합니다.
-  </p>
-  <div class="banner">⚠️ 목동 일대는 토지거래허가구역으로 거래 제약이 있을 수 있습니다. 분담금·환급 추정치는 가정에 민감하므로 참고용으로만 활용하세요.</div>
+  <div class="note">모든 점수는 공개 보도 기반 추정·비공식 값이에요. 정확한 단계·분담금은 조합/신탁 공식 고시문으로 확인하세요. 목동 일대는 토지거래허가 등 거래 제약이 있을 수 있어요.</div>
 </div></section>
 
 <footer><div class="wrap">
-  <div class="cols">
-    <div>
-      <b>목동 신시가지 1~14단지 재건축 Watch</b>
-      <small>공개 정보 기반 비공식 진행상황 트래커 · 매일 1회 자동 갱신.<br>문의/제보: your-email@example.com</small>
-    </div>
-    <div>
-      <b>바로가기</b>
-      <small><a href="#rankings">랭킹</a> · <a href="#calendar">캘린더</a> · <a href="#news">뉴스</a> · <a href="#complexes">단지</a></small>
-    </div>
-  </div>
-  <div class="disc">© 2026 Mokdong Redevelopment Watch. 정보 제공 목적이며 정확성을 보장하지 않습니다. 투자 권유·법적 자문이 아니며, 모든 의사결정은 공식 자료와 전문가 자문에 근거하시기 바랍니다.</div>
+  <b>목동 신시가지 1~14단지 재건축 Watch</b>
+  <small>공개 정보 기반 비공식 진행상황 트래커 · 매일 1회 자동 갱신<br>투자 권유·법적 자문이 아닙니다. 문의/제보: your-email@example.com</small>
 </div></footer>
 
 <script>
-const METHOD_KO = m => m==='조합'?'조합':'신탁';
-const METHOD_CLS = m => m==='조합'?'union':'trust';
-const BARCOLOR = {race_score:'var(--race)', feasibility_score:'var(--feas)', interest_score:'var(--intr)'};
+const METHOD_KO=m=>m==='조합'?'조합':'신탁', MCLS=m=>m==='조합'?'union':'trust';
+const COLOR={race_score:'var(--blue)',feasibility_score:'var(--green)',interest_score:'var(--orange)'};
+let DATA=null;
 
-function fmtDateTime(iso){
-  if(!iso) return '데이터 준비 중';
-  const d = new Date(iso);
-  if(isNaN(d)) return iso;
-  const p = n => String(n).padStart(2,'0');
-  return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+function fdt(iso){if(!iso)return'준비 중';const d=new Date(iso);if(isNaN(d))return iso;const p=n=>String(n).padStart(2,'0');return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())} 기준`;}
+function rel(iso){if(!iso)return'';const d=new Date(iso);if(isNaN(d))return iso;const h=(Date.now()-d)/36e5;if(h<1)return'방금';if(h<24)return Math.floor(h)+'시간 전';return Math.floor(h/24)+'일 전';}
+async function load(p){try{const r=await fetch(p,{cache:'no-store'});if(r.ok)return await r.json();}catch(e){}return null;}
+
+function summary(meta){
+  document.getElementById('updated').textContent=fdt(meta.updated_at);
+  const s=meta.summary3||{};
+  const card=(ic,bg,col,k,o,ex)=>`<div class="s3"><div class="ic" style="background:${bg}">${ic}</div>
+    <div class="txt"><div class="k">${k}</div><div class="nm">${o?o.name:'—'}</div>
+    <div class="meta">${o?ex(o):'데이터 준비 중'}</div></div></div>`;
+  document.getElementById('summary3').innerHTML=
+    card('🏁','var(--blue-bg)','',"레이스 1위",s.race,o=>`${o.label} · ${o.score}점`)+
+    card('💰','var(--green-bg)','',"사업성 1위",s.feasibility,o=>`${o.type||''} · ${o.score}점`)+
+    card('🔥','var(--orange-bg)','',"관심도 1위",s.interest,o=>`뉴스 ${o.mentions}건 · ${o.score}점`);
 }
-function relDate(iso){
-  if(!iso) return '';
-  const d = new Date(iso); if(isNaN(d)) return iso;
-  const diff = (Date.now()-d.getTime())/36e5;
-  if(diff < 1) return '방금';
-  if(diff < 24) return Math.floor(diff)+'시간 전';
-  return Math.floor(diff/24)+'일 전';
-}
-
-let DATA = null;
-
-async function loadJSON(path){
-  try{ const r = await fetch(path,{cache:'no-store'}); if(r.ok) return await r.json(); }
-  catch(e){}
-  return null;
-}
-
-function renderSummary(meta){
-  const u = document.getElementById('updated');
-  u.innerHTML = `마지막 업데이트: <b>${fmtDateTime(meta.updated_at)}</b>`;
-  const s = meta.summary3 || {};
-  const card = (k,icon,obj,extra)=>`
-    <div class="s3"><div class="k">${icon} ${k}</div>
-      <div class="nm">${obj? obj.name : '—'}</div>
-      <div class="meta">${obj? extra(obj) : '데이터 준비 중'}</div></div>`;
-  document.getElementById('summary3').innerHTML =
-    card('레이스 1위','🏁',s.race, o=>`${o.label} · ${o.score}점`) +
-    card('사업성 1위','💰',s.feasibility, o=>`${o.type||''} · ${o.score}점`) +
-    card('관심도 급상승','🔥',s.interest, o=>`최근 언급 ${o.mentions}건 · ${o.score}점`);
-}
-
-function renderRank(metric){
-  const list = [...DATA.complexes].sort((a,b)=> (b[metric]||0)-(a[metric]||0));
-  const el = document.getElementById('rankList');
-  el.innerHTML = list.map((c,i)=>{
-    const score = c[metric]||0;
-    let sub = '';
-    if(metric==='race_score') sub = c.race_stage + (c.constructor?` · ${c.constructor}`:'');
-    else if(metric==='feasibility_score') sub = (c.feasibility_type||'') + (c.land_share_avg?` · 지분 ${c.land_share_avg}`:' · 구조값 잠정');
-    else sub = `최근 30일 뉴스 ${c.news_mentions_30d||0}건`;
+function rank(metric){
+  const list=[...DATA.complexes].sort((a,b)=>(b[metric]||0)-(a[metric]||0));
+  document.getElementById('rankList').innerHTML=list.map((c,i)=>{
+    const sc=c[metric]||0;let sub;
+    if(metric==='race_score')sub=c.race_stage+(c.constructor?` · ${c.constructor}`:'');
+    else if(metric==='feasibility_score')sub=(c.feasibility_type||'')+(c.land_share_avg?` · 지분 ${c.land_share_avg}`:' · 구조값 잠정');
+    else sub=`최근 30일 뉴스 ${c.news_mentions_30d||0}건`;
     return `<a class="row ${i===0?'top1':''}" href="complex.html?id=${c.complex_id}">
       <div class="rk">${i+1}</div>
-      <div class="nmwrap"><span class="dn">${c.name}</span>
-        <span class="pill ${METHOD_CLS(c.method)}">${METHOD_KO(c.method)}</span></div>
-      <div class="barcell"><div class="sub">${sub}</div>
-        <div class="bar"><i style="width:${score}%;background:${BARCOLOR[metric]}"></i></div></div>
-      <div class="scoreN" style="color:${BARCOLOR[metric]}">${score}</div>
-    </a>`;
+      <div class="rmid"><div class="rname"><span class="dn">${c.name}</span>
+        <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
+        <div class="rsub">${sub}</div>
+        <div class="bar"><i style="width:${sc}%;background:${COLOR[metric]}"></i></div></div>
+      <div class="scoreN" style="color:${COLOR[metric]}">${sc}</div></a>`;
   }).join('');
 }
-
-function renderCalendar(){
-  const order = {'2026-06':1,'2026 하반기':2,'2026':3,'미정':9};
-  const evs = DATA.complexes
-    .filter(c=>c.next_milestone && c.next_milestone.event)
-    .map(c=>({name:c.name, ...c.next_milestone}))
-    .sort((a,b)=> (order[a.target]||5)-(order[b.target]||5));
-  document.getElementById('calList').innerHTML = evs.map(e=>`
-    <div class="ev"><div class="when">${e.target}</div>
-      <div class="what">${e.event}</div>
-      <div class="who">${e.name}</div></div>`).join('');
+function calendar(){
+  const o={'2026-06':1,'2026 하반기':2,'2026':3,'미정':9};
+  document.getElementById('calList').innerHTML=DATA.complexes.filter(c=>c.next_milestone&&c.next_milestone.event)
+    .map(c=>({name:c.name,...c.next_milestone})).sort((a,b)=>(o[a.target]||5)-(o[b.target]||5))
+    .map(e=>`<div class="ev"><span class="when">${e.target}</span><div class="what">${e.event}</div><div class="who">${e.name}</div></div>`).join('');
 }
-
-function renderNews(news){
-  const el = document.getElementById('newsList');
-  const items = (news && news.items) ? news.items : [];
-  if(items.length===0){
-    el.innerHTML = `<div class="na"><div class="nt">아직 수집된 뉴스가 없습니다.</div>
-      <div class="nm">매일 자동 수집 작업이 처음 실행되면 이곳에 최신 기사가 표시됩니다.</div></div>`;
-    return;
-  }
-  el.innerHTML = items.slice(0,12).map(n=>`
-    <a class="na" href="${n.link}" target="_blank" rel="noopener">
-      <div class="nt">${n.title||''}</div>
-      <div class="tagrow">${(n.complexes||[]).map(id=>`<span class="ctag">${id}단지</span>`).join('')}</div>
-      <div class="nm"><span>${n.source||''}</span><span>${relDate(n.published)}</span></div>
-    </a>`).join('');
+function news(n){
+  const el=document.getElementById('newsList');const items=(n&&n.items)?n.items:[];
+  if(!items.length){el.innerHTML=`<div class="na"><div class="nt">아직 수집된 뉴스가 없어요.</div><div class="nmeta"><span>매일 자동 수집 후 표시됩니다</span></div></div>`;return;}
+  el.innerHTML=items.slice(0,12).map(x=>`<a class="na" href="${x.link}" target="_blank" rel="noopener">
+    <div class="nt">${x.title||''}</div>
+    <div class="tagrow">${(x.complexes||[]).map(id=>`<span class="ctag">${id}단지</span>`).join('')}</div>
+    <div class="nmeta"><span>${x.source||''}</span><span>${rel(x.published)}</span></div></a>`).join('');
 }
-
-function renderComplexes(){
-  document.getElementById('cxGrid').innerHTML = DATA.complexes.map(c=>`
+function cards(){
+  document.getElementById('cxGrid').innerHTML=DATA.complexes.map(c=>`
     <a class="cx" href="complex.html?id=${c.complex_id}">
-      <div class="top"><div class="num">${c.complex_id}단지</div>
-        <span class="pill ${METHOD_CLS(c.method)}">${METHOD_KO(c.method)}</span></div>
+      <div class="top"><div class="num">${c.complex_id}단지</div><span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
       <div class="stage">${c.race_stage||''}</div>
       <div class="mini">
-        <div class="m"><div class="ml">레이스</div><div class="mv" style="color:var(--race)">${c.race_score||0}</div></div>
-        <div class="m"><div class="ml">사업성</div><div class="mv" style="color:var(--feas)">${c.feasibility_score||0}</div></div>
-        <div class="m"><div class="ml">관심도</div><div class="mv" style="color:var(--intr)">${c.interest_score||0}</div></div>
-      </div>
-    </a>`).join('');
+        <div class="m"><div class="ml">레이스</div><div class="mv" style="color:var(--blue)">${c.race_score||0}</div></div>
+        <div class="m"><div class="ml">사업성</div><div class="mv" style="color:var(--green)">${c.feasibility_score||0}</div></div>
+        <div class="m"><div class="ml">관심도</div><div class="mv" style="color:var(--orange)">${c.interest_score||0}</div></div>
+      </div></a>`).join('');
 }
-
 async function init(){
-  DATA = await loadJSON('data.json');
-  if(!DATA){
-    document.getElementById('summary3').innerHTML =
-      '<div class="s3"><div class="nm">데이터를 불러올 수 없습니다</div><div class="meta">GitHub Pages에 배포된 뒤 정상 표시됩니다(로컬 file:// 에서는 fetch 제한).</div></div>';
-    return;
-  }
-  const news = await loadJSON('news.json');
-  renderSummary(DATA.meta||{});
-  renderRank('race_score');
-  renderCalendar();
-  renderNews(news);
-  renderComplexes();
-  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-    t.classList.add('active');
-    renderRank(t.dataset.metric);
+  DATA=await load('data.json');
+  if(!DATA){document.getElementById('updated').textContent='데이터를 불러올 수 없어요';return;}
+  const n=await load('news.json');
+  summary(DATA.meta||{});rank('race_score');calendar();news(n);cards();
+  document.querySelectorAll('#seg button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');rank(b.dataset.metric);
   }));
 }
 init();

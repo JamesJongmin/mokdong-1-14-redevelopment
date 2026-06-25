@@ -29,7 +29,6 @@
   .nav-links a:active{color:var(--blue)}
   @media(max-width:680px){.nav-links{display:none}}
 
-  /* hero */
   header.hero{padding:44px 0 8px}
   .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--blue);background:var(--blue-bg);padding:6px 12px;border-radius:999px;letter-spacing:-.01em}
   header.hero h1{font-size:2rem;font-weight:800;line-height:1.28;letter-spacing:-.035em;margin:16px 0 10px}
@@ -37,7 +36,6 @@
   .updated{margin-top:14px;font-size:.84rem;color:var(--gray);font-weight:500;display:inline-flex;align-items:center;gap:6px}
   .dot-live{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-bg)}
 
-  /* 오늘의 요약 카드 */
   .summary3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
   .s3{background:var(--card);border-radius:20px;padding:18px 18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.04),0 1px 2px rgba(0,0,0,.03)}
   .s3 .ic{width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
@@ -51,12 +49,10 @@
   h2.sec{font-size:1.4rem;font-weight:800;letter-spacing:-.035em}
   .sec-desc{color:var(--gray);font-size:.92rem;margin-top:5px;letter-spacing:-.01em;font-weight:500}
 
-  /* segmented control */
   .seg{display:inline-flex;background:var(--line);border-radius:14px;padding:4px;gap:2px;margin-bottom:16px}
   .seg button{border:0;background:transparent;font-family:inherit;font-size:.92rem;font-weight:700;color:var(--gray);padding:9px 18px;border-radius:11px;cursor:pointer;letter-spacing:-.02em;transition:.15s}
   .seg button.active{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
 
-  /* ranking */
   .rank{display:flex;flex-direction:column;gap:10px}
   .row{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:14px;background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
   .row:active{transform:scale(.99)}
@@ -73,14 +69,12 @@
   .bar>i{display:block;height:100%;border-radius:999px;transition:width .4s ease}
   .scoreN{font-size:1.3rem;font-weight:800;letter-spacing:-.04em;min-width:40px;text-align:right}
 
-  /* calendar */
   .cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
   .ev{background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
   .ev .when{display:inline-block;font-size:.76rem;font-weight:700;color:var(--blue-d);background:var(--blue-bg);padding:4px 10px;border-radius:8px;letter-spacing:-.01em}
   .ev .what{font-weight:700;margin-top:10px;letter-spacing:-.02em}
   .ev .who{font-size:.85rem;color:var(--gray);margin-top:2px;font-weight:500}
 
-  /* news */
   .news{display:flex;flex-direction:column;gap:10px}
   .na{display:block;background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
   .na:active{transform:scale(.99)}
@@ -89,7 +83,6 @@
   .ctag{font-size:.7rem;font-weight:700;background:var(--blue-bg);color:var(--blue-d);padding:2px 8px;border-radius:7px}
   .nmeta{font-size:.8rem;color:var(--faint);margin-top:9px;display:flex;justify-content:space-between;gap:8px;font-weight:500}
 
-  /* complex cards */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
   .cx{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
   .cx:active{transform:scale(.98)}
@@ -109,7 +102,6 @@
   footer{margin-top:40px;padding:32px 0 40px;border-top:1px solid var(--line)}
   footer b{font-weight:800;font-size:1rem;letter-spacing:-.03em}
   footer small{display:block;color:var(--gray);font-size:.82rem;line-height:1.7;margin-top:8px;font-weight:500}
-  .method-row{margin-top:30px}
 </style>
 </head>
 <body>
@@ -234,4 +226,37 @@ function calendar(){
 function news(n){
   const el=document.getElementById('newsList');const items=(n&&n.items)?n.items:[];
   if(!items.length){el.innerHTML=`<div class="na"><div class="nt">아직 수집된 뉴스가 없어요.</div><div class="nmeta"><span>매일 자동 수집 후 표시됩니다</span></div></div>`;return;}
-  el.innerHTML=items.slice(0,12).map(x=>`<a class="na" href="${x.link}" target="_blank" 
+  el.innerHTML=items.slice(0,12).map(x=>`<a class="na" href="${x.link}" target="_blank" rel="noopener">
+    <div class="nt">${x.title||''}</div>
+    <div class="tagrow">${(x.complexes||[]).map(id=>`<span class="ctag">${id}단지</span>`).join('')}</div>
+    <div class="nmeta"><span>${x.source||''}</span><span>${rel(x.published)}</span></div></a>`).join('');
+}
+function cards(){
+  document.getElementById('cxGrid').innerHTML=DATA.complexes.map(c=>`
+    <a class="cx" href="complex.html?id=${c.complex_id}">
+      <div class="cxcover">${cover(c)}<span class="cxnum">${c.complex_id}단지</span>
+        <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
+      <div class="cxbody">
+        <div class="stage">${c.race_stage||''}</div>
+        <div class="mini">
+          <div class="m"><div class="ml">레이스</div><div class="mv" style="color:var(--blue)">${c.race_score||0}</div></div>
+          <div class="m"><div class="ml">사업성</div><div class="mv" style="color:var(--green)">${c.feasibility_score||0}</div></div>
+          <div class="m"><div class="ml">관심도</div><div class="mv" style="color:var(--orange)">${c.interest_score||0}</div></div>
+        </div></div></a>`).join('');
+}
+async function init(){
+  DATA=await load('data.json');
+  if(!DATA){document.getElementById('updated').textContent='데이터를 불러올 수 없어요';return;}
+  const n=await load('news.json');
+  summary(DATA.meta||{});rank('race_score');calendar();news(n);cards();
+  document.querySelectorAll('#seg button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');rank(b.dataset.metric);
+  }));
+}
+init();
+</script>
+<script data-goatcounter="https://jamesjongmin.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -138,4 +138,28 @@ function timeline(c,ss){
 function kv(c){
   const f=(v,s='')=>(v==null)?'미확정':v+s;
   const u=(c.units_before||c.units_after)?`${f(c.units_before)} → ${f(c.units_after)}`:'미확정';
-  const items=[['세대수(현
+  const items=[['세대수(현→후)',u],['평균 대지지분',f(c.land_share_avg)],['용적률(현→계획)',(c.far_current||c.far_planned)?`${f(c.far_current)} → ${f(c.far_planned)}`:'미확정'],['추정 비례율',f(c.expected_ratio,'%')],['사업성 유형',c.feasibility_type||'—'],['추진 방식',METHOD_KO(c.method)]];
+  document.getElementById('kv').innerHTML=items.map(([l,v])=>`<div class="item"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
+  document.getElementById('feasnote').textContent=(c.land_share_avg==null)?'※ 대지지분·용적률 등 구조값 미확정이라 사업성 점수는 잠정 시드값이에요. 공식 고시문 확보 시 가중합으로 재계산됩니다.':'사업성 점수는 대지지분(35%)·비례율(25%)·용적률(15%)·입지(15%)·규모(10%) 가중합이에요.';
+  document.getElementById('notes').textContent=c.notes||'등록된 비고가 없어요.';
+}
+function cnews(c,n){
+  const items=((n&&n.items)||[]).filter(x=>(x.complexes||[]).includes(c.complex_id)).slice(0,8);
+  const el=document.getElementById('cnews');
+  if(!items.length){el.innerHTML=`<div class="na"><div class="nt">이 단지로 태깅된 최신 뉴스가 아직 없어요.</div></div>`;return;}
+  el.innerHTML=items.map(x=>`<a class="na" href="${x.link}" target="_blank" rel="noopener"><div class="nt">${x.title||''}</div><div class="nm">${x.source||''} · ${rel(x.published)}</div></a>`).join('');
+}
+async function init(){
+  const d=await load('data.json');
+  if(!d){document.getElementById('chead').innerHTML='<h1>데이터를 불러올 수 없어요</h1>';return;}
+  const c=d.complexes.find(x=>x.complex_id===qid())||d.complexes[0];
+  document.title=`${c.name} | 목동 재건축 트래커`;
+  head(c);timeline(c,d.stage_scores||{});kv(c);
+  cnews(c,await load('news.json'));
+}
+init();
+</script>
+<script data-goatcounter="https://jamesjongmin.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

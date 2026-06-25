@@ -126,7 +126,12 @@ function timeline(c,ss){
   const cur=ORDER.indexOf(c.race_stage_key);
   document.getElementById('timeline').innerHTML=ORDER.map((k,i)=>{const s=ss[k]||{label:k,score:''};
     const cls=i<cur?'done':(i===cur?'now':''),mk=i<cur?'✓':(i===cur?'●':'');
-    return `<div class="tlstep ${cls}"><div class="dot">${mk}</div><div><div class="stp">${s.label}</div><div class="scx">${s.score}점${i===cur?' · 현재 단계':''}</div></div></div>`;}).join('');
+    let when;const dt=(c.dates||{})[k];
+    if(i<cur) when=dt?dt+' 완료':'완료';
+    else if(i===cur) when=dt?dt+' · 현재':'진행 중';
+    else if(i===cur+1) when=(c.next_milestone&&c.next_milestone.target)?c.next_milestone.target+' 예상':'예상';
+    else when='예상';
+    return `<div class="tlstep ${cls}"><div class="dot">${mk}</div><div><div class="stp">${s.label}</div><div class="scx">${when}<span style="color:var(--faint)"> · ${s.score}점</span></div></div></div>`;}).join('');
   const nm=c.next_milestone;
   document.getElementById('nextmile').textContent=nm&&nm.event?`📅 다음 마일스톤 · ${nm.event} (${nm.target||'미정'})`:'다음 마일스톤 정보 없음';
 }

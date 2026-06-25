@@ -115,7 +115,10 @@
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "우리자산신탁 사업시행자 지정 고시. 종상향·공원 조성 이슈."
+      "notes": "우리자산신탁 사업시행자 지정 고시. 종상향·공원 조성 이슈.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 2,
@@ -142,7 +145,10 @@
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "신탁 방식. 종상향·공원 조성 이슈(앞단지 그룹)."
+      "notes": "신탁 방식. 종상향·공원 조성 이슈(앞단지 그룹).",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 3,
@@ -169,7 +175,10 @@
         "target": "2026"
       },
       "constructor": null,
-      "notes": "추진위원회 승인."
+      "notes": "추진위원회 승인.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 4,
@@ -196,7 +205,10 @@
         "target": "미정"
       },
       "constructor": null,
-      "notes": "조합 방식. 정비구역 지정 단계."
+      "notes": "조합 방식. 정비구역 지정 단계.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 5,
@@ -223,7 +235,10 @@
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "대지지분 최상위('지분 깡패'). 입지 우수, 신탁 방식."
+      "notes": "대지지분 최상위('지분 깡패'). 입지 우수, 신탁 방식.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 6,
@@ -250,7 +265,11 @@
         "target": "2026-06"
       },
       "constructor": "DL이앤씨(우선협상, '아크로 목동 리젠시')",
-      "notes": "사업 속도 선두. 지하 2층~지상 49층 4개동 2,173가구."
+      "notes": "사업 속도 선두. 지하 2층~지상 49층 4개동 2,173가구.",
+      "dates": {
+        "jeongbi_zone": "2025.12",
+        "constructor": "2026.06"
+      }
     },
     {
       "complex_id": 7,
@@ -277,7 +296,10 @@
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "목동역 초역세권·학원가 인접. 시세·일반분양가 1위, 환급 기대. 현대건설 '디에이치' 관심."
+      "notes": "목동역 초역세권·학원가 인접. 시세·일반분양가 1위, 환급 기대. 현대건설 '디에이치' 관심.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 8,
@@ -304,7 +326,10 @@
         "target": "미정"
       },
       "constructor": null,
-      "notes": "조합 방식. 설계자 선정 진행. 이용 편리."
+      "notes": "조합 방식. 설계자 선정 진행. 이용 편리.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 9,
@@ -331,7 +356,10 @@
         "target": "미정"
       },
       "constructor": null,
-      "notes": "신탁 방식. 설계자 선정 진행(선두그룹)."
+      "notes": "신탁 방식. 설계자 선정 진행(선두그룹).",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 10,
@@ -358,7 +386,10 @@
         "target": "2026"
       },
       "constructor": null,
-      "notes": "신탁 방식. 설계자 선정 완료, 시공사 선정 임박. 현대건설 관심."
+      "notes": "신탁 방식. 설계자 선정 완료, 시공사 선정 임박. 현대건설 관심.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 11,
@@ -385,7 +416,10 @@
         "target": "2026"
       },
       "constructor": null,
-      "notes": "신탁 방식. 사업시행자 선정 신청(선두그룹)."
+      "notes": "신탁 방식. 사업시행자 선정 신청(선두그룹).",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 12,
@@ -412,7 +446,11 @@
         "target": "2026"
       },
       "constructor": null,
-      "notes": "조합 방식. 2026-02 조합설립인가, 창립총회 준비."
+      "notes": "조합 방식. 2026-02 조합설립인가, 창립총회 준비.",
+      "dates": {
+        "jeongbi_zone": "2025.12",
+        "prep_committee": "2026.02"
+      }
     },
     {
       "complex_id": 13,
@@ -439,7 +477,10 @@
         "target": "2026"
       },
       "constructor": null,
-      "notes": "신탁 방식. 설계자 선정 완료. 직사각형 구획(조망 유리). 3,852가구 규모, 삼성물산·GS건설 관심."
+      "notes": "신탁 방식. 설계자 선정 완료. 직사각형 구획(조망 유리). 3,852가구 규모, 삼성물산·GS건설 관심.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     },
     {
       "complex_id": 14,
@@ -466,7 +507,10 @@
         "target": "2026"
       },
       "constructor": null,
-      "notes": "규모 최대(3,100→5,123가구). 현대건설 '디에이치' 관심."
+      "notes": "규모 최대(3,100→5,123가구). 현대건설 '디에이치' 관심.",
+      "dates": {
+        "jeongbi_zone": "2025.12"
+      }
     }
   ]
 }

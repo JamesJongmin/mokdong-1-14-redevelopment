@@ -91,11 +91,14 @@
 
   /* complex cards */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-  .cx{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
+  .cx{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .12s}
   .cx:active{transform:scale(.98)}
-  .cx .top{display:flex;align-items:center;justify-content:space-between}
-  .cx .num{font-size:1.3rem;font-weight:800;letter-spacing:-.04em}
-  .cx .stage{font-size:.86rem;font-weight:600;color:var(--sub);margin:10px 0 14px;letter-spacing:-.02em;min-height:2.4em}
+  .cxcover{position:relative;line-height:0}
+  .cxcover svg{width:100%;height:92px;display:block}
+  .cxnum{position:absolute;left:13px;bottom:9px;font-size:1.15rem;font-weight:800;letter-spacing:-.04em;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.3)}
+  .cxcover .chip{position:absolute;right:11px;top:11px}
+  .cxbody{padding:14px 16px 16px}
+  .cx .stage{font-size:.86rem;font-weight:600;color:var(--sub);margin:0 0 12px;letter-spacing:-.02em;min-height:2.4em}
   .mini{display:flex;gap:8px}
   .mini .m{flex:1;text-align:center;background:var(--bg);border-radius:12px;padding:9px 4px}
   .mini .ml{font-size:.66rem;color:var(--gray);font-weight:700}
@@ -168,6 +171,29 @@ const METHOD_KO=m=>m==='조합'?'조합':'신탁', MCLS=m=>m==='조합'?'union':
 const COLOR={race_score:'var(--blue)',feasibility_score:'var(--green)',interest_score:'var(--orange)'};
 let DATA=null;
 
+function cover(c){
+  const id=c.complex_id, hue=(id*27+205)%360;
+  let seed=id*9301+49297; const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280;};
+  const W=400,H=180,ground=152; let t='';
+  const n=3+Math.floor(rnd()*2);
+  const gap=(W-20)/n;
+  for(let i=0;i<n;i++){
+    const tw=gap*0.66, tx=12+gap*i+gap*0.17, th=58+rnd()*80, ty=ground-th;
+    t+=`<rect x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" width="${tw.toFixed(1)}" height="${th.toFixed(1)}" rx="5" fill="hsl(${hue},${44+i*4}%,${60-i*5}%)"/>`;
+    const cols=Math.max(2,Math.floor(tw/13)), rows=Math.max(2,Math.floor(th/16)), gxs=tw/cols;
+    for(let r=0;r<rows;r++)for(let k=0;k<cols;k++){
+      if(rnd()<0.16) continue;
+      const wy=ty+11+r*16; if(wy>ground-9) continue;
+      t+=`<rect x="${(tx+gxs*k+gxs*0.2).toFixed(1)}" y="${wy.toFixed(1)}" width="${(gxs*0.5).toFixed(1)}" height="7" rx="1.5" fill="hsl(${hue},65%,92%)" opacity="${(0.45+rnd()*0.5).toFixed(2)}"/>`;
+    }
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="sk${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(${hue},70%,96%)"/><stop offset="1" stop-color="hsl(${(hue+22)%360},72%,90%)"/></linearGradient></defs>
+    <rect width="${W}" height="${H}" fill="url(#sk${id})"/>
+    <circle cx="328" cy="40" r="15" fill="hsl(${(hue+32)%360},82%,83%)" opacity="0.65"/>
+    ${t}<rect x="0" y="${ground}" width="${W}" height="${H-ground}" fill="hsl(${hue},34%,86%)"/></svg>`;
+}
+
 function fdt(iso){if(!iso)return'준비 중';const d=new Date(iso);if(isNaN(d))return iso;const p=n=>String(n).padStart(2,'0');return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())} 기준`;}
 function rel(iso){if(!iso)return'';const d=new Date(iso);if(isNaN(d))return iso;const h=(Date.now()-d)/36e5;if(h<1)return'방금';if(h<24)return Math.floor(h)+'시간 전';return Math.floor(h/24)+'일 전';}
 async function load(p){try{const r=await fetch(p,{cache:'no-store'});if(r.ok)return await r.json();}catch(e){}return null;}
@@ -208,35 +234,4 @@ function calendar(){
 function news(n){
   const el=document.getElementById('newsList');const items=(n&&n.items)?n.items:[];
   if(!items.length){el.innerHTML=`<div class="na"><div class="nt">아직 수집된 뉴스가 없어요.</div><div class="nmeta"><span>매일 자동 수집 후 표시됩니다</span></div></div>`;return;}
-  el.innerHTML=items.slice(0,12).map(x=>`<a class="na" href="${x.link}" target="_blank" rel="noopener">
-    <div class="nt">${x.title||''}</div>
-    <div class="tagrow">${(x.complexes||[]).map(id=>`<span class="ctag">${id}단지</span>`).join('')}</div>
-    <div class="nmeta"><span>${x.source||''}</span><span>${rel(x.published)}</span></div></a>`).join('');
-}
-function cards(){
-  document.getElementById('cxGrid').innerHTML=DATA.complexes.map(c=>`
-    <a class="cx" href="complex.html?id=${c.complex_id}">
-      <div class="top"><div class="num">${c.complex_id}단지</div><span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
-      <div class="stage">${c.race_stage||''}</div>
-      <div class="mini">
-        <div class="m"><div class="ml">레이스</div><div class="mv" style="color:var(--blue)">${c.race_score||0}</div></div>
-        <div class="m"><div class="ml">사업성</div><div class="mv" style="color:var(--green)">${c.feasibility_score||0}</div></div>
-        <div class="m"><div class="ml">관심도</div><div class="mv" style="color:var(--orange)">${c.interest_score||0}</div></div>
-      </div></a>`).join('');
-}
-async function init(){
-  DATA=await load('data.json');
-  if(!DATA){document.getElementById('updated').textContent='데이터를 불러올 수 없어요';return;}
-  const n=await load('news.json');
-  summary(DATA.meta||{});rank('race_score');calendar();news(n);cards();
-  document.querySelectorAll('#seg button').forEach(b=>b.addEventListener('click',()=>{
-    document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');rank(b.dataset.metric);
-  }));
-}
-init();
-</script>
-<script data-goatcounter="https://jamesjongmin.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-</body>
-</html>
+  el.innerHTML=items.slice(0,12).map(x=>`<a class="na" href="${x.link}" target="_blank" 

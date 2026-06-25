@@ -27,6 +27,9 @@
   .chip.union{background:var(--orange-bg);color:#C2410C}.chip.trust{background:var(--blue-bg);color:var(--blue-d)}
   header.ch h1{font-size:2rem;font-weight:800;letter-spacing:-.04em;margin:14px 0 4px}
   header.ch .csub{color:var(--sub);font-size:.95rem;font-weight:500;letter-spacing:-.02em}
+  .chcover{position:relative;border-radius:20px;overflow:hidden;line-height:0;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .chcover svg{width:100%;height:160px;display:block}
+  .chcover .cxnum{position:absolute;left:20px;bottom:14px;font-size:1.5rem;font-weight:800;letter-spacing:-.04em;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.32)}
 
   .gauges{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
   .g{background:var(--card);border-radius:18px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
@@ -87,12 +90,35 @@
 const ORDER=["jeongbi_zone","prep_committee","union_setup_push","trustee_apply","union_or_trustee_set","designer_ongoing","designer_done","constructor","impl_approval","mgmt_approval","relocation","construction","completion"];
 const METHOD_KO=m=>m==='조합'?'조합 방식':'신탁 방식',MCLS=m=>m==='조합'?'union':'trust';
 function qid(){return parseInt(new URLSearchParams(location.search).get('id'))||1;}
+function cover(c){
+  const id=c.complex_id, hue=(id*27+205)%360;
+  let seed=id*9301+49297; const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280;};
+  const W=400,H=180,ground=152; let t='';
+  const n=3+Math.floor(rnd()*2), gap=(W-20)/n;
+  for(let i=0;i<n;i++){
+    const tw=gap*0.66, tx=12+gap*i+gap*0.17, th=58+rnd()*80, ty=ground-th;
+    t+=`<rect x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" width="${tw.toFixed(1)}" height="${th.toFixed(1)}" rx="5" fill="hsl(${hue},${44+i*4}%,${60-i*5}%)"/>`;
+    const cols=Math.max(2,Math.floor(tw/13)), rows=Math.max(2,Math.floor(th/16)), gxs=tw/cols;
+    for(let r=0;r<rows;r++)for(let k=0;k<cols;k++){
+      if(rnd()<0.16) continue;
+      const wy=ty+11+r*16; if(wy>ground-9) continue;
+      t+=`<rect x="${(tx+gxs*k+gxs*0.2).toFixed(1)}" y="${wy.toFixed(1)}" width="${(gxs*0.5).toFixed(1)}" height="7" rx="1.5" fill="hsl(${hue},65%,92%)" opacity="${(0.45+rnd()*0.5).toFixed(2)}"/>`;
+    }
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="sk${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(${hue},70%,96%)"/><stop offset="1" stop-color="hsl(${(hue+22)%360},72%,90%)"/></linearGradient></defs>
+    <rect width="${W}" height="${H}" fill="url(#sk${id})"/>
+    <circle cx="328" cy="40" r="15" fill="hsl(${(hue+32)%360},82%,83%)" opacity="0.65"/>
+    ${t}<rect x="0" y="${ground}" width="${W}" height="${H-ground}" fill="hsl(${hue},34%,86%)"/></svg>`;
+}
 function rel(iso){if(!iso)return'';const d=new Date(iso);if(isNaN(d))return iso;const h=(Date.now()-d)/36e5;return h<24?Math.max(1,Math.floor(h))+'시간 전':Math.floor(h/24)+'일 전';}
 async function load(p){try{const r=await fetch(p,{cache:'no-store'});if(r.ok)return await r.json();}catch(e){}return null;}
 function gauge(l,v,c){v=v||0;return `<div class="g"><div class="gl">${l}</div><div class="gv" style="color:${c}">${v}<span>/100</span></div><div class="gb"><i style="width:${v}%;background:${c}"></i></div></div>`;}
 
 function head(c){
-  document.getElementById('chead').innerHTML=`<span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span>
+  document.getElementById('chead').innerHTML=`
+    <div class="chcover">${cover(c)}<span class="cxnum">${c.complex_id}단지</span></div>
+    <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span>
     <h1>${c.name}</h1><div class="csub">${c.race_stage||''}${c.constructor?` · 시공사 ${c.constructor}`:''}</div>
     <div class="gauges">${gauge('🏁 레이스',c.race_score,'var(--blue)')}${gauge('💰 사업성',c.feasibility_score,'var(--green)')}${gauge('🔥 관심도',c.interest_score,'var(--orange)')}</div>`;
 }
@@ -107,28 +133,4 @@ function timeline(c,ss){
 function kv(c){
   const f=(v,s='')=>(v==null)?'미확정':v+s;
   const u=(c.units_before||c.units_after)?`${f(c.units_before)} → ${f(c.units_after)}`:'미확정';
-  const items=[['세대수(현→후)',u],['평균 대지지분',f(c.land_share_avg)],['용적률(현→계획)',(c.far_current||c.far_planned)?`${f(c.far_current)} → ${f(c.far_planned)}`:'미확정'],['추정 비례율',f(c.expected_ratio,'%')],['사업성 유형',c.feasibility_type||'—'],['추진 방식',METHOD_KO(c.method)]];
-  document.getElementById('kv').innerHTML=items.map(([l,v])=>`<div class="item"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
-  document.getElementById('feasnote').textContent=(c.land_share_avg==null)?'※ 대지지분·용적률 등 구조값 미확정이라 사업성 점수는 잠정 시드값이에요. 공식 고시문 확보 시 가중합으로 재계산됩니다.':'사업성 점수는 대지지분(35%)·비례율(25%)·용적률(15%)·입지(15%)·규모(10%) 가중합이에요.';
-  document.getElementById('notes').textContent=c.notes||'등록된 비고가 없어요.';
-}
-function cnews(c,n){
-  const items=((n&&n.items)||[]).filter(x=>(x.complexes||[]).includes(c.complex_id)).slice(0,8);
-  const el=document.getElementById('cnews');
-  if(!items.length){el.innerHTML=`<div class="na"><div class="nt">이 단지로 태깅된 최신 뉴스가 아직 없어요.</div></div>`;return;}
-  el.innerHTML=items.map(x=>`<a class="na" href="${x.link}" target="_blank" rel="noopener"><div class="nt">${x.title||''}</div><div class="nm">${x.source||''} · ${rel(x.published)}</div></a>`).join('');
-}
-async function init(){
-  const d=await load('data.json');
-  if(!d){document.getElementById('chead').innerHTML='<h1>데이터를 불러올 수 없어요</h1>';return;}
-  const c=d.complexes.find(x=>x.complex_id===qid())||d.complexes[0];
-  document.title=`${c.name} | 목동 재건축 트래커`;
-  head(c);timeline(c,d.stage_scores||{});kv(c);
-  cnews(c,await load('news.json'));
-}
-init();
-</script>
-<script data-goatcounter="https://jamesjongmin.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-</body>
-</html>
+  const items=[['세대수(현

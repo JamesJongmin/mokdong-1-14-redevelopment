@@ -126,10 +126,11 @@ function timeline(c,ss){
   const cur=ORDER.indexOf(c.race_stage_key);
   document.getElementById('timeline').innerHTML=ORDER.map((k,i)=>{const s=ss[k]||{label:k,score:''};
     const cls=i<cur?'done':(i===cur?'now':''),mk=i<cur?'✓':(i===cur?'●':'');
-    let when;const dt=(c.dates||{})[k];
+    let when;const dt=(c.dates||{})[k];const et=(c.eta||{})[k];
     if(i<cur) when=dt?dt+' 완료':'완료';
     else if(i===cur) when=dt?dt+' · 현재':'진행 중';
-    else if(i===cur+1) when=(c.next_milestone&&c.next_milestone.target)?c.next_milestone.target+' 예상':'예상';
+    else if(et) when=et+' 예상';
+    else if(i===cur+1&&c.next_milestone&&c.next_milestone.target) when=c.next_milestone.target+' 예상';
     else when='예상';
     return `<div class="tlstep ${cls}"><div class="dot">${mk}</div><div><div class="stp">${s.label}</div><div class="scx">${when}<span style="color:var(--faint)"> · ${s.score}점</span></div></div></div>`;}).join('');
   const nm=c.next_milestone;

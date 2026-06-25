@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-06-25T20:20:00+09:00",
+    "updated_at": "2026-06-25T21:21:39+09:00",
     "data_basis": "공개 보도 기반 잠정 시드값(2026-06). 정비 단계/구조값은 양천구청·서울시 고시문으로 확정 필요.",
     "disclaimer": "추정치·비공식 정보이며 투자 권유가 아닙니다. 분담금·단계·일정은 각 조합/신탁 및 관계기관 공식 자료로 확인하세요.",
     "totals": {
@@ -94,10 +94,10 @@
       "complex_id": 1,
       "name": "목동1단지",
       "method": "신탁",
-      "race_stage_key": "union_or_trustee_set",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "조합설립인가/사업시행자 지정",
-      "race_score": 35,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 78,
       "feasibility_type": "균형형",
       "feasibility_score": 78,
@@ -111,23 +111,28 @@
       "units_after": 3500,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "사업시행계획 수립",
+        "event": "시공사 선정",
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "우리자산신탁 사업시행자 지정 고시. 종상향·공원 조성 이슈.",
+      "notes": "신탁(우리자산신탁). 정비구역 2025.12 → 사업시행자 지정 2026.02 → 설계자 희림건축 2026.05. 시공사 미선정.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.12",
+        "union_or_trustee_set": "2026.02",
+        "designer_done": "2026.05"
+      },
+      "eta": {
+        "constructor": "2026 하반기"
       }
     },
     {
       "complex_id": 2,
       "name": "목동2단지",
       "method": "신탁",
-      "race_stage_key": "trustee_apply",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "사업시행자 지정 신청/동의",
-      "race_score": 32,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 76,
       "feasibility_type": "균형형",
       "feasibility_score": 76,
@@ -137,27 +142,32 @@
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
-      "units_before": null,
-      "units_after": null,
+      "units_before": 1640,
+      "units_after": 3389,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "사업시행자 지정",
-        "target": "2026 하반기"
+        "event": "시공사 선정",
+        "target": "2027"
       },
       "constructor": null,
-      "notes": "신탁 방식. 종상향·공원 조성 이슈(앞단지 그룹).",
+      "notes": "신탁(하나자산신탁). 사업시행자 지정 2026.02, 설계자 디에이·삼하 2026.04, 정비사업위 구성.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.12",
+        "union_or_trustee_set": "2026.02",
+        "designer_done": "2026.04"
+      },
+      "eta": {
+        "constructor": "2027"
       }
     },
     {
       "complex_id": 3,
       "name": "목동3단지",
       "method": "조합",
-      "race_stage_key": "prep_committee",
+      "race_stage_key": "union_setup_push",
       "race_bonus": 0,
-      "race_stage": "추진위 구성/신탁 예비지정",
-      "race_score": 20,
+      "race_stage": "조합설립 추진",
+      "race_score": 28,
       "feasibility_seed": 72,
       "feasibility_type": "균형형",
       "feasibility_score": 72,
@@ -167,27 +177,32 @@
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
-      "units_before": null,
-      "units_after": null,
+      "units_before": 1588,
+      "units_after": 3317,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "조합 창립총회",
-        "target": "2026"
+        "event": "조합설립인가",
+        "target": "2026.05"
       },
       "constructor": null,
-      "notes": "추진위원회 승인.",
+      "notes": "조합방식. 추진위 승인 2025.12, 설계자 ANU 2026.02. 조합설립인가 2026.05 목표(추정).",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.12",
+        "prep_committee": "2025.12"
+      },
+      "eta": {
+        "union_or_trustee_set": "2026.05",
+        "constructor": "미정"
       }
     },
     {
       "complex_id": 4,
       "name": "목동4단지",
       "method": "조합",
-      "race_stage_key": "jeongbi_zone",
+      "race_stage_key": "union_or_trustee_set",
       "race_bonus": 0,
-      "race_stage": "정비구역 지정",
-      "race_score": 10,
+      "race_stage": "조합설립인가/사업시행자 지정",
+      "race_score": 35,
       "feasibility_seed": 74,
       "feasibility_type": "균형형",
       "feasibility_score": 74,
@@ -201,23 +216,28 @@
       "units_after": null,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "추진위 구성",
-        "target": "미정"
+        "event": "시공사 선정 입찰",
+        "target": "2026.06"
       },
       "constructor": null,
-      "notes": "조합 방식. 정비구역 지정 단계.",
+      "notes": "조합방식. 정비구역 2025.08, 추진위 2025.11, 창립총회 2026.04, 설계자 나우동인 2026.01. 시공사 입찰 2026.06~07 예상.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.08",
+        "prep_committee": "2025.11",
+        "union_or_trustee_set": "2026.04"
+      },
+      "eta": {
+        "constructor": "2026 하반기"
       }
     },
     {
       "complex_id": 5,
       "name": "목동5단지",
       "method": "신탁",
-      "race_stage_key": "designer_ongoing",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "설계자 선정 진행",
-      "race_score": 45,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 95,
       "feasibility_type": "지분형",
       "feasibility_score": 95,
@@ -227,17 +247,22 @@
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
-      "units_before": null,
-      "units_after": null,
+      "units_before": 1848,
+      "units_after": 3930,
       "expected_ratio": null,
       "next_milestone": {
         "event": "시공사 선정",
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "대지지분 최상위('지분 깡패'). 입지 우수, 신탁 방식.",
+      "notes": "신탁(하나자산신탁). 정비구역 2025.09, 사업시행자 지정 2025.12, 설계자 ANU·삼우 2026.02. 대지지분 최상위·사업성 최우수.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.09",
+        "union_or_trustee_set": "2025.12",
+        "designer_done": "2026.02"
+      },
+      "eta": {
+        "constructor": "2026 하반기"
       }
     },
     {
@@ -262,23 +287,28 @@
       "expected_ratio": null,
       "next_milestone": {
         "event": "시공사 선정 총회",
-        "target": "2026-06"
+        "target": "2026.06"
       },
       "constructor": "DL이앤씨(우선협상, '아크로 목동 리젠시')",
-      "notes": "사업 속도 선두. 지하 2층~지상 49층 4개동 2,173가구.",
+      "notes": "조합방식·선두. 정비구역 2024.08(최초), 조합설립 2025.05(14개 중 첫 조합). 통합심의 2026.05 의결, 시공사 총회 2026.06.27.",
       "dates": {
-        "jeongbi_zone": "2025.12",
+        "jeongbi_zone": "2024.08",
+        "prep_committee": "2024",
+        "union_or_trustee_set": "2025.05",
         "constructor": "2026.06"
+      },
+      "eta": {
+        "impl_approval": "2026 하반기"
       }
     },
     {
       "complex_id": 7,
       "name": "목동7단지",
       "method": "조합",
-      "race_stage_key": "union_setup_push",
+      "race_stage_key": "prep_committee",
       "race_bonus": 0,
-      "race_stage": "조합설립 추진",
-      "race_score": 28,
+      "race_stage": "추진위 구성/신탁 예비지정",
+      "race_score": 20,
       "feasibility_seed": 90,
       "feasibility_type": "분양가형",
       "feasibility_score": 90,
@@ -292,23 +322,27 @@
       "units_after": null,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "조합설립인가",
-        "target": "2026 하반기"
+        "event": "추진위 승인",
+        "target": "2026 상반기"
       },
       "constructor": null,
-      "notes": "목동역 초역세권·학원가 인접. 시세·일반분양가 1위, 환급 기대. 현대건설 '디에이치' 관심.",
+      "notes": "조합방식·대장 단지. 정비구역 2025.09. 추진위 구성 단계, 조합설립 2026 하반기 예상. 현대건설 관심.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.09"
+      },
+      "eta": {
+        "union_or_trustee_set": "2026 하반기",
+        "constructor": "2028"
       }
     },
     {
       "complex_id": 8,
       "name": "목동8단지",
       "method": "조합",
-      "race_stage_key": "designer_ongoing",
+      "race_stage_key": "prep_committee",
       "race_bonus": 0,
-      "race_stage": "설계자 선정 진행",
-      "race_score": 45,
+      "race_stage": "추진위 구성/신탁 예비지정",
+      "race_score": 20,
       "feasibility_seed": 75,
       "feasibility_type": "균형형",
       "feasibility_score": 75,
@@ -318,27 +352,31 @@
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
-      "units_before": null,
-      "units_after": null,
+      "units_before": 1352,
+      "units_after": 1881,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "조합설립인가",
-        "target": "미정"
+        "event": "조합설립 총회",
+        "target": "2026.02"
       },
       "constructor": null,
-      "notes": "조합 방식. 설계자 선정 진행. 이용 편리.",
+      "notes": "조합방식. 정비구역 2025.03, 동의율 77.5%. 조합설립 총회 2026.02 예상, 시공사 공고 2026.06~07 예상.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.03"
+      },
+      "eta": {
+        "union_or_trustee_set": "2026.02",
+        "constructor": "2026 하반기"
       }
     },
     {
       "complex_id": 9,
       "name": "목동9단지",
       "method": "신탁",
-      "race_stage_key": "designer_ongoing",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "설계자 선정 진행",
-      "race_score": 45,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 76,
       "feasibility_type": "균형형",
       "feasibility_score": 76,
@@ -356,10 +394,13 @@
         "target": "미정"
       },
       "constructor": null,
-      "notes": "신탁 방식. 설계자 선정 진행(선두그룹).",
+      "notes": "신탁(한국자산신탁). 정비구역 2025.09, 사업시행자 지정 2025.10(동의율 80% 최단기), 설계자 건원건축.",
       "dates": {
-        "jeongbi_zone": "2025.12"
-      }
+        "jeongbi_zone": "2025.09",
+        "union_or_trustee_set": "2025.10",
+        "designer_done": "2026.01"
+      },
+      "eta": {}
     },
     {
       "complex_id": 10,
@@ -382,23 +423,28 @@
       "units_after": null,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "시공사 선정",
-        "target": "2026"
+        "event": "시공사 입찰",
+        "target": "2026.06"
       },
       "constructor": null,
-      "notes": "신탁 방식. 설계자 선정 완료, 시공사 선정 임박. 현대건설 관심.",
+      "notes": "신탁(한국토지신탁). 사업시행자 지정 2025.10, 설계자 나우동인 2025.12. 시공사 입찰공고 2026.06.15(현대 vs 대우 거론).",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025",
+        "union_or_trustee_set": "2025.10",
+        "designer_done": "2025.12"
+      },
+      "eta": {
+        "constructor": "2026.06"
       }
     },
     {
       "complex_id": 11,
       "name": "목동11단지",
       "method": "신탁",
-      "race_stage_key": "trustee_apply",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "사업시행자 지정 신청/동의",
-      "race_score": 32,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 76,
       "feasibility_type": "균형형",
       "feasibility_score": 76,
@@ -412,23 +458,28 @@
       "units_after": null,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "사업시행자 지정",
-        "target": "2026"
+        "event": "시공사 선정",
+        "target": "2026.10"
       },
       "constructor": null,
-      "notes": "신탁 방식. 사업시행자 선정 신청(선두그룹).",
+      "notes": "신탁(한국자산신탁). 정비구역 2025.11, 사업시행자 지정 2026.01, 설계자 ANU 2026.04. 시공사 2026.10 예정.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.11",
+        "union_or_trustee_set": "2026.01",
+        "designer_done": "2026.04"
+      },
+      "eta": {
+        "constructor": "2026.10"
       }
     },
     {
       "complex_id": 12,
       "name": "목동12단지",
       "method": "조합",
-      "race_stage_key": "prep_committee",
+      "race_stage_key": "union_or_trustee_set",
       "race_bonus": 0,
-      "race_stage": "추진위 구성/신탁 예비지정",
-      "race_score": 20,
+      "race_stage": "조합설립인가/사업시행자 지정",
+      "race_score": 35,
       "feasibility_seed": 73,
       "feasibility_type": "균형형",
       "feasibility_score": 73,
@@ -442,14 +493,18 @@
       "units_after": null,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "조합 창립총회",
-        "target": "2026"
+        "event": "시공사 선정",
+        "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "조합 방식. 2026-02 조합설립인가, 창립총회 준비.",
+      "notes": "조합방식. 정비구역 2025.03, 추진위 2024.09, 조합설립인가 2026.02, 설계자 희림 2026.01. 시공사 가을 총회 목표(GS건설 유력).",
       "dates": {
-        "jeongbi_zone": "2025.12",
-        "prep_committee": "2026.02"
+        "jeongbi_zone": "2025.03",
+        "prep_committee": "2024.09",
+        "union_or_trustee_set": "2026.02"
+      },
+      "eta": {
+        "constructor": "2026 하반기"
       }
     },
     {
@@ -473,23 +528,28 @@
       "units_after": null,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "시공사 선정",
-        "target": "2026"
+        "event": "시공사 입찰",
+        "target": "2026.03"
       },
       "constructor": null,
-      "notes": "신탁 방식. 설계자 선정 완료. 직사각형 구획(조망 유리). 3,852가구 규모, 삼성물산·GS건설 관심.",
+      "notes": "신탁(대신자산신탁·목동 신탁 1호). 정비구역 2025.03, 사업시행자 지정 2025.10, 설계자 ANU 2025.12. 시공사 입찰 2026.03 예정(삼성물산 관심). 3,852가구.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.03",
+        "union_or_trustee_set": "2025.10",
+        "designer_done": "2025.12"
+      },
+      "eta": {
+        "constructor": "2026.03"
       }
     },
     {
       "complex_id": 14,
       "name": "목동14단지",
       "method": "신탁",
-      "race_stage_key": "designer_ongoing",
+      "race_stage_key": "union_or_trustee_set",
       "race_bonus": 0,
-      "race_stage": "설계자 선정 진행",
-      "race_score": 45,
+      "race_stage": "조합설립인가/사업시행자 지정",
+      "race_score": 35,
       "feasibility_seed": 82,
       "feasibility_type": "규모형",
       "feasibility_score": 82,
@@ -503,13 +563,18 @@
       "units_after": 5123,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "시공사 선정",
-        "target": "2026"
+        "event": "시공사 입찰",
+        "target": "2026.09"
       },
       "constructor": null,
-      "notes": "규모 최대(3,100→5,123가구). 현대건설 '디에이치' 관심.",
+      "notes": "신탁(KB부동산신탁)·규모 최대(3,100→5,123). 정비구역 2025.03, 사업시행자 지정 2025.10, 통합심의 신청 2026.05. 시공사 입찰 2026.09 예상.",
       "dates": {
-        "jeongbi_zone": "2025.12"
+        "jeongbi_zone": "2025.03",
+        "union_or_trustee_set": "2025.10"
+      },
+      "eta": {
+        "constructor": "2026.09",
+        "impl_approval": "진행 중"
       }
     }
   ]

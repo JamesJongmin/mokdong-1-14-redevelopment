@@ -1,8 +1,434 @@
 {
-  "generated_at": "2026-06-28T12:31:02+09:00",
+  "generated_at": "2026-06-29T09:57:58+09:00",
   "window_days": 30,
   "count": 60,
   "items": [
+    {
+      "title": "DL이앤씨, 1조 2868억 ‘목동6단지 재건축 사업’ 시공사 선정 - 오피니언뉴스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE05WGxxeDk4ZWMtV1NINEpvMnFZMGFpS2dPd1c0Um1qZEtqSWdmUnNSSTJicmtWNXBJRW5LTUFsMjVKVGtNQXF2T3MwM0Y3NXQ0dHZxZjlaOVRlM0ZkX3ZmWGJsT1djTloxRzlyYTUyVlQ?oc=5",
+      "source": "오피니언뉴스",
+      "published": "2026-06-29T09:51:29+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1조2868억 목동6단지 재건축 시공사 선정 [공시pick] - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9oN0VRSVcySHpXUWNUU2FSb2E2Y1dUWHBIMERSYVVvajJVMmUyc19aWUxxQ1lnRHU1OWRDZ1BzcFBhX3QyX19oWjZLNmNNSWVwcVJz?oc=5",
+      "source": "네이트",
+      "published": "2026-06-29T09:49:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 시공사 선정···1196표 중 1032표 86.2% 찬성 - 이뉴스투데이",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9KTEVkbkt5VDFXbTdRd2kzMXRsQzNhb0RZNXJfX2JOcWlKUTBIUVZzaUJPVDB6c0tDUTJWSC1qbkgtNmZpYzBnaGZaRmhvdjlpNWN6Y08zekpiNWdjR1Nyb3g4UDh6YzkyZVlFbzByS0zSAXRBVV95cUxQVE96V3o1Yy1sUkJMbDB6cXRoRTkyUF9oa3EwbDFCTURNVXlPbnlETnNjWmZ0Zk5vVF9QS2hBWDhJUWVlTlZkUjYyU2FLc0M2OS1GZWxGcW1jd3ZFdnFwTm5UVklBV0FIWldhMjY5TWU0Z2lNLQ?oc=5",
+      "source": "이뉴스투데이",
+      "published": "2026-06-29T09:48:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "'아크로 목동리젠시' 내건 DL이앤씨, 목동6단지 시공권 확보 - 월요신문",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9mN1Vnanh3VGdFWS1BY0NMM2kwLW5uRTFHTWNDclRUMjdPVnc3bGpEQ3ktT3ZVX2kwSkFCNmh3Wm9pZl82cS01WjBDbk9YX0xzUi1lUEtRQ21VZG5hRkJ4YnkwLWwwYXVJV0E?oc=5",
+      "source": "월요신문",
+      "published": "2026-06-29T09:47:49+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 시공사 선정…1조2868억 규모 - 페로타임즈",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zZk1Bb01RbGNfd0RhbWc5MWp6YVlNaFhHWXBnYlktMnFtVDRTNkJjM3RPejk1dGhuX3RlSGdHRDZ1VzIyb19QSmREbnlPa055Q1dGeFF2amtkeHZuYXpvV2d4bVJwQ1ZsLWQzaQ?oc=5",
+      "source": "페로타임즈",
+      "published": "2026-06-29T09:43:44+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 '아크로' 짓는다…1조2868억원 재건축 수주 - 파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Dc2R2WlJ6ZHJ0YkJ1NDMyZWpDN1ZKWmc0dHRnOFJnVkFFdjNBZzBia0tscWR1d25XWS1yQ1AwVGRWaFlHYS1pZ2Z5SDBaTFE1aldfcnI5bW5TZw?oc=5",
+      "source": "파이낸셜뉴스",
+      "published": "2026-06-29T09:41:33+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 시공사 선정 - ebn.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1IaXQxNUtJSXkySmFFcC1TLXlrc1NUYVlndjdKM2lORFN1VjFybHMtUmZrbF80SzVoY3hROW5mbEhqdS1keG1ZaE5YYXEtVFBNa19sdFc3bjhjbG8wbWU3eW9SenRWc21S?oc=5",
+      "source": "ebn.co.kr",
+      "published": "2026-06-29T09:41:11+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 시공사로…공사비 1조2868억원 - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1yclFjamxMXzBFZ3N0NmtONi10OWExclRDVkxwTXRaZEpySWFDRVVIN2ppclhpU3oyRk1lSjZHM1FIb2VUMkFTR2xDUkpSV2VjM3pV?oc=5",
+      "source": "네이트",
+      "published": "2026-06-29T09:32:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 시공사 선정…1조2868억원 규모 첫 수주 - 한국금융신문",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBMN213ejZ6ZW9peExJX3hKZTVudk14VDkySGk3UGsyVVcwYkZNcmRaTzNzSEF0aWtTbGxQenRZNGxjSk1lU0E2LVJlSE14MHRmblpjeHVUQm4zeGh3bmhuM0hHUEJCRlVTZDhPVzY1UzBEdDliMHotaElwNC0?oc=5",
+      "source": "한국금융신문",
+      "published": "2026-06-29T09:31:49+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 시공사로…공사비 1조2868억원 - 뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBvcGUzUk0yT1pDYjItdXQwWDJ0NU9HYVFvU2tpX0dBTUp2RXhqZTdsalN5eTdodTJTOWp1NVFVaW9HR3J3NWtGOWZFNXhqcllJWjlfWmZMVnBreUkz?oc=5",
+      "source": "뉴스핌",
+      "published": "2026-06-29T09:29:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동 첫 재건축 품었다…1.3조 '아크로 목동리젠시' 시공 - 서울타임즈뉴스",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9FY19sWHI4MkpvQi1UMjlvYk9zVExRZzdDSU5HZm94MGZHUGNvVzVDSHNxaEpmZ3Job0QxVW14LThBR2N2S1dvYnVZRVVDejFFR0U5Qnl2LUFKaWtBYjAtdllMczNtX1Ryam1R?oc=5",
+      "source": "서울타임즈뉴스",
+      "published": "2026-06-29T09:27:58+09:00",
+      "complexes": []
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 시공권 확보…공사비 1.2 규모 - 글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaGNaQkhyWXdHN2JLYXFELXh1X1RrR2JfNkNSMEdsazBER1Y0ckdLZUNLYkQ1enl3MDdWaDhJVFNpS25YUTFNSzFfX2NocnpTZFJ0QWM3ejFXaU9oQjl6VllsM0lZODJLS3RLVlN6STlNOEdiN1RDNHFlN2Q2RWFqSm5kQURuRU1o?oc=5",
+      "source": "글로벌이코노믹",
+      "published": "2026-06-29T09:27:33+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "삼성물산·DL이앤씨, 개포우성4차·목동6단지 재건축 사업 수주 - 통신일보",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1UQVBvTnluYWF2ejFqVkNnQ0dHNmVWOTNVMWZJOEV0SWpEbVg4U1R1ZEFNbU1NX1gyVzd4cFpYMzdoYi1LZzlPVjhXNEZzT1RpYUxYVDROVl9kOGhUU080bTlvU0pQZw?oc=5",
+      "source": "통신일보",
+      "published": "2026-06-29T09:21:19+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 시공사 선정…\"공사비 1조2868억 규모\" - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5UYUx6V241eW0wd01vN3dZQ2gyd3BVbnRvaktOVnVEREVFcTVBTWtGaWtRV2l5dUR2MVFqY1JpbzIxS2ZVbEVGRTJVSHpicWhCd2Y5c2xCNU1zR1hFcVhzN25jT1JOYXVfZlhucUh5eDVWZ3VFX2s4Xw?oc=5",
+      "source": "네이트",
+      "published": "2026-06-29T09:13:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 시공사 선정… 1.2조 규모 사업 수주 - Korea IT Times",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE90TWV6clA4dHFUZS1HWUVVTXBfYXJKYjctUFJKYURic0xBeXVUTVZKWDZqQVQ2Rlp2d0tGNm1LT2VocjlYSk1JaGhKLU9ISzVuTmJ6TkI0d05RMUFjakU5RGRmcFlSU094VE1kLUJzYw?oc=5",
+      "source": "Korea IT Times",
+      "published": "2026-06-29T09:10:35+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1.2조 규모 ‘목동6단지 재건축 사업’ 품었다...“목동 재건축 최초 단지” - ER 이코노믹리뷰",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5mem9ZNUNPT3JtOWNKRUxKOG8xMXl1RFlwWTFVNmtOUG1vWlZ5UFAyYUNTOHZTOWlJQ0pUWmp1emlhYkotVUsyMU5XV3MtZG1pRFFWZXF1TEZTaVZMa25vdUNmMnp5UmNJV04yaw?oc=5",
+      "source": "ER 이코노믹리뷰",
+      "published": "2026-06-29T09:09:55+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동 첫 ‘아크로’ 깃발⋯6단지 재건축 시공권 확보 - 이투데이",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1SNHNqT0JIdENNS0g2YWgwOTVnOWlQRWE2VmV0dlZuRWNGOUVEODhPZ1MwV1hWMUxGSFFIVHFTbTRRSkxTLTBBSUYwVGgzajRmOXpDMg?oc=5",
+      "source": "이투데이",
+      "published": "2026-06-29T09:07:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1.3조원 '목동6단지' 시공사 선정…올해 첫마수걸이 수주 - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9WMWFaZHZ6TGlfdFFvcEdOT1U3U0hZOVdtTTB6YVFhcGxVUXdUYnlSTG5ManA3LU1vUW9iN1FmN2JVOEozYTFwZ0ZUS0F3dmtsUFl3?oc=5",
+      "source": "네이트",
+      "published": "2026-06-29T08:58:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동 6단지 재건축 품었다…'아크로 목동리젠시' 조성 - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE55Tk1GTG9kLW9YRDVUVGxCSVdEcmdvU092VlItZVd0OWtYVlcxRy1LQ3dIMnZ1blphT2psYkVibjAyV2MzM09VVGhRZF9jNm9iY0NB?oc=5",
+      "source": "네이트",
+      "published": "2026-06-29T08:57:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동 6단지 재건축 품었다…‘아크로 목동리젠시’ 조성 - 이데일리",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZ0dfR2lkR05GNGplM0tqcHQwYmJaTnNrV2FjdWZoSGhKZklKb3VOSnRPZkxMUm5zX2JBelNWWVZlZFVvakU0aFhqVFpKREFEc3QtZ1lyV1ZKOVFhWl9CTjZOTXVTeFdxcGR6Tnl3UGRTU3dCUFlySHFlVnFWVUx3YQ?oc=5",
+      "source": "이데일리",
+      "published": "2026-06-29T08:55:11+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, '목동 재건축 1호' 선정…1.3조원 규모 6단지 재건축 맡는다 - 인포스탁데일리",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE51MnlMNmI3NjlmeTRTT1p6Z1dHLVo3MWxQeVhPdDg0S0NXYkVGU1FpVHBpV2g0cHVrdDdtNWVyeWYyNXRwSzdsMGtVcFFuYm1XSWQ1WVZNTlg2MFBvQUFYNnhid0tiZ25NbHpSTlRqUmYxakhCNEE?oc=5",
+      "source": "인포스탁데일리",
+      "published": "2026-06-29T08:54:19+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "목동6단지 재건축 시공사로 DL이앤씨 확정 - LG헬로비전",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB6ZWtrYndCMVhHemdKUWsxR3J1QV81MTAzZEtMYU5QNjlfTktXZU8ybHlBWHRoSkpYRU04eUluWm5UQVN5YzRuOTl1RHJTc004bmQ1VmtSeFlnRm1falI4dlJMeWxKdExHNXN1OTRjbjBBblJBVWfSAXZBVV95cUxQemVra2J3QjFYR3pnSlFrMUdydUFfNTEwM2RLTGFOUDY5X05LV2VPMmx5QVh0aEpKWEVNOHlJblpuVEFTeWM0bjk5dURyU3NNOG5kNVZrUnhZZ0ZtX2pSOHZSTHlsSnRMRzVzdTk0Y24wQW5SQVVn?oc=5",
+      "source": "LG헬로비전",
+      "published": "2026-06-29T08:53:19+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1조2868억원 규모 목동6단지 재건축 시공사로…올해 마수걸이 수주 - 아시아투데이",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5aVjdONFI4RkFDMGFVZnE5U2xSRDV6QXhjNkNlWWI3QzlCdHRtcGp3bENfa0NvVHI3WjF2QkZ4TGt4eWpvRGltdHZpVzBnVTQ4UkpmN1hsUFRjS1lQTUc5aVpVdXFQTmpiT2NHM0hR?oc=5",
+      "source": "아시아투데이",
+      "published": "2026-06-29T08:52:24+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "﻿DL이앤씨, 목동6단지 마수걸이 수주…목동 재건축 첫 깃발 - 서울경제TV",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94WWhlT2hIdkE1NEVxaEItOGZYMEQ5R2pYdThYQjNLa3VrTkFDRUdPaGIwTjZGVGZ3RkdvWElGTk5GUGl1ZnVDem1Hc29hSGZCbVZHWDNFWHhjcUhIV3AwOC1hdUw?oc=5",
+      "source": "서울경제TV",
+      "published": "2026-06-29T08:52:02+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 수주...목동에 ‘아크로' 브랜드 선보 - 스마트투데이",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5yb1F2UzBYZnAyVi1wRDJfTmRNbWVkMmpEdHpkSm5VbzU3WTdlRURJdzlWOS1xaEo4V3p0eHZDOXFwNzA5ZlJ4VThmaHNNcXd1UVpmVFFQX1NLbjlWTU1V?oc=5",
+      "source": "스마트투데이",
+      "published": "2026-06-29T08:50:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 시공사로 선정…'아크로 목동리젠시'로 재건축 - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8tVGI2ZEpFeEhMSzhLZEhGYjhKSFJ4LUZZZFhBd3JzWm9VbjlQSHJBMXl0eUFGVFhjS1hfY0Jma2FoeVV4eW8zLU1NYXlDRXFKLU5iNE1MM1U1aWQ2bzZvMGRMLUo3bXY2cllvY0xIQW51VXJQU21uRQ?oc=5",
+      "source": "네이트",
+      "published": "2026-06-29T08:48:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "목동6단지 재건축 시공사로 DL이앤씨 확정 - LG헬로비전",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFAxZGJsQnpibzNEc2dHd1lIUXptdDVoaUVnWGpndGpBYmpXbjZhSUtNNFNLSE14R0pXcnNGNHZzWGdubFhpRTJfYjJDTUFVUEcta05PNVZ2SFdqZ2ctRU9VYmN3UVY5R1hlaXBjZHpZdEFxVlnSAXZBVV95cUxQemVra2J3QjFYR3pnSlFrMUdydUFfNTEwM2RLTGFOUDY5X05LV2VPMmx5QVh0aEpKWEVNOHlJblpuVEFTeWM0bjk5dURyU3NNOG5kNVZrUnhZZ0ZtX2pSOHZSTHlsSnRMRzVzdTk0Y24wQW5SQVVn?oc=5",
+      "source": "LG헬로비전",
+      "published": "2026-06-29T08:46:45+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, ‘목동6단지 재건축 사업’ 시공사 선정 - 월드투데이",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1KdThYZ0ZjOU5tRW9wVmJtLUJ5ZjVXaV9IV29DeGlvOHVVRkVlQVdyREFoOXVRSkJnSDh2MGNaWU81WFBqbVBwaGpTMEx1MEFfd2JDc01IaERhRkJ2RFd6d0J1Mjh5Q2RFOVRvalZ3?oc=5",
+      "source": "월드투데이",
+      "published": "2026-06-29T08:45:02+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, ‘목동6단지 재건축 사업’ 시공사 선정 - 국토일보",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NbnIxLW1FOWl2NWVjM3NWWi1XQTFoVV8xdnUwdnJlZ2NkelZNa3ZTRkl4Ynk1b2s0TGV1OWpGSkNBdk5BV0dZN28zUjZXc0U2QmJNbUEwSzR3cmlJN1RMQnc2SQ?oc=5",
+      "source": "국토일보",
+      "published": "2026-06-29T08:45:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 1조2868억원 재건축 시공사 선정 - 인더뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0yV3dHYlQwdTVvcU1sd0JOLVN1RUNvR1hEeEJRYjBkcWtUZFlZYUZac3RkNjczVkM3T2NDOWswc3NWcXNVbFVKMXI4ZHdLWUFUM2lueDByWmQ0T2plQ1RGUXV2bGk?oc=5",
+      "source": "인더뉴스",
+      "published": "2026-06-29T08:39:26+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "아크로, 목동에 첫 깃발 꽂다…DL이앤씨, 6단지 시공권 86% 압도적 득표로 확보 - 파이낸셜투데이",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE55eWgzenQ1azZPNXdvZlotaXR2QS1WSWdwWmpUekY4a3B2aXYwT2VWa05xbTE4dWQyTG9UR3ozSUhYMXVwSHQ4ZVhoLWM2Q19PUHhKYmlhR3YwUkZOdml2M3BMT0E4dkdHUXfSAW5BVV95cUxORm5FV0pLVXZ5YkIxUnoxOGZ3OWs5Qy0xLWpvNDhUUndVanZZejcwS3BKNGVMOXJJU1BiXzN1Z01DcFpsQ0xRUWplV2gzRkZvVHpoUUFHUVNmc1JfalNDQkIwN1hJSlpKN2pWUXFKUQ?oc=5",
+      "source": "파이낸셜투데이",
+      "published": "2026-06-29T08:39:20+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1.2조 규모 ‘목동6단지’ 수주…목동 첫 하이엔드 단지 조성 - 스포츠동아",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9zTjhUaVVHZERSZGpTMTRSazhjWmFidm9tdjZEQkxXbDJFTXhhbFN3cV9TTGVxeWkzYkp0cElwSnZyU0o1VjVLZ3hRMGp1T2U0NllCd0xiMi0yWnBoODNUcEo0UnVIa21RYWlzS01zbWlTU1U?oc=5",
+      "source": "스포츠동아",
+      "published": "2026-06-29T08:39:12+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "목동 최초의 아크로, 목동의 새로운 하이엔드 기준 세운다 - 한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ra2J2RllFeV91QkZ3OHZTclU4WGFKLV9QYnFqUWdYa1FETFNUMkpXS0JvRkthZVp2WEJxaWcwUDBfMUNzS2VuUndMczRSaUtSQTAtNERjNTYxQdIBVEFVX3lxTE1MLW10U0RHVXdBZGFZamF5LUJYSllwbHYwSUFnMTczbFZqTEM4anhuQ3RwQzhHT2EwWWs0Sl9DTzFNZkc1TE9tbmM5TUE4c3BmR2k1eA?oc=5",
+      "source": "한국경제",
+      "published": "2026-06-29T08:37:37+09:00",
+      "complexes": []
+    },
+    {
+      "title": "DL이앤씨, 1.3조원 ‘목동6단지’ 재건축 시공사 선정 - 헤럴드경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE44NmFYOGMtQ0hIOHU1aVhHdFdOQndIYW5PYnktQzR5NHFGNzdRbFg4WEpjR2pHWjB5NXFEM3NOT3B1REtTRXJHSjZDeTl0aWF4ZWFsQ3Jn?oc=5",
+      "source": "헤럴드경제",
+      "published": "2026-06-29T08:23:26+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지아파트 재건축 시공사 선정 - 디지털투데이",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA1dmVZZEwwX3RwMjB5NklmNVFFalZJM3ZwR3ROSkNZVU9WbS1tMm9vZGhsVXFvbEI3U3loRGdXVW1Ua0d4TGN1SlEwLWZxclhpSG9kN3c0N1Fpc25vRDNhemhmOHA1NzNrYldXUTQyV3psZXc?oc=5",
+      "source": "디지털투데이",
+      "published": "2026-06-29T08:20:01+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, '1조 2868억' 목동6단지 재건축 품었다…매출 대비 17% 규모 - 데이터투자",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ydXVzTHkwNEROQXV0ZXlMaTZUOGo1S2RIMkUtTHAyaVpPdUFqSkIxZU0yMWtXNERyd3JJXzhyZ2I0VkZjeENLOFR5ZEU0MHRaZG5DcC1ENmY5UWx2c1dVZUEtclpMM01ZSTN0bnBJQ3hjMGs?oc=5",
+      "source": "데이터투자",
+      "published": "2026-06-29T07:55:52+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "수주 목표 64% 채운 현대건설, 하반기 목동 공략으로 2년 연속 도시정비 신기록 노린다 - 소비자가 만드는 신문",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5QZ2dPVldyalpUb09yWHJ4OHdXelBoak0wVklwR0tHZ1RsM1VOb2I3Nk4xMFBJekY4bkZOdDFBNGF1VzV3dm55MktZTEtjZ0t6UGdDWm9MVC1BM0VJeXFuY3NVWWl1bndjS2dLdWdDWWR5WUE?oc=5",
+      "source": "소비자가 만드는 신문",
+      "published": "2026-06-29T06:10:00+09:00",
+      "complexes": []
+    },
+    {
+      "title": "30조 목동 재건축 마수걸이… DL이앤씨, 1.3조 6단지 수주 - 대한경제",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1qV0RlREJXSU5RdzIzYmlSdmsxclpscjdTTGhoOTZiaDZWQ2tYdkpLclR3b251ckFMcEpFazJYVHhfazJvS3FVekhoemJqWUFqLWNwT2Y3NS1fVGo3VjROZWR4VE5NVjNlSmNPWVE4dlJEVkhz?oc=5",
+      "source": "대한경제",
+      "published": "2026-06-29T05:00:11+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1.3조 규모 ‘목동 6단지’ 재건축 시공사 선정 - 동아일보",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1sWkp1X1ZtTjFVQmt1N21zaEpqTm9VTWlNX3hVUkY5RG9KUjk2U29IZkNFcnVKYnFpUEdaa29CT1k3SVVnck5CeWZGLWNGRkt4VDJkSk11V0VJUWdlMFk1Q0pKNE80Z9IBZkFVX3lxTE1sWkp1X1ZtTjFVQmt1N21zaEpqTm9VTWlNX3hVUkY5RG9KUjk2U29IZkNFcnVKYnFpUEdaa29CT1k3SVVnck5CeWZGLWNGRkt4VDJkSk11V0VJUWdlMFk1Q0pKNE80Zw?oc=5",
+      "source": "동아일보",
+      "published": "2026-06-29T00:30:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1.3조 규모 ‘목동 6단지’ 재건축 시공사 선정 - 동아일보",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE05RGFZX3FVTVhYYVg0eWFYQXctSEJUNW1CdzZweUw5NExMeTFFenlxbmdTaVBneDBOUkFvdDVYb1Z5LTA2WXR5YkZzN3dabDI4VWRubW1QOFlsZWtmdlFLZzFsbTIzZmFfN3ZSV2NzaGxlUU9iYVHSAWZBVV95cUxNbFpKdV9WbU4xVUJrdTdtc2hKak5vVU1pTV94VVJGOURvSlI5NlNvSGZDRXJ1SmJxaVBHWmtvQk9ZN0lVZ3JOQnlmRi1jRkZLeFQyZEpNdVdFSVFnZTBZNUNKSjRPNGc?oc=5",
+      "source": "동아일보",
+      "published": "2026-06-29T00:30:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 재건축 품었다…1.3조 정비사업 첫 수주 - fetv.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBVMkcyTHFaTFhBRkE1WkZLclVoR1BHQkstcEtwR0RGd1h2SjFzNU90ZmhTWTVzWkJhTFpIaWpxajhkQkVWWVdVb3lXTGpBMVd3a0pvMmtLc3dGcFYxS1pGNUdMQzVPaWFs?oc=5",
+      "source": "fetv.co.kr",
+      "published": "2026-06-28T16:14:54+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 목동6단지 품었다…올해 도시정비 마수걸이 수주 - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5NQ01LM2E0ZTBpUHoyeU5vaURuNnh2MzRSQ2QxeWJ5S2NHbTkzNE51RWpCWFZyS0did0FqWGg1UXFiaDRqU3BvbV9tYi1TT20zUE9V?oc=5",
+      "source": "네이트",
+      "published": "2026-06-28T15:58:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, '1.3조' 목동6단지 재건축 시공사 선정…올해 첫 정비사업 수주 - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9iSlZVS0c2U3M4b19WaHpwbGxIZVo1THhtRktQVFllNmp0N1owV3Riei10V05lbnI0OE9mdzVBSjBTd19kYjZNeW1FZHFsTV9SS1pv?oc=5",
+      "source": "네이트",
+      "published": "2026-06-28T14:24:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, '1.3조' 목동6단지 재건축 시공사 선정…올해 첫 정비사업 수주 - 네이트",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkV2h2VWN4SlVHY2M3RTNCeWtCMEFzUy1BYVpMUkwtLXZCaEJobjVHNTF1dFNzbVpCUVZJUmRhNHdRem9fbjRQcE5Td0x1RXNkYjhHWWdyTlVBaDBtczUzNg?oc=5",
+      "source": "네이트",
+      "published": "2026-06-28T14:24:00+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, '1.3조' 목동6단지 재건축 시공사 선정…올해 첫 정비사업 수주 - 머니투데이 - 머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE44VmEtMXMyOUZVaVVyWnZiMzJXYjhUTHNtMHlvNDZlcGhULWpsT0Jlb2doUmxQcHBGa0dwZHJFcVdKQjhnTk5aWGxSMjhaN3ByZGRxWmxxeDdwU09aeWp3NnVaYjYxSnhET183VHhlSdIBb0FVX3lxTE44VmEtMXMyOUZVaVVyWnZiMzJXYjhUTHNtMHlvNDZlcGhULWpsT0Jlb2doUmxQcHBGa0dwZHJFcVdKQjhnTk5aWGxSMjhaN3ByZGRxWmxxeDdwU09aeWp3NnVaYjYxSnhET183VHhlSQ?oc=5",
+      "source": "머니투데이",
+      "published": "2026-06-28T14:23:15+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1조2868억원 규모 '목동6단지' 재건축 시공사 선정 - 스페셜경제",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5a3p0R0Y3WDJlZEtUaEZaM2dXMndqMElwTmlDcUduUkJwVENpWHlqUFgtQWYtd1JMQjBENENWYzdjSy11VjFURVV0X01HSHdFbDBHLUpyYmszZGMtekxkTW42X3pkekJITFdoUw?oc=5",
+      "source": "스페셜경제",
+      "published": "2026-06-28T13:26:41+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1조3000억 규모 서울 ‘목동6단지’ 재건축 품었다…“목동 첫 ‘아크로’ 조성” - 아시아투데이",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBraXlyY3NYbUpHTTVxV044QVlJRExLTk43UjRSdmw3akdRQ0dqSHR4eUFiUkdvUnM1SVptQ3k4OWlwdUZrb05QOXVsQzZXckIwbWhTWHI3eExFQWx5SXl0c2U3WGl1QTZBVW5adHNR?oc=5",
+      "source": "아시아투데이",
+      "published": "2026-06-28T13:19:14+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, '목동6단지' 재건축 시공사 선정… '아크로 목동리젠시' 단지명 - 이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1haklhS2Y0UVZUcW1qVTZoeFJmRlluSndad29Rd3dOTVh2amEyaWtYMnVrZUNQV3RpWkVYZXZHQ0JuTE5fVVlTNV9jcVptU2JvcElIRXJTV294ZWhRUmc5MmNHSS1nUFVfZEFwajRwdw?oc=5",
+      "source": "이코노뉴스",
+      "published": "2026-06-28T12:54:50+09:00",
+      "complexes": [
+        6
+      ]
+    },
     {
       "title": "DL이앤씨, 목동6 택한 건 '최고시세'…S급 리버뷰 등 사업조건은? - 하우징워치",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1VT2s0WkN6SGhMNHJVQmNyNmU0TEUzQ3hrbHdXZVNsMnJhRExOZDFhbjFlR21abzUzQS1sMjJYUy01R09KYks4NXhDRmxBN1FUVWdiTTd0VVJueE11bWxLNG0yNDR2M1dr?oc=5",
@@ -12,7 +438,7 @@
     },
     {
       "title": "목동 첫 수주 DL이앤씨…1.3조원 규모 목동6단지 '아크로' 단다 - 땅집고",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ZWlJOTGlzeGpmUWxCT1lkdmVyd0NnVXZFa1FudDk5WFQxYlJNTVVuMlY1WThXNThqOVNkOTRLNnZxMUdodXRTSkZoNklfMTBGZmQ2T2N2WGlhaVMzRzZucGx2TmpFTmplTHRTenFTczVLNzTSAXNBVV95cUxNWVpSTkxpc3hqZlFsQk9ZZHZlcndDZ1V2RWtRbnQ5OVhUMWJSTU1VbjJWNVk4VzU4ajlTZDk0SzZ2cTFHaHV0U0pGaDZJXzEwRmZkNk9jdlhpYWlTM0c2bnBsdk5qRU5qZUx0U3pxU3M1Szc0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBDd05ZZUlPcWFEM0t6b3JDZDRIU1FuOElWUGNkVDBFYnM1bFlMakhMOXBwRVZXLUpUYXpGOVYwakZtX2FuY0k0MHFjRVhhLUlpRFhKU3BBRDFMQklIWHFsS0VlTFFsZWpNTVRlRVFidjlZYzU2eF94SkI5M3pobVHSAXNBVV95cUxNWVpSTkxpc3hqZlFsQk9ZZHZlcndDZ1V2RWtRbnQ5OVhUMWJSTU1VbjJWNVk4VzU4ajlTZDk0SzZ2cTFHaHV0U0pGaDZJXzEwRmZkNk9jdlhpYWlTM0c2bnBsdk5qRU5qZUx0U3pxU3M1Szc0?oc=5",
       "source": "땅집고",
       "published": "2026-06-28T10:29:39+09:00",
       "complexes": [
@@ -39,7 +465,7 @@
     },
     {
       "title": "DL이앤씨, 1.3조원 규모 '목동6단지' 재건축 시공사 선정 - 뉴시스",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB3TnloTEQ3ZGxpV3VvVHV6U1M3bU5BT0ZDNDhOdGloSW9SMTR1X0hPWUdMOFZNXzFUVi1vWExEWFdBWHk0LUpTTTVPY0Viczl0NVBjMkFtZjdhd0Z6UGYxUUx4bVY5VnB5anBLbjNXZmVmbVd2NHY4eNIBeEFVX3lxTFB3TnloTEQ3ZGxpV3VvVHV6U1M3bU5BT0ZDNDhOdGloSW9SMTR1X0hPWUdMOFZNXzFUVi1vWExEWFdBWHk0LUpTTTVPY0Viczl0NVBjMkFtZjdhd0Z6UGYxUUx4bVY5VnB5anBLbjNXZmVmbVd2NHY4eA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBUSVd5ek03YUtfVWNZNURkM2tNTlg3bGlpSmUtQWZmbTBLYVh0anlhbkZRV2p0MHJuMUpVTnpOdUc5Vmxvc0FqOUNfTUNEYU1vTTZaR3dEMGp1TjF1aFBiV9IBeEFVX3lxTFB3TnloTEQ3ZGxpV3VvVHV6U1M3bU5BT0ZDNDhOdGloSW9SMTR1X0hPWUdMOFZNXzFUVi1vWExEWFdBWHk0LUpTTTVPY0Viczl0NVBjMkFtZjdhd0Z6UGYxUUx4bVY5VnB5anBLbjNXZmVmbVd2NHY4eA?oc=5",
       "source": "뉴시스",
       "published": "2026-06-28T09:05:04+09:00",
       "complexes": [
@@ -58,6 +484,15 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAzeEJ6YjMtaFUyMnpMM1YyY3BVZWVxa3RjaXRLZWhYMWExWmRzR2R1ZGlhVFBNMXdkYWkwUk5XMmFBa0pYTUg4R1JWc29ZUjFPWlVHMjRpSk9KVi1BczdTRDFqUFcySElXYjY5MngwREs?oc=5",
       "source": "하우징타임즈",
       "published": "2026-06-28T04:01:16+09:00",
+      "complexes": [
+        6
+      ]
+    },
+    {
+      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 시공사 선정 - MSN",
+      "link": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxQbUVRM1cxWDU4bG9YS3R4ZmNwYXFMQXNqbDZSaV9sSzJiSGdUbjZvZ0YtdG9iaXVkeFF0eEE1YVJyWnRoNU1tWjJDeVFXcnRYVjBzRTZyeF9rZXp1RHVNdGNoTmRuSkZBLVF5dmJQR2hlbjNCaU1BWmtSdW9fNUxwWWhDaXhlMW5yams4ZGozUy04ZEg5eERhSE5LWjNFUFNaM0NPajJGazd3dVVlT1RIejBiMDhlUW9iUG9HN1k4U1B6R1RPaHJ5Z2d6LURrdGtPRjY2dFdqNmRfR3FoeWFlTVpjUE1GaUZRVnB0WVh4V0ZpWV92TDh5WWtvTmQyb0ZPSlpxNzRCRTNYdXB2WVFsaUxYZ3VmWGFIUHIyQzVVdVluYndZcmthSnNqbjJuSS1GemZWenFBTmZjTFk0MmJldElsbFp2UHVhSkVWTll4a3FQZw?oc=5",
+      "source": "MSN",
+      "published": "2026-06-28T01:32:22+09:00",
       "complexes": [
         6
       ]
@@ -96,427 +531,6 @@
       "published": "2026-06-27T22:12:57+09:00",
       "complexes": [
         6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.2조원 규모 목동6단지 재건축 사업 수주 - 뉴스토마토",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Sc3FYc1V4ZEZpZHJLdE5TU2plbmU3dnF6QnBidVZyU3BiOEo3dFpaMmZQdzBnczlQQkdFUWMxNVRHTWF0aGlIUGVLVVFvc2pnSkpwZmxEeHJEUjQ3dHMzNQ?oc=5",
-      "source": "뉴스토마토",
-      "published": "2026-06-27T21:41:42+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동6단지 재건축 수주…신시가지 첫 시공사 선정 - 포쓰저널",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1naUl4RlRYQXRlOWVVMzJYY0pJT1pBQ2lkSkFPRElkMXRDSzFQQ0ZTaG5NQzVKX19sdXZvNFNSRlRHS2d1ZVhreTFqazhJb1lOek1jMmd0UUZYLTg0b1BCdFN5c1c?oc=5",
-      "source": "포쓰저널",
-      "published": "2026-06-27T20:06:21+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 정비사업 시공권 수주 - 서울파이낸스",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FZUp4VW5OeXRZQTJUODNqVG1DTVdobFVPQ0ZXOWJucUJMM3IydzREeE10RzB4eVk2Z2VpMXJicVFhWUxXMzhuR0JyaG1PSjlNZGxqQTVieE03VVB4WUlfNEJMUTdBU1F6RVE?oc=5",
-      "source": "서울파이낸스",
-      "published": "2026-06-27T19:54:42+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 수주 - 네이트",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tdVdpMUs2eE1vZ3RZZ0o2VENfYTRZY081Z3R2OWstbUEwTnBLa1JIN3lOVm0yWGNVQTV1TXA1NFFFWklkMEdfNVhOdHdjVlRaakxF?oc=5",
-      "source": "네이트",
-      "published": "2026-06-27T19:27:00+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 수주 - 네이트",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBdmZiY3ZkYVlUaWdmNEg3VlVXQjVXUzkzX0ZaeWFHczJLdlJENkYxZzRSWmxBVXFJaTFzZkwzaXk1WGJmZ0ZQTDRXRU0xdGJ3cWt5V08tRnMzZUFsREh0UA?oc=5",
-      "source": "네이트",
-      "published": "2026-06-27T19:27:00+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "\"목동 첫 재건축 시공사 확정\"…DL이앤씨, 1조2868억원 목동6단지 품었다 - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1Sdl9FYU42WlU1eEY3d1k4RFdmMFFPLVptc1U4YXZLb3o3Zm1HMDhpMzdPZTYwazQ1aTJkdjdqRndueWZXUF9CYlpsU0h1T1lzLWs4Zg?oc=5",
-      "source": "v.daum.net",
-      "published": "2026-06-27T19:26:56+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "목동 첫 재건축 시공사 확정…DL이앤씨, 1조2868억원 목동6단지 품었다 - 아주경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WeWh3Unk1Y3QzbjdtNnRUZi1obXR0cS1obzhJMXN4czhVV0dSR3Z0XzU2b1dENXlwSVhpaHhtMUpyZXItQkdWaXVTa3FadURmZ01hVUNicHE5d9IBWEFVX3lxTE1KT2tMd2ZCS2FycFBPQlBMLTQxcTZSUEhFZDUtSXg3UERkU2NxSWpUbHZTUVpCb2NzRnhjczczYk1OUVlQUnJ6eU1yV3dhQXNoZzZNNE1KQ28?oc=5",
-      "source": "아주경제",
-      "published": "2026-06-27T19:26:51+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동 첫 ‘아크로’ 짓는다…6단지 수주 - 한스경제",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB4d2JEbVVkNkZfSmFaVlRKUEN6ZnhuR3RxS2lSc3pfSjBLMnRsWFkyRUR4RUIxUmNtb3VEZDQ3R0xTdThIbTEtc2cta0dTdDRWQU9oY3VMSEowa1NWTGtOeXlmamFCbW00RXNiUjNNMNIBb0FVX3lxTFB4d2JEbVVkNkZfSmFaVlRKUEN6ZnhuR3RxS2lSc3pfSjBLMnRsWFkyRUR4RUIxUmNtb3VEZDQ3R0xTdThIbTEtc2cta0dTdDRWQU9oY3VMSEowa1NWTGtOeXlmamFCbW00RXNiUjNNMA?oc=5",
-      "source": "한스경제",
-      "published": "2026-06-27T19:24:35+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 수주…‘목동 최초 아크로’ - 글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONkxEd2JHVmlLOE5vb3p2aUZ0M3RsZDhzSi1TTUpBSFJsZUNDVkhMS0VsVFBaVXk5OV9FcmJiRDNLVkhQSXQzSGhJblUzOUNNQkVwbEJiNldPSW9mQkFOdUI2ei0tcDFaRWRyWS1Na3JCTEpIeFctZ1BVY3ppejlOZGY1XzBnUDFS?oc=5",
-      "source": "글로벌이코노믹",
-      "published": "2026-06-27T19:24:31+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동 첫 ‘아크로’ 짓는다…6단지 수주 - 한스경제",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1OU0Y1Mkx2ZlFLV0lMLUFOTmdZenhROUFUb3E2OTdvSFlNU09aTVBJN1h1QkhraTB0ZlYtSnhQQW1hOHRLLTNfQ2MxUlVWelRaS3p2eWY1eVNOZUhhc3A4MDBjS3ZQdE1BNE5Ld9IBb0FVX3lxTFB4d2JEbVVkNkZfSmFaVlRKUEN6ZnhuR3RxS2lSc3pfSjBLMnRsWFkyRUR4RUIxUmNtb3VEZDQ3R0xTdThIbTEtc2cta0dTdDRWQU9oY3VMSEowa1NWTGtOeXlmamFCbW00RXNiUjNNMA?oc=5",
-      "source": "한스경제",
-      "published": "2026-06-27T19:19:20+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동 첫 ‘아크로’ 짓는다…6단지 수주 - 한스경제",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBmLUx0ajlFYml3ckg0TThobjhrUHdaVklKdVRtZHV1MkJYNTNtd0h4amVvVzlLLVF6d2NZNXY0dEUzT3NrS2E3MlVST3BvWkp0UVp6ZWhZMlRsWlVOUVRiWWxZaFEzM09uUWJR0gFvQVVfeXFMUHh3YkRtVWQ2Rl9KYVpWVEpQQ3pmeG5HdHFLaVJzel9KMEsydGxYWTJFRHhFQjFSY21vdURkNDdHTFN1OEhtMS1zZy1rR1N0NFZBT2hjdUxISjBrU1ZMa055eWZqYUJtbTRFc2JSM00w?oc=5",
-      "source": "한스경제",
-      "published": "2026-06-27T19:19:20+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "목동6단지, 동의율 86% 'DL이앤씨' 시공사 확정…총회서 11개 안건 의결 - 디벨로퍼뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4wbkZxc1Z1WjF2TGtwRzRaNkJxQXFJdHJLNHluaDdac2dvMG1lS2ZxeTBGOFhWU2wwOWh3Tnk0MHVQUlhpYXZmVUFJX005NzdzcjVHN3o0cl9ZbGtXNTUwMzgzM19EczFR?oc=5",
-      "source": "디벨로퍼뉴스",
-      "published": "2026-06-27T19:17:47+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 시공사 선정… 올해 첫 마수걸이 - 천지일보",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE00T1VfWlFKeHl3cFlBaXN3X1BaSlVzV3hfRFBPeFlOOVozYTVveDNaSVdWUkszSEZGRGtYVnBqME1XcUFYSWJOTGZ3M3RmWVlHSE5IbE1INE11RnY0QmVEOEU2aVF2S2Rxb0E?oc=5",
-      "source": "천지일보",
-      "published": "2026-06-27T19:13:59+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동 6단지 재건축 시공권 확보…‘목동 1호 아크로’ 랜드마크 짓는다 - 헤럴드경제",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE93QkVwbUFYZl92UFB4Y29YX0YyT3FWc1JFT25aMlprZGVSUW11aDdjckQ0MnctVzNsNjBBcXFFU29hajZaRGdMLW1Yc29NQjJ0bWpPNXJR?oc=5",
-      "source": "헤럴드경제",
-      "published": "2026-06-27T19:06:15+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동6단지 재건축 품었다...올해 도시정비 첫 수주 - ebn.co.kr",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9EcUl6QWlqd3doYzg0REQ2NlNWNG94djlrc2tPT2V4UXdyZmU3T09id0htOUNIemZOa2VXMGhWMFB3a0ZENnZtTnljcm5tUDBzN2thalU2T2FGSTA4WFBCempoWS1NT3Q5?oc=5",
-      "source": "ebn.co.kr",
-      "published": "2026-06-27T18:52:06+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.2조 규모 ‘목동 6단지’ 재건축 수주 - 포인트데일리",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1zR0xLUDhsQ2J3Y2VNOENaeXU1Q1VDRGE2elMwQ2JoTlV1Uy1WN2N0M0dibnNOLVJ6Tmh4NFpmOGhXaHpOMDFLOUhpbVUyWkwyenpfbUdjcW5TeVFlWFd5ZHE3MmtWXzE4M0E1bU1UVEbSAXRBVV95cUxPQlVHd2xqRS0zd25QcWt1NXdWUVNvRjlkNzJPRHZtOElOQXJsTHcyYk1WNk5wYmJibzgwVjBSeTNlMlpaaTlkVXJIZDI1SG5ZU0VWZGhueVFHRnVEdlgzVFQ4OUt2X0xpYlJOaElmLVRHMmJEaw?oc=5",
-      "source": "포인트데일리",
-      "published": "2026-06-27T18:41:15+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 시공사 선정 - 네이트",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1tYXNzQ0x4eUdCZmt3ZURJWFhMOEI0Y0pBTDl4bjZvbFVzNFp6aWpodG42WEJUSk1SNEg3UlJycVhrSEdXdjBYd3UwX0J3WW51dXpj?oc=5",
-      "source": "네이트",
-      "published": "2026-06-27T18:36:00+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동 6단지 재건축 시공사 선정…1.3조원 규모 수주 - 산경투데이",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5VZDFxTFRLLW5iS1BuemVmeW9BaU1feXRwbDB5SVpiUVNSTnFHUHZTNjF1LVZSZ0FlYTg5Qk9qdjg2U1VDbjVqU0FyUVpvektRQ05RMF9vQkNaNXVOTy1pVGkyd1BRb3lvaGhlSE5ncTjSAXRBVV95cUxPNVh1R3llNDJ6Y1N0SEVKeHlxTHFNMExpTUVPNThIV0E5UzN2SmZWZU5obEVxa0EwUXY4U2s1ajhuZUNMSWxjYWladjJmajZfQkk1ZUk1MEtjUEFNTmZUc2J2ajZNaWhPM1RXRFQtZlhoMWUwUg?oc=5",
-      "source": "산경투데이",
-      "published": "2026-06-27T18:34:36+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "“목동 랜드마크로 완성할 것”…DL이앤씨, 1.3조원 규모 목동6단지 재건축 수주 - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBxRFRKdnRJSmFleVFIamQ0dzI4RkhONVRFT3VvY2ZwRFhpd3d3cS13amJMMWw0MW5BdkswSWJNWjE3LUhvdDZtRmc2WlhCbFU?oc=5",
-      "source": "v.daum.net",
-      "published": "2026-06-27T18:30:00+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, '1.2조' 목동6단지 재건축 시공사로 선정…수주 반등 도모 - 연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1zcjEyOUxCaDJMdGlsNUlmZmVwbWNhalhlNG9Gell5NUFkanZTN2YxcEstTmcwMUJaNmk5cS1YRnNheGZJdmlzclVrbnEzX1pkbnF1VXhQREViVlR1TVhHclIwandtaThod0NaOVNUUkw?oc=5",
-      "source": "연합인포맥스",
-      "published": "2026-06-27T18:29:57+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "\"목동 랜드마크로 완성할 것\"…DL이앤씨, 1.3조원 규모 목동6단지 재건축 수주 - 네이트",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5RN0tETks5d2lER1kwN2FCb2hPc2RwTEtYMkpQQjN1S1hta2F1c1FnTEg5bVZPWVlxQkpVY0RlYWp4eTlaOWlzSVBTNnMyZTl1NklJ?oc=5",
-      "source": "네이트",
-      "published": "2026-06-27T18:29:00+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 시공사 선정 - 네이트",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9PdGhiaFVUZWFLUldDVFVJREhtTTkxVWt0MUhHN0pFSnJHMWlPQ1c5cW1rZXdMLTlpUlB2RkFyVTh0U1Bnc1pRUXV0My1fdms5UTFOMjVrUXhPWHVRWU1IN1k1dnBLRVpIOHAxRFlQRHFjUzJCSHhaUw?oc=5",
-      "source": "네이트",
-      "published": "2026-06-27T18:14:00+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 1.3조원 규모 목동6단지 재건축 시공사 선정 - 연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9XOGdZSzEyazRFZGVWalVWSFk5bEJsMGliUkREU2pmTlpoT0NVRjJ6b2VJLWFpbGR0NFA4Q0M1dzZ0Z3B0VU1XdkRCYlBVeTVKb3hnMmFvUVh0WWvSAWBBVV95cUxQYnhDUDRUSFRMUS1JVml1ZVdVY1ZDTkZUZ0FLdklBNXFzUkoxTjA1UmgxMmZsOUlTWVVRQTl4TFpSRXIxS2RyUWI4TUgzRlVWbmxfUldEMEVwTmk0d3BySXU?oc=5",
-      "source": "연합뉴스",
-      "published": "2026-06-27T18:13:57+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동6단지 재건축 사업 수주… 공사비 1조 2868억 원 마수걸이 - 서울경제",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1kLVUxM3h0QWlrYXVTdEg1V3RNUWVPOEJucGlTaTFHQ1pUT21kR2JHa2NFaTlvVDFvTENCZUhGM0JadTY0YldCUXlxUjJwUXA3a0HSAVNBVV95cUxNUUx2SFp0ZFZjcDlFZXkxWXZBRHhYSkxaNGRzR014X0dGS1hmaHVOMHB5N3FyZ0ZaRUlkT1dvRmI0Q2czRWpJd0FwV1cxX1JmaG80RQ?oc=5",
-      "source": "서울경제",
-      "published": "2026-06-27T18:12:35+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동 재건축 첫 깃발 꽂아…6단지 수주 - 데일리한국",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1EZ0Q5bXJMaVFYRmpnRHRvbjYyd19rX2NQMkQ5M2JPMnBQemJCR0xFeWg2UEFkUjBNalRYYXFLZXZhaWZ2cEFhZ1NUcjUwYnA1ZjBwSzNPaEJkblpRc21QekVIZi0zRXctdXdjSlctdlMzcTjSAXNBVV95cUxNRGdEOW1yTGlRWEZqZ0R0b242Mndfa19jUDJEOTNiTzJwUHpiQkdMRXloNlBBZFIwTWpUWGFxS2V2YWlmdnBBYWdTVHI1MGJwNWYwcEszT2hCZG5aUXNtUHpFSGYtM0V3LXV3Y0pXLXZTM3E4?oc=5",
-      "source": "데일리한국",
-      "published": "2026-06-27T17:27:15+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동 재건축 첫 깃발 꽂아…6단지 수주 - 데일리한국",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8wSkEwaGZoLUU2ZjZDLVRVb2JTX3FyNE5jNS1JTUk3dzBzaGlFZ0VORlJGeHhwZjN6V29wQWRqWFFmMXo1b2E1bUNVUktDVVYwVHVrVWN4dUxuTFdraU10dkJfWVdCWnRJczV1YkJVRdIBc0FVX3lxTE1EZ0Q5bXJMaVFYRmpnRHRvbjYyd19rX2NQMkQ5M2JPMnBQemJCR0xFeWg2UEFkUjBNalRYYXFLZXZhaWZ2cEFhZ1NUcjUwYnA1ZjBwSzNPaEJkblpRc21QekVIZi0zRXctdXdjSlctdlMzcTg?oc=5",
-      "source": "데일리한국",
-      "published": "2026-06-27T17:15:43+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동6단지 재건축 잡았다…마수걸이 수주 - MTN 머니투데이방송",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9xZmtoZ3dQbXJOS0JMTGw0WnNsU3o2b0J6akd6bk01SW5KZUJKS2pDWkFzdGlNbVhaN3Zwd21EMW1UcEgzQngzMzdROEh3blByOGtaT3dkaFZHcDNZaWFCRHd6dHU?oc=5",
-      "source": "MTN 머니투데이방송",
-      "published": "2026-06-27T17:04:40+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "DL이앤씨, 목동6단지 재건축 사업 수주… 올해 첫 마수걸이 - 대한경제",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5FSk5ZajFVZHVGVWZLTnN5dzN0Z1RZRTRqRVdGNTNUcG9tS183SUxFRmVWd25LRmwyT3dOUFZ0aHNKZWpKbXZ0UzR6Z0w5WHVpRzJyYmwxcEJTbFAtdnpSbm84cHBnZ2JaLXplbDloeW9UOUpV?oc=5",
-      "source": "대한경제",
-      "published": "2026-06-27T16:59:27+09:00",
-      "complexes": [
-        6
-      ]
-    },
-    {
-      "title": "강남급 재건축 공사비가 평당 900만원대?...목동의 묘한 셈법 - 땅집고",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16NW9pbEZLWjhRbDFVLWZpdnVzUHBKcThBcnp4TGFjZU50YjV5UjBxT2lJd2k2TlUtbzN6Nk1NcURWOWg4d00yT2JaaFhnVWRUWW9iaEQ5MkUxaC1UM2ZNSVY3bmFhSU9oWjNJTmJsdU9RbzRZTExoRkx6Mk1keWvSAXNBVV95cUxPQk1KRVRSMG5FSVBfVWFsWUROY2cwNFROdkNKaW5rS2VlUk5vVDE5TnJMcktTRldHYXZxOHJEV1ZaRnhITU9NUlJlYXVvOC1UaVNhc0VhbWhXSXJ5ODY5Wjlnbm55OXFxdVVULVM4WUw5Qkxz?oc=5",
-      "source": "땅집고",
-      "published": "2026-06-27T06:00:00+09:00",
-      "complexes": []
-    },
-    {
-      "title": "성수·목동 30조 재개발…건설사 총력 수주전 폭발 - 주간현대",
-      "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE00OUtIeXk3ZlNoRkhxS0ZsTXFkVFBGbzNZNnV4RHVYdWJpVy1kWms5Z05aV1p4WUo3MEgzdGtLOUxrbG8?oc=5",
-      "source": "주간현대",
-      "published": "2026-06-26T15:38:00+09:00",
-      "complexes": []
-    },
-    {
-      "title": "목동10단지에 ‘디에이치’ 선점···대우·포스코 맞불 놓을까 - 시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9fLVNNM09ERzQzR01RdTlrbVQtaXUyNG1MbWJrc3RpSVdpM0xjZW4wLVRxLVBCT0NhYTZMU2w3VGxLbXdDZUVNd1p0aldOcUtZYnV6MVhwblk4MTBQQnB0NVNFUGFkMy1KWVU5YWpJWFh3MGlTMVHSAXZBVV95cUxPXy1TTTNPREc0M0dNUXU5a21ULWl1MjRtTG1ia3N0aUlXaTNMY2VuMC1UcS1QQk9DYWE2TFNsN1RsS213Q2VFTXdadGpXTnFLWWJ1ejFYcG5ZODEwUEJwdDVTRVBhZDMtSllVOWFqSVhYdzBpUzFR?oc=5",
-      "source": "시사저널e",
-      "published": "2026-06-26T15:09:21+09:00",
-      "complexes": [
-        10
-      ]
-    },
-    {
-      "title": "목동10단지 재건축, 시공자 선정 열기 '후끈'...현설에 6개사 참여 - 하우징타임즈",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBwc3dXT1l5QmJ5ZExkdlY5SFBucmdhRXUwOHNxNWRVMm1hZ09PMEw3NTVac2s0ZGlEUkFLWURSaVhfODZ5azhjOFJCcTFaQmc0NE9UbmJNYUh1N3JDb0xiYndldXllc1hMdS1TOGJPcWE?oc=5",
-      "source": "하우징타임즈",
-      "published": "2026-06-26T09:45:00+09:00",
-      "complexes": [
-        10
-      ]
-    },
-    {
-      "title": "공사비 30조 폭탄에도…용적률 낮은 목동, 분담금 걱정대신 '환급 기대' - 네이트",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBIMFRPNUZSZ2o0c050UEgzM0JvMlREYi1IalZwdkw0eENQN1F3ekZlenRGSU1WMGF6RzM1TFZTdllWZWktOUlydnFiN1lNMG05V1hR?oc=5",
-      "source": "네이트",
-      "published": "2026-06-26T05:02:00+09:00",
-      "complexes": []
-    },
-    {
-      "title": "“목동 재건축 잡아라”…30조 수주전 점화 - 대한경제",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5Bakk1RkxDSkJxUFF4NDdwUlJsX0l2V0Y1eDF3cVZIVldkd1RPSnVWYjlsV1R0OFlETTQ5Ri05U0lHVEFtTTB6eGMyZnBVdDIyU1d1NjcxdVJxTFFpN2FtMFB0SzFBWjMtR3BieWVRTERIMlU?oc=5",
-      "source": "대한경제",
-      "published": "2026-06-26T05:00:14+09:00",
-      "complexes": []
-    },
-    {
-      "title": "공사비 30조 폭탄에도…용적률 낮은 목동, 분담금 걱정대신 ‘환급 기대’ - 이데일리",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYTM4MDZKYi04d0UtbXlFTGVvV2NUZmtxb2NqS2dldm5VVVpNR0Jjd0VmVTMwaGFGTG9xUVhtTk1JTzlaR1k5aGRwSEJCM0xaRVhyTXFzektnbVdiR1VuOUdpOThoN2dNQ3ZkRFQzaXl4eEh3VVFiZXBxclkxendTSg?oc=5",
-      "source": "이데일리",
-      "published": "2026-06-26T05:00:04+09:00",
-      "complexes": []
-    },
-    {
-      "title": "\"재건축 다 엎어지나요\" 국토부장관이 정비구역 해제?…뿔난 민심 - 땅집고",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB6WFRjbmpYLS1rUV9QYXY0NmM4Y3JKcDRjT2FraUN5YXJ3b1dnS3VRMDJLV3RRWFI4aXJpTVN5eWlvaUxTVFdJMFhFa1BIendFYWpOVEZ1UHllLTN3RW9BZE5FaVZZeURmSzBKSEdwOVdoOGphcXhKUDZWUmFsa0XSAXNBVV95cUxONFdoTGdyMkJjTmNKTUxXZEFhdHllMV9Wai00UHBHZzQ2bzV2Q0ZJRktWeUNWVWRZRmNLQXBQdlozbUgxeURNS1FMZ2JRRmVHai1weTFMOUctNU4xbG0tREo2OXE0bVNZcFRNcTV0WC04N0Vj?oc=5",
-      "source": "땅집고",
-      "published": "2026-06-25T16:37:23+09:00",
-      "complexes": []
-    },
-    {
-      "title": "SK에코플랜트 아파트 브랜드 '드파인' 서울 공략 본격화, 장동현 목동에서 경쟁력 시험대 - 비즈니스포스트",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Md2R6UU1vWFhDdXE4cnBBS25PWGNQVlBGcTJ2X3hwMTJVcDZiLTZab1BYaWVFODZvSjNTWi01TmtETTZnUXJra3VIak5jY1BPOWlZOENhRTczSzluWFVrcGxVMk5JQ0gtRjNlVHc1bWNYa3c?oc=5",
-      "source": "비즈니스포스트",
-      "published": "2026-06-25T15:58:20+09:00",
-      "complexes": []
-    },
-    {
-      "title": "(30조 재건축 대전)\"진짜 전쟁은 지금부터\"…목동 '알토란' 7·14단지 쟁탈전 서막 - 뉴스토마토",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VM2Z5U2RtTWVzRVBGQktpMTJxWXFXTmlLVklyYjg4RkUwbGYyZmo1eTNUUXhRMFNpVHdXbGpXSDZFMjlmQVktZDc3WURTNVZqQXRjaGpkN0hGUVBzSGdraQ?oc=5",
-      "source": "뉴스토마토",
-      "published": "2026-06-25T15:09:11+09:00",
-      "complexes": [
-        14
-      ]
-    },
-    {
-      "title": "[현장] 현대 vs 대우, 목동 10·14단지 재건축서 격돌 '예고' - 스마트투데이",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB2bWNhVFJxMnVFQXgyZW5hSVMzdkE2MnJfRHNEdU5mNXBoc0RBbWFWZmZoaTBBZTFGS1E5akZ6RlZaNXFXQkdhLXdpTjdXQ1ZYd2hERWRkNjhPUkQzd0ow?oc=5",
-      "source": "스마트투데이",
-      "published": "2026-06-25T15:09:00+09:00",
-      "complexes": [
-        14
-      ]
-    },
-    {
-      "title": "목동13단지 재건축, 목하 시공자 선정 중...총공사비 약 2조3,760억원 - 하우징타임즈",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1POGctRG0yNEdXR1d6V2FlRm1PdmwxWk1RTEZUWnBSd3lBVEhidmxQS1BoMTZXTUcwcHBBdEtTYllBZFJVLTZnNS14czVEZzNHT21oUUJvRzlqVjZvRGdnWmhrdWZwUG13blotWWYzNVU?oc=5",
-      "source": "하우징타임즈",
-      "published": "2026-06-25T14:45:00+09:00",
-      "complexes": [
-        13
-      ]
-    },
-    {
-      "title": "목동7단지 재건축, 동의율 90.4% 확보…조합설립인가 신청 완료 - 디벨로퍼뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE95TldZY1ZOd0ltMDFDU2llSXBucTBfM2dva0pKcFpMb3cxYkFKbVM1QVlySFQ4OVBaNXJqcDI5VFBlYXVvUGNLcjhzTm9NYjgyMUVqMFJ4Q0VMa0xqS1g4Z1B4N2tYdjA1?oc=5",
-      "source": "디벨로퍼뉴스",
-      "published": "2026-06-25T11:41:51+09:00",
-      "complexes": [
-        7
-      ]
-    },
-    {
-      "title": "목동 7단지 조합설립인가 신청 ··· 재건축 속도 - LG헬로비전",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9yV0tSV25ReTcwSFNLRUMzXzlkenJJb21rekxMbU9Ic0VSN1VIcmFZZzFDdDZIX0xoN2dCZmU2QTFHcldyck1FZWw4NDdDZUVqa2N0Tk1ISUZKYjBOd2RNdWZMdkVLa1RVV0d5YjZKaFpiQdIBdkFVX3lxTFA5VW5sdGhRYjVmTHdaandkNGJINkFiMHdiOUhyd3B6RnprczVQY2VHR3h3LXgzMURIYXhIaGlwaDZoaVNYX3BtbGtJMnduSUNEejFtVWN3SXZ2TEFwcU12Um9yTjJUOHRYRC1QRFZFdkgwT2RkM0E?oc=5",
-      "source": "LG헬로비전",
-      "published": "2026-06-25T08:26:22+09:00",
-      "complexes": [
-        7
-      ]
-    },
-    {
-      "title": "'디에이치·자이·래미안' 반년 새 재개발·재건축 20조 삼켰다 - 비즈워치",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1UT3RXTGMyTlRHMVZfOEhxTktIR1ZZT3B1Qms2dkdraHN1bzZjTFJuODZNYThqYTZKNWFJdGY1X0JzREo4Um9MU2g5T1ExYm5WVHRyeVNDUUZXX2hSMy1jSDFxNzlZMWtKc2VwZ2JDVkU?oc=5",
-      "source": "비즈워치",
-      "published": "2026-06-25T06:36:03+09:00",
-      "complexes": []
-    },
-    {
-      "title": "정비사업 ‘마지막 대어’가 팔딱거린다 - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA4OWdVQTlIQmpkV2lDOFdsYlFvVmhKaEUxel9OZFdVV3ZxeG4zX0xva1E4b3F4UlhiOVAtakF1WFNibDg5RklBOVJibzhmam0yNE83Ng?oc=5",
-      "source": "v.daum.net",
-      "published": "2026-06-24T21:03:14+09:00",
-      "complexes": []
-    },
-    {
-      "title": "[이슈] 목동 재건축 수주전 본격 점화 - 오늘경제",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9qTjFBZGc0b29JTFhOeTVBX05QcU1kemkwS055RkNXbjVzMFEtRjYyNldXSVFwdEQxV3pCLUZwU0FtbW9BcnNGSWVTUEJUSmhNOUJKcTNpZkhENjh0ZmFFaGNTWHlDc2ZBcUlPblpDQV9BejQ?oc=5",
-      "source": "오늘경제",
-      "published": "2026-06-24T16:46:27+09:00",
-      "complexes": []
-    },
-    {
-      "title": "목동7단지, 조합설립인가 신청… 7월초 완료 예상 - 한국주택경제신문",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8zSTVoVHNlZVlyb25aM2NzbmEyY0pFaU5GOERHN3lSY0pvb1pQN082TWNHd0pEWjg4X3hrcVZTdVduTGhQa1lkZHh6aC1JMldnamx1cGlVTlA1SGxZMGlzcTdJdlltV1Y4?oc=5",
-      "source": "한국주택경제신문",
-      "published": "2026-06-24T16:44:37+09:00",
-      "complexes": [
-        7
-      ]
-    },
-    {
-      "title": "목동4단지, 7월 시공사 선정 공고 추진…통합심의도 속도 - 디벨로퍼뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jSk03Z0ZONU9oeUc4QlUyQVc2MUFVc2M1WGdBMmFWQ3lBTWtlQ3FWZkh0a0lZLVhwUzBVZUN1bmhmb2Uwcm5OUTBRTmd2V2FJMFNIS0tJTFJVaG0tS1pRR25pTFIxcWdN?oc=5",
-      "source": "디벨로퍼뉴스",
-      "published": "2026-06-24T15:29:45+09:00",
-      "complexes": [
-        4
-      ]
-    },
-    {
-      "title": "[인터뷰]김상윤 목동4단지 조합장 \"다음 세대가 이어갈 단지 만들 것\" - 디벨로퍼뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBiTlBFUmsyNTgwREZIUzJjZkxGTFRmUFdRMnRFUWtjUE9VVWJqT0pDS2lrakx2Z004QmZuWU5ILUF3UmhBX09BQV9BMFRvcHBWb3lnLTdtU1ktZlpJVk1OTVJSd2M2LTln?oc=5",
-      "source": "디벨로퍼뉴스",
-      "published": "2026-06-24T15:29:45+09:00",
-      "complexes": [
-        4
-      ]
-    },
-    {
-      "title": "목동7단지 재건축, 조합설립 임박...내달 초 인가 날 것으로 전망 - 하우징타임즈",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1nNTk3MVUzbHZKLVY0WVh4QmVsenRUZFl2dnRCRi1Rd3NWX2dYQzFvUlpQLWdlY2hnck9LVXRsLXNCZ2ZZM2lBQXJ6b3g1ZjdKSHZibGMzWHB2VXRLLVpGVTVSRi1CRC16alVMT1phZHU?oc=5",
-      "source": "하우징타임즈",
-      "published": "2026-06-24T13:36:09+09:00",
-      "complexes": [
-        7
       ]
     }
   ]

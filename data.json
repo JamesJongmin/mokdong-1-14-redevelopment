@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-06-28T12:31:02+09:00",
+    "updated_at": "2026-06-29T09:58:03+09:00",
     "data_basis": "공개 보도 기반 잠정 시드값(2026-06). 정비 단계/구조값은 양천구청·서울시 고시문으로 확정 필요.",
     "disclaimer": "추정치·비공식 정보이며 투자 권유가 아닙니다. 분담금·단계·일정은 각 조합/신탁 및 관계기관 공식 자료로 확인하세요.",
     "totals": {
@@ -22,7 +22,7 @@
       "interest": {
         "name": "목동6단지",
         "score": 97,
-        "mentions": 37
+        "mentions": 55
       }
     },
     "weights": {
@@ -207,8 +207,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 74,
       "interest_seed": 58,
-      "interest_score": 33,
-      "news_mentions_30d": 2,
+      "interest_score": 23,
+      "news_mentions_30d": 0,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -278,7 +278,7 @@
       "feasibility_score": 80,
       "interest_seed": 92,
       "interest_score": 97,
-      "news_mentions_30d": 37,
+      "news_mentions_30d": 55,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -313,8 +313,8 @@
       "feasibility_type": "분양가형",
       "feasibility_score": 90,
       "interest_seed": 88,
-      "interest_score": 54,
-      "news_mentions_30d": 4,
+      "interest_score": 35,
+      "news_mentions_30d": 0,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -414,8 +414,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 77,
       "interest_seed": 66,
-      "interest_score": 36,
-      "news_mentions_30d": 2,
+      "interest_score": 26,
+      "news_mentions_30d": 0,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -519,8 +519,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 80,
       "interest_seed": 66,
-      "interest_score": 31,
-      "news_mentions_30d": 1,
+      "interest_score": 26,
+      "news_mentions_30d": 0,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -554,8 +554,8 @@
       "feasibility_type": "규모형",
       "feasibility_score": 82,
       "interest_seed": 75,
-      "interest_score": 40,
-      "news_mentions_30d": 2,
+      "interest_score": 30,
+      "news_mentions_30d": 0,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,

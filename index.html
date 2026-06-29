@@ -140,10 +140,10 @@
   .spot .go:hover{transform:translateX(3px)}
   @media(max-width:680px){.spot h3{font-size:1.42rem}.spot .scale .box .v{font-size:1.28rem}}
 
-  .row.is14{background:linear-gradient(180deg,#FFF8EE,#fff);outline:2px solid #FFD79A;animation:ring 2.6s ease-out 1}
-  .badge14{font-size:.68rem;font-weight:800;color:#B45309;background:#FFE9C7;padding:3px 8px;border-radius:7px;letter-spacing:-.01em;white-space:nowrap}
-  .cx.is14{outline:2px solid #FFC773;box-shadow:0 6px 20px rgba(255,160,40,.2)}
-  .cx.is14 .cxnum::after{content:" \1F451"}
+  .row.feat{background:linear-gradient(180deg,#FFF8EE,#fff);outline:2px solid #FFD79A;animation:ring 2.6s ease-out 1}
+  .badgefeat{font-size:.68rem;font-weight:800;color:#B45309;background:#FFE9C7;padding:3px 8px;border-radius:7px;letter-spacing:-.01em;white-space:nowrap}
+  .cx.feat{outline:2px solid #FFC773;box-shadow:0 6px 20px rgba(255,160,40,.2)}
+  .cx.feat .cxnum::after{content:" \1F451"}
 </style>
 </head>
 <body>
@@ -204,7 +204,7 @@
 <script>
 const METHOD_KO=m=>m==='조합'?'조합':'신탁', MCLS=m=>m==='조합'?'union':'trust';
 const COLOR={race_score:'var(--blue)',feasibility_score:'var(--green)',interest_score:'var(--orange)'};
-let DATA=null;
+let DATA=null,FEATURED=14;
 
 function cover(c){
   const id=c.complex_id, hue=(id*27+205)%360;
@@ -251,11 +251,11 @@ function rank(metric){
     if(metric==='race_score')sub=c.race_stage+(c.constructor?` · ${c.constructor}`:'');
     else if(metric==='feasibility_score')sub=(c.feasibility_type||'')+(c.land_share_avg?` · 지분 ${c.land_share_avg}`:' · 구조값 잠정');
     else sub=`최근 30일 뉴스 ${c.news_mentions_30d||0}건`;
-    const hl=c.complex_id===14;
-    return `<a class="row ${i===0?'top1':''} ${hl?'is14':''}" href="complex.html?id=${c.complex_id}">
+    const hl=c.complex_id===FEATURED;
+    return `<a class="row ${i===0?'top1':''} ${hl?'feat':''}" href="complex.html?id=${c.complex_id}">
       <div class="rk">${i+1}</div>
       <div class="rmid"><div class="rname"><span class="dn">${c.name}</span>
-        <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span>${hl?'<span class="badge14">\u{1F451} 최대규모</span>':''}</div>
+        <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span>${hl?'<span class="badgefeat">\u{1F451} 금주의 주목</span>':''}</div>
         <div class="rsub">${sub}</div>
         <div class="bar"><i data-w="${sc}" style="width:0;background:${COLOR[metric]}"></i></div></div>
       <div class="scoreN" style="color:${COLOR[metric]}">${sc}</div></a>`;
@@ -278,7 +278,7 @@ function news(n){
 }
 function cards(){
   document.getElementById('cxGrid').innerHTML=DATA.complexes.map(c=>`
-    <a class="cx ${c.complex_id===14?'is14':''}" href="complex.html?id=${c.complex_id}">
+    <a class="cx ${c.complex_id===FEATURED?'feat':''}" href="complex.html?id=${c.complex_id}">
       <div class="cxcover">${cover(c)}<img class="cxphoto" src="assets/photos/${c.complex_id}.jpg" alt="${c.name} 전경" loading="lazy" onerror="this.remove()"><span class="cxnum">${c.complex_id}단지</span>
         <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
       <div class="cxbody">
@@ -297,27 +297,40 @@ function countUpAll(root){
     requestAnimationFrame(step);});
 }
 function spotlight(){
-  const c=DATA.complexes.find(x=>x.complex_id===14);
   const el=document.getElementById('spotlight');
+  const c=DATA.complexes.find(x=>x.complex_id===FEATURED);
   if(!c||!el)return;
-  const before=c.units_before||0,after=c.units_after||0,delta=after-before,pct=before?Math.round(delta/before*100):0;
+  const fw=(DATA.meta&&DATA.meta.featured)||{};
+  const ub=c.units_before,ua=c.units_after,hasU=!!(ub&&ua);
+  const delta=hasU?ua-ub:0,pct=(hasU&&ub)?Math.round(delta/ub*100):0;
   const mile=c.next_milestone||{};
-  el.innerHTML=`<div class="spot">
-    <div class="pad">
-      <span class="tag"><span class="crown">\u{1F451}</span> 주목 단지 · 규모 최대</span>
-      <h3>${c.name}, 목동 최대어</h3>
-      <div class="sub">${c.method==='신탁'?'신탁':'조합'} 방식 · ${c.race_stage||''}</div>
+  const body=hasU?`
       <div class="scale">
-        <div class="box"><div class="l">지금</div><div class="v"><span data-cu="${before}">0</span>세대</div></div>
-        <div class="arr">\u2192</div>
-        <div class="box up"><div class="l">재건축 후</div><div class="v"><span data-cu="${after}">0</span>세대</div></div>
+        <div class="box"><div class="l">지금</div><div class="v"><span data-cu="${ub}">0</span>세대</div></div>
+        <div class="arr">→</div>
+        <div class="box up"><div class="l">재건축 후</div><div class="v"><span data-cu="${ua}">0</span>세대</div></div>
       </div>
       <div class="sstat">
         <span class="si">증가 <b>+${delta.toLocaleString()}</b>세대</span>
         <span class="si">규모 <b>+${pct}%</b></span>
         ${mile.event?`<span class="si">다음 <b>${mile.event}</b> · ${mile.target||''}</span>`:''}
+      </div>`:`
+      <div class="scale">
+        <div class="box"><div class="l">레이스</div><div class="v"><span data-cu="${c.race_score||0}">0</span></div></div>
+        <div class="box"><div class="l">사업성</div><div class="v"><span data-cu="${c.feasibility_score||0}">0</span></div></div>
+        <div class="box up"><div class="l">관심도</div><div class="v"><span data-cu="${c.interest_score||0}">0</span></div></div>
       </div>
-      <a class="go" href="complex.html?id=14">14단지 자세히 보기 \u2192</a>
+      <div class="sstat">
+        ${mile.event?`<span class="si">다음 <b>${mile.event}</b> · ${mile.target||''}</span>`:''}
+        <span class="si">최근 30일 뉴스 <b>${c.news_mentions_30d||0}</b>건</span>
+      </div>`;
+  el.innerHTML=`<div class="spot">
+    <div class="pad">
+      <span class="tag"><span class="crown">👑</span> 이번 주의 주목 단지${fw.iso_week?` · ${fw.iso_year}년 ${fw.iso_week}주차`:''}</span>
+      <h3>이번 주 주목, ${c.name}</h3>
+      <div class="sub">${c.method==='신탁'?'신탁':'조합'} 방식 · ${c.race_stage||''}</div>
+      ${body}
+      <a class="go" href="complex.html?id=${c.complex_id}">${c.name} 자세히 보기 →</a>
     </div></div>`;
   countUpAll(el);
 }
@@ -332,6 +345,7 @@ async function init(){
   DATA=await load('data.json');
   if(!DATA){document.getElementById('updated').textContent='데이터를 불러올 수 없어요';return;}
   const n=await load('news.json');
+  FEATURED=(DATA.meta&&DATA.meta.featured&&DATA.meta.featured.id)||14;
   summary(DATA.meta||{});spotlight();rank('race_score');calendar();news(n);cards();revealOn();
   document.querySelectorAll('#seg button').forEach(b=>b.addEventListener('click',()=>{
     document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('active'));

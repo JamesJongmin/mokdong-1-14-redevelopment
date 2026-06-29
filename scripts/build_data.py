@@ -107,6 +107,21 @@ def main():
                      "mentions": i.get("news_mentions_30d", 0)},
     }
 
+    # 3.5) 금주의 주목 단지 (형평성 위해 ISO 주차 기준으로 단지를 순환)
+    ordered = sorted(data["complexes"], key=lambda x: x["complex_id"])
+    now = datetime.now(KST)
+    iso = now.isocalendar()
+    iso_week, iso_year = iso[1], iso[0]
+    feat = ordered[(iso_week - 1) % len(ordered)]
+    data["meta"]["featured"] = {
+        "id": feat["complex_id"],
+        "name": feat["name"],
+        "iso_year": iso_year,
+        "iso_week": iso_week,
+        "race_stage": feat.get("race_stage", ""),
+        "rotation": "주차순환(ISO week, complex_id 오름차순)",
+    }
+
     # 4) 타임스탬프
     data["meta"]["updated_at"] = datetime.now(KST).isoformat(timespec="seconds")
 
@@ -115,7 +130,8 @@ def main():
     print("data.json 갱신 완료 ·",
           f"레이스1위 {r['name']}({r['race_score']}) ·",
           f"사업성1위 {f['name']}({f['feasibility_score']}) ·",
-          f"관심도1위 {i['name']}({i['interest_score']})")
+          f"관심도1위 {i['name']}({i['interest_score']}) ·",
+          f"금주의 주목 {feat['name']}(W{iso_week})")
 
 
 if __name__ == "__main__":

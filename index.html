@@ -106,6 +106,17 @@
   footer{margin-top:40px;padding:32px 0 40px;border-top:1px solid var(--line)}
   footer b{font-weight:800;font-size:1rem;letter-spacing:-.03em}
   footer small{display:block;color:var(--gray);font-size:.82rem;line-height:1.7;margin-top:8px;font-weight:500}
+  footer a{color:var(--blue-d);font-weight:600}
+  .adlabel{font-size:.7rem;font-weight:700;color:var(--faint);letter-spacing:.04em;margin-bottom:10px;text-transform:uppercase}
+  .adgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:680px){.adgrid{grid-template-columns:1fr}}
+  .adcard{display:flex;align-items:center;gap:13px;background:#FBF7F2;border:1px solid #EFE4D6;border-radius:16px;padding:15px 17px;transition:transform .12s,box-shadow .12s}
+  .adcard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(111,78,55,.13)}
+  .adico{width:42px;height:42px;border-radius:12px;background:#6F4E37;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+  .adtxt{flex:1;min-width:0}
+  .adname{font-weight:800;font-size:1rem;letter-spacing:-.02em;color:#4A3526}
+  .addesc{font-size:.8rem;color:#8B6F5A;font-weight:500;margin-top:2px;letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .adgo{font-size:.8rem;font-weight:700;color:#6F4E37;white-space:nowrap;flex-shrink:0}
 
   @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   @keyframes shimmer{0%{background-position:-160% 0}100%{background-position:260% 0}}
@@ -199,9 +210,25 @@
   <div class="note">모든 점수는 공개 보도 기반 추정·비공식 값이에요. 정확한 단계·분담금은 조합/신탁 공식 고시문으로 확인하세요. 목동 일대는 토지거래허가 등 거래 제약이 있을 수 있어요.</div>
 </div></section>
 
+<section class="block reveal" id="sponsor"><div class="wrap">
+  <div class="adlabel">광고 · Sponsored</div>
+  <div class="adgrid">
+    <a class="adcard" href="https://ykcoffee.co.kr/about" target="_blank" rel="noopener sponsored">
+      <div class="adico">☕</div>
+      <div class="adtxt"><div class="adname">Yellowknife Roasters</div>
+        <div class="addesc">스페셜티 커피 로스터리 · 갓 볶은 원두</div></div>
+      <div class="adgo">방문하기 →</div></a>
+    <a class="adcard" href="https://www.coffeemarket.info/" target="_blank" rel="noopener sponsored">
+      <div class="adico">📈</div>
+      <div class="adtxt"><div class="adname">Coffee Market Info</div>
+        <div class="addesc">커피 선물 시장 인텔리전스 · 주간 리포트</div></div>
+      <div class="adgo">리포트 보기 →</div></a>
+  </div>
+</div></section>
+
 <footer><div class="wrap">
   <b>목동 신시가지 1~14단지 재건축 Watch</b>
-  <small>공개 정보 기반 비공식 진행상황 트래커 · 매일 1회 자동 갱신<br>투자 권유·법적 자문이 아닙니다. 문의/제보: kevin.j.baek@gmail.com</small>
+  <small>공개 정보 기반 비공식 진행상황 트래커 · 매일 1회 자동 갱신<br>투자 권유·법적 자문이 아닙니다.<br>광고문의 · 문의/제보 : <a href="mailto:kevin.j.baek@gmail.com">kevin.j.baek@gmail.com</a></small>
 </div></footer>
 
 <script>

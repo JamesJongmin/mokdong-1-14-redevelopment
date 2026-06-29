@@ -64,6 +64,14 @@
   .na .nt{font-weight:600;font-size:.94rem;letter-spacing:-.02em;line-height:1.4}
   .na .nm{font-size:.78rem;color:var(--faint);white-space:nowrap;font-weight:500}
   footer{margin-top:34px;padding:26px 0 40px;border-top:1px solid var(--line);color:var(--gray);font-size:.82rem;font-weight:500}
+  .intro{font-size:.98rem;line-height:1.72;color:var(--sub);letter-spacing:-.01em;font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .chips .c{font-size:.8rem;font-weight:700;background:var(--blue-bg);color:var(--blue-d);padding:6px 11px;border-radius:9px;letter-spacing:-.01em}
+  .facts{display:flex;flex-direction:column;margin-top:16px;border-top:1px solid var(--line)}
+  .facts .f{display:grid;grid-template-columns:66px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);align-items:start}
+  .facts .fl{font-size:.8rem;color:var(--gray);font-weight:700}
+  .facts .fv{font-size:.9rem;color:var(--ink);font-weight:500;line-height:1.5;letter-spacing:-.01em}
+  .watchline{display:flex;gap:8px;align-items:flex-start;background:var(--orange-bg);color:#9A3412;font-size:.86rem;border-radius:12px;padding:11px 14px;margin-top:14px;font-weight:500;line-height:1.5}
 </style>
 </head>
 <body>
@@ -75,6 +83,8 @@
 <header class="ch"><div class="wrap" id="chead"></div></header>
 
 <div class="wrap">
+  <section><h2 class="sec">단지 소개</h2>
+    <div class="card" id="profileCard"></div></section>
   <section><h2 class="sec">진행 타임라인</h2>
     <div class="card"><div class="tl" id="timeline"></div><div class="nextmile" id="nextmile"></div></div></section>
   <section><h2 class="sec">사업성</h2>
@@ -151,12 +161,21 @@ function cnews(c,n){
   if(!items.length){el.innerHTML=`<div class="na"><div class="nt">이 단지로 태깅된 최신 뉴스가 아직 없어요.</div></div>`;return;}
   el.innerHTML=items.map(x=>`<a class="na" href="${x.link}" target="_blank" rel="noopener"><div class="nt">${x.title||''}</div><div class="nm">${x.source||''} · ${rel(x.published)}</div></a>`).join('');
 }
+function profile(c){
+  const el=document.getElementById('profileCard');const p=c.profile;
+  if(!p){el.innerHTML='<p class="intro">등록된 단지 소개가 아직 없어요.</p>';return;}
+  const facts=[['위치',p.location],['학군',p.school],['교통',p.transit],['평형·규모',p.units_type]].filter(x=>x[1]);
+  el.innerHTML=`<p class="intro">${p.intro||''}</p>`
+    +((p.strengths&&p.strengths.length)?`<div class="chips">${p.strengths.map(s=>`<span class="c">${s}</span>`).join('')}</div>`:'')
+    +(facts.length?`<div class="facts">${facts.map(f=>`<div class="f"><div class="fl">${f[0]}</div><div class="fv">${f[1]}</div></div>`).join('')}</div>`:'')
+    +(p.watch?`<div class="watchline">⚠️ <span>${p.watch}</span></div>`:'');
+}
 async function init(){
   const d=await load('data.json');
   if(!d){document.getElementById('chead').innerHTML='<h1>데이터를 불러올 수 없어요</h1>';return;}
   const c=d.complexes.find(x=>x.complex_id===qid())||d.complexes[0];
   document.title=`${c.name} | 목동 재건축 트래커`;
-  head(c);timeline(c,d.stage_scores||{});kv(c);
+  head(c);profile(c);timeline(c,d.stage_scores||{});kv(c);
   cnews(c,await load('news.json'));
 }
 init();

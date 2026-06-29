@@ -92,7 +92,8 @@
   .cxnum{position:absolute;left:13px;bottom:9px;font-size:1.15rem;font-weight:800;letter-spacing:-.04em;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.3)}
   .cxcover .chip{position:absolute;right:11px;top:11px}
   .cxbody{padding:14px 16px 16px}
-  .cx .stage{font-size:.86rem;font-weight:600;color:var(--sub);margin:0 0 12px;letter-spacing:-.02em;min-height:2.4em}
+  .cx .stage{font-size:.86rem;font-weight:600;color:var(--sub);margin:0 0 8px;letter-spacing:-.02em;min-height:2.4em}
+  .cxtag{font-size:.74rem;font-weight:700;color:var(--blue-d);background:var(--blue-bg);display:inline-block;padding:4px 9px;border-radius:8px;margin:0 0 12px;letter-spacing:-.01em;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .mini{display:flex;gap:8px}
   .mini .m{flex:1;text-align:center;background:var(--bg);border-radius:12px;padding:9px 4px}
   .mini .ml{font-size:.66rem;color:var(--gray);font-weight:700}
@@ -283,6 +284,7 @@ function cards(){
         <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
       <div class="cxbody">
         <div class="stage">${c.race_stage||''}</div>
+        ${(c.profile&&c.profile.strengths&&c.profile.strengths[0])?`<div class="cxtag">${c.profile.strengths[0]}</div>`:''}
         <div class="mini">
           <div class="m"><div class="ml">레이스</div><div class="mv" style="color:var(--blue)">${c.race_score||0}</div></div>
           <div class="m"><div class="ml">사업성</div><div class="mv" style="color:var(--green)">${c.feasibility_score||0}</div></div>

@@ -93,7 +93,9 @@
   .cxcover .chip{position:absolute;right:11px;top:11px}
   .cxbody{padding:14px 16px 16px}
   .cx .stage{font-size:.86rem;font-weight:600;color:var(--sub);margin:0 0 8px;letter-spacing:-.02em;min-height:2.4em}
-  .cxtag{font-size:.74rem;font-weight:700;color:var(--blue-d);background:var(--blue-bg);display:inline-block;padding:4px 9px;border-radius:8px;margin:0 0 12px;letter-spacing:-.01em;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cxtag{font-size:.74rem;font-weight:700;color:var(--blue-d);background:var(--blue-bg);display:inline-block;padding:4px 9px;border-radius:8px;margin:0 0 8px;letter-spacing:-.01em;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cxpred{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--sub);font-weight:600;margin:0 0 12px;letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cxpred .pdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
   .mini{display:flex;gap:8px}
   .mini .m{flex:1;text-align:center;background:var(--bg);border-radius:12px;padding:9px 4px}
   .mini .ml{font-size:.66rem;color:var(--gray);font-weight:700}
@@ -206,6 +208,7 @@
 const METHOD_KO=m=>m==='조합'?'조합':'신탁', MCLS=m=>m==='조합'?'union':'trust';
 const COLOR={race_score:'var(--blue)',feasibility_score:'var(--green)',interest_score:'var(--orange)'};
 let DATA=null,FEATURED=14;
+const CONFCLR={'확정':'var(--green)','높음':'var(--blue)','중간':'var(--orange)','낮음':'var(--faint)','매우낮음':'var(--faint)'};
 
 function cover(c){
   const id=c.complex_id, hue=(id*27+205)%360;
@@ -285,6 +288,7 @@ function cards(){
       <div class="cxbody">
         <div class="stage">${c.race_stage||''}</div>
         ${(c.profile&&c.profile.strengths&&c.profile.strengths[0])?`<div class="cxtag">${c.profile.strengths[0]}</div>`:''}
+        ${(c.prediction&&c.prediction.predicted)?`<div class="cxpred"><span class="pdot" style="background:${CONFCLR[c.prediction.confidence]||'var(--faint)'}"></span>🏗 ${c.prediction.predicted}</div>`:''}
         <div class="mini">
           <div class="m"><div class="ml">레이스</div><div class="mv" style="color:var(--blue)">${c.race_score||0}</div></div>
           <div class="m"><div class="ml">사업성</div><div class="mv" style="color:var(--green)">${c.feasibility_score||0}</div></div>

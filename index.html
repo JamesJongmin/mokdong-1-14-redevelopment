@@ -103,6 +103,47 @@
   footer{margin-top:40px;padding:32px 0 40px;border-top:1px solid var(--line)}
   footer b{font-weight:800;font-size:1rem;letter-spacing:-.03em}
   footer small{display:block;color:var(--gray);font-size:.82rem;line-height:1.7;margin-top:8px;font-weight:500}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes shimmer{0%{background-position:-160% 0}100%{background-position:260% 0}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(255,138,0,.45)}70%{box-shadow:0 0 0 12px rgba(255,138,0,0)}100%{box-shadow:0 0 0 0 rgba(255,138,0,0)}}
+  .reveal{opacity:0}
+  .reveal.in{animation:fadeUp .55s cubic-bezier(.22,.61,.36,1) forwards}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;animation:none!important}}
+  header.hero h1 b{background:linear-gradient(100deg,var(--blue),#8B5CF6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .s3{transition:transform .14s,box-shadow .14s}
+  .s3:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.07)}
+  .row{cursor:pointer}
+  .row:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .cx:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.08)}
+  .na:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.05)}
+
+  .spot{position:relative;margin-top:24px;border-radius:24px;overflow:hidden;color:#fff;background:linear-gradient(120deg,#1B64DA 0%,#3182F6 42%,#8B5CF6 100%);box-shadow:0 14px 40px rgba(43,76,200,.32);animation:fadeUp .6s ease both}
+  .spot::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.22) 48%,transparent 66%);background-size:240% 100%;animation:shimmer 4.5s linear infinite;pointer-events:none}
+  .spot .pad{position:relative;z-index:1;padding:24px 24px 26px}
+  .spot .crown{font-size:1.6rem;animation:floaty 3s ease-in-out infinite;display:inline-block}
+  .spot .tag{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:800;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;letter-spacing:-.01em;backdrop-filter:blur(4px)}
+  .spot h3{font-size:1.65rem;font-weight:800;letter-spacing:-.04em;margin:14px 0 4px}
+  .spot .sub{font-size:.92rem;color:rgba(255,255,255,.85);font-weight:500;letter-spacing:-.01em}
+  .spot .scale{display:flex;align-items:center;gap:14px;margin:20px 0 4px}
+  .spot .scale .box{flex:1;background:rgba(255,255,255,.13);border-radius:16px;padding:13px 8px;text-align:center;backdrop-filter:blur(4px)}
+  .spot .scale .box .l{font-size:.7rem;font-weight:700;color:rgba(255,255,255,.78)}
+  .spot .scale .box .v{font-size:1.5rem;font-weight:800;letter-spacing:-.04em;margin-top:2px}
+  .spot .scale .arr{font-size:1.5rem;font-weight:800;opacity:.85}
+  .spot .scale .box.up{background:rgba(255,255,255,.22)}
+  .spot .scale .box.up .v{color:#FFE27A}
+  .spot .sstat{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap}
+  .spot .sstat .si{font-size:.84rem;font-weight:600;color:rgba(255,255,255,.92)}
+  .spot .sstat .si b{font-size:1.05rem;font-weight:800;letter-spacing:-.02em}
+  .spot .go{display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.9rem;font-weight:800;background:#fff;color:var(--blue-d);padding:11px 18px;border-radius:13px;letter-spacing:-.02em;transition:transform .12s}
+  .spot .go:hover{transform:translateX(3px)}
+  @media(max-width:680px){.spot h3{font-size:1.42rem}.spot .scale .box .v{font-size:1.28rem}}
+
+  .row.is14{background:linear-gradient(180deg,#FFF8EE,#fff);outline:2px solid #FFD79A;animation:ring 2.6s ease-out 1}
+  .badge14{font-size:.68rem;font-weight:800;color:#B45309;background:#FFE9C7;padding:3px 8px;border-radius:7px;letter-spacing:-.01em;white-space:nowrap}
+  .cx.is14{outline:2px solid #FFC773;box-shadow:0 6px 20px rgba(255,160,40,.2)}
+  .cx.is14 .cxnum::after{content:" \1F451"}
 </style>
 </head>
 <body>
@@ -118,13 +159,14 @@
 
 <header class="hero"><div class="wrap">
   <span class="eyebrow">● 매일 자동 업데이트</span>
-  <h1>목동 1~14단지,<br>오늘 누가 앞서고 있을까?</h1>
+  <h1>목동 1~14단지,<br>오늘 <b>누가 앞서고 있을까?</b></h1>
   <p>레이스·사업성·관심도 3가지 점수로 14개 단지를 매일 줄 세웁니다.</p>
   <div class="updated"><span class="dot-live"></span><span id="updated">불러오는 중…</span></div>
   <div class="summary3" id="summary3"></div>
+  <div id="spotlight"></div>
 </div></header>
 
-<section class="block" id="rankings"><div class="wrap">
+<section class="block reveal" id="rankings"><div class="wrap">
   <div class="sec-head"><h2 class="sec">단지 랭킹</h2>
     <p class="sec-desc">탭을 눌러 기준을 바꿔보세요. 행을 누르면 단지 상세로 이동해요.</p></div>
   <div class="seg" id="seg">
@@ -135,19 +177,19 @@
   <div class="rank" id="rankList"></div>
 </div></section>
 
-<section class="block" id="calendar"><div class="wrap">
+<section class="block reveal" id="calendar"><div class="wrap">
   <div class="sec-head"><h2 class="sec">이벤트 캘린더</h2>
     <p class="sec-desc">단지별 다음 마일스톤을 빠른 순으로 보여드려요.</p></div>
   <div class="cal" id="calList"></div>
 </div></section>
 
-<section class="block" id="news"><div class="wrap">
+<section class="block reveal" id="news"><div class="wrap">
   <div class="sec-head"><h2 class="sec">오늘의 뉴스</h2>
     <p class="sec-desc">'목동 재건축' 최신 기사를 매일 자동 수집해 단지별로 묶어드려요.</p></div>
   <div class="news" id="newsList"></div>
 </div></section>
 
-<section class="block" id="complexes"><div class="wrap">
+<section class="block reveal" id="complexes"><div class="wrap">
   <div class="sec-head"><h2 class="sec">14개 단지</h2>
     <p class="sec-desc">카드를 누르면 점수·타임라인·관련 뉴스를 볼 수 있어요.</p></div>
   <div class="grid" id="cxGrid"></div>
@@ -209,14 +251,16 @@ function rank(metric){
     if(metric==='race_score')sub=c.race_stage+(c.constructor?` · ${c.constructor}`:'');
     else if(metric==='feasibility_score')sub=(c.feasibility_type||'')+(c.land_share_avg?` · 지분 ${c.land_share_avg}`:' · 구조값 잠정');
     else sub=`최근 30일 뉴스 ${c.news_mentions_30d||0}건`;
-    return `<a class="row ${i===0?'top1':''}" href="complex.html?id=${c.complex_id}">
+    const hl=c.complex_id===14;
+    return `<a class="row ${i===0?'top1':''} ${hl?'is14':''}" href="complex.html?id=${c.complex_id}">
       <div class="rk">${i+1}</div>
       <div class="rmid"><div class="rname"><span class="dn">${c.name}</span>
-        <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
+        <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span>${hl?'<span class="badge14">\u{1F451} 최대규모</span>':''}</div>
         <div class="rsub">${sub}</div>
-        <div class="bar"><i style="width:${sc}%;background:${COLOR[metric]}"></i></div></div>
+        <div class="bar"><i data-w="${sc}" style="width:0;background:${COLOR[metric]}"></i></div></div>
       <div class="scoreN" style="color:${COLOR[metric]}">${sc}</div></a>`;
   }).join('');
+  requestAnimationFrame(()=>document.querySelectorAll('#rankList .bar>i').forEach(i=>{i.style.width=(i.dataset.w||0)+'%';}));
 }
 function calendar(){
   const o={'2026-06':1,'2026 하반기':2,'2026':3,'미정':9};
@@ -234,7 +278,7 @@ function news(n){
 }
 function cards(){
   document.getElementById('cxGrid').innerHTML=DATA.complexes.map(c=>`
-    <a class="cx" href="complex.html?id=${c.complex_id}">
+    <a class="cx ${c.complex_id===14?'is14':''}" href="complex.html?id=${c.complex_id}">
       <div class="cxcover">${cover(c)}<img class="cxphoto" src="assets/photos/${c.complex_id}.jpg" alt="${c.name} 전경" loading="lazy" onerror="this.remove()"><span class="cxnum">${c.complex_id}단지</span>
         <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
       <div class="cxbody">
@@ -245,11 +289,50 @@ function cards(){
           <div class="m"><div class="ml">관심도</div><div class="mv" style="color:var(--orange)">${c.interest_score||0}</div></div>
         </div></div></a>`).join('');
 }
+function countUpAll(root){
+  (root||document).querySelectorAll('[data-cu]').forEach(el=>{
+    const target=+el.getAttribute('data-cu')||0,dur=950,t0=performance.now();
+    const step=now=>{const p=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*e).toLocaleString();if(p<1)requestAnimationFrame(step);};
+    requestAnimationFrame(step);});
+}
+function spotlight(){
+  const c=DATA.complexes.find(x=>x.complex_id===14);
+  const el=document.getElementById('spotlight');
+  if(!c||!el)return;
+  const before=c.units_before||0,after=c.units_after||0,delta=after-before,pct=before?Math.round(delta/before*100):0;
+  const mile=c.next_milestone||{};
+  el.innerHTML=`<div class="spot">
+    <div class="pad">
+      <span class="tag"><span class="crown">\u{1F451}</span> 주목 단지 · 규모 최대</span>
+      <h3>${c.name}, 목동 최대어</h3>
+      <div class="sub">${c.method==='신탁'?'신탁':'조합'} 방식 · ${c.race_stage||''}</div>
+      <div class="scale">
+        <div class="box"><div class="l">지금</div><div class="v"><span data-cu="${before}">0</span>세대</div></div>
+        <div class="arr">\u2192</div>
+        <div class="box up"><div class="l">재건축 후</div><div class="v"><span data-cu="${after}">0</span>세대</div></div>
+      </div>
+      <div class="sstat">
+        <span class="si">증가 <b>+${delta.toLocaleString()}</b>세대</span>
+        <span class="si">규모 <b>+${pct}%</b></span>
+        ${mile.event?`<span class="si">다음 <b>${mile.event}</b> · ${mile.target||''}</span>`:''}
+      </div>
+      <a class="go" href="complex.html?id=14">14단지 자세히 보기 \u2192</a>
+    </div></div>`;
+  countUpAll(el);
+}
+function revealOn(){
+  const els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return;}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+  els.forEach(e=>io.observe(e));
+  setTimeout(()=>els.forEach(e=>e.classList.add('in')),1400);
+}
 async function init(){
   DATA=await load('data.json');
   if(!DATA){document.getElementById('updated').textContent='데이터를 불러올 수 없어요';return;}
   const n=await load('news.json');
-  summary(DATA.meta||{});rank('race_score');calendar();news(n);cards();
+  summary(DATA.meta||{});spotlight();rank('race_score');calendar();news(n);cards();revealOn();
   document.querySelectorAll('#seg button').forEach(b=>b.addEventListener('click',()=>{
     document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('active'));
     b.classList.add('active');rank(b.dataset.metric);

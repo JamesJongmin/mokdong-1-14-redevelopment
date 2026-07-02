@@ -91,6 +91,11 @@
   .adname{font-weight:800;font-size:1rem;letter-spacing:-.02em;color:#4A3526}
   .addesc{font-size:.8rem;color:#8B6F5A;font-weight:500;margin-top:2px;letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .adgo{font-size:.8rem;font-weight:700;color:#6F4E37;white-space:nowrap;flex-shrink:0}
+  .massing{margin-top:14px;padding:14px;border:1px solid var(--line2);border-radius:12px;background:var(--bg)}
+  .mtitle{font-size:13px;font-weight:700;color:#333D4B;margin-bottom:6px}
+  .mtitle span{font-weight:500;font-size:11px;color:#8B95A1;margin-left:4px}
+  .mdelta{text-align:center;font-size:13px;font-weight:700;color:var(--blue-d);margin-top:4px}
+  .mnote{text-align:center;font-size:10.5px;color:#8B95A1;margin-top:6px;line-height:1.4}
 </style>
 </head>
 <body>
@@ -196,6 +201,32 @@ function cnews(c,n){
   if(!items.length){el.innerHTML=`<div class="na"><div class="nt">이 단지로 태깅된 최신 뉴스가 아직 없어요.</div></div>`;return;}
   el.innerHTML=items.map(x=>`<a class="na" href="${x.link}" target="_blank" rel="noopener"><div class="nt">${x.title||''}</div><div class="nm">${x.source||''} · ${rel(x.published)}</div></a>`).join('');
 }
+function massingBlock(c){
+  const m=c.massing; if(!m) return '';
+  const fb=m.floors_before, fa=m.floors_after, ub=m.units_before, ua=m.units_after;
+  const maxF=Math.max(fb||0, fa||0, 1);
+  const H=132, W=300, baseY=150, colW=64, gap=96;
+  const bx=54, ax=bx+gap+colW;
+  const hb=fb?Math.max(10, fb/maxF*H):0;
+  const ha=fa?Math.max(10, fa/maxF*H):0;
+  const fmt=n=>n?n.toLocaleString():'미정';
+  const floorLines=(x,w,h)=>{ if(!h) return ''; let s='',n=Math.min(12,Math.round(h/11)); for(let i=1;i<n;i++){const y=baseY-h*i/n; s+=`<line x1="${x}" y1="${y}" x2="${x+w}" y2="${y}" stroke="rgba(255,255,255,.35)" stroke-width="1"/>`;} return s; };
+  const delta=(ua&&ub)?ua-ub:null;
+  const tower=(x,h,fill,stroke)=> h? `<rect x="${x}" y="${baseY-h}" width="${colW}" height="${h}" rx="4" fill="${fill}" stroke="${stroke}" stroke-width="1"/>`+floorLines(x,colW,h) : `<rect x="${x}" y="${baseY-14}" width="${colW}" height="14" rx="3" fill="var(--line,#e5e8eb)"/><text x="${x+colW/2}" y="${baseY-3}" text-anchor="middle" font-size="9" fill="#8B95A1">미정</text>`;
+  return `<div class="massing"><div class="mtitle">📐 규모 변화 도식 <span>자체 생성 · 데이터 기반</span></div>`
+    +`<svg viewBox="0 0 ${W} 178" width="100%" role="img" aria-label="${c.name} 재건축 전후 규모 도식">`
+    +`<line x1="18" y1="${baseY}" x2="${W-6}" y2="${baseY}" stroke="var(--line,#e5e8eb)" stroke-width="1.5"/>`
+    +tower(bx,hb,'var(--line,#c9d1d9)','#b0b8c1')
+    +tower(ax,ha,'var(--blue,#1f6feb)','#1858c4')
+    +`<text x="${bx+colW/2}" y="${baseY-hb-8}" text-anchor="middle" font-size="12" font-weight="700" fill="#4E5968">${fb?fb+'층':''}</text>`
+    +`<text x="${ax+colW/2}" y="${baseY-ha-8}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--blue,#1f6feb)">${fa?fa+'층':''}</text>`
+    +`<text x="${bx+colW/2}" y="168" text-anchor="middle" font-size="11" fill="#6B7684">현재 · ${fmt(ub)}세대</text>`
+    +`<text x="${ax+colW/2}" y="168" text-anchor="middle" font-size="11" fill="#333D4B" font-weight="600">재건축 후 · ${fmt(ua)}세대</text>`
+    +`<text x="${(bx+ax+colW)/2}" y="${baseY-Math.max(hb,ha)/2}" text-anchor="middle" font-size="13" fill="#8B95A1">→</text>`
+    +`</svg>`
+    +(delta!==null?`<div class="mdelta">+${delta.toLocaleString()}세대 (약 ${Math.round((ua/ub-1)*100)}% 증가)</div>`:'')
+    +`<div class="mnote">공개 보도 기반 잠정 수치. 실제 층수·세대수는 인가 고시로 확정.</div></div>`;
+}
 function profile(c){
   const el=document.getElementById('profileCard');const p=c.profile;
   if(!p){el.innerHTML='<p class="intro">등록된 단지 소개가 아직 없어요.</p>';return;}
@@ -203,7 +234,7 @@ function profile(c){
   el.innerHTML=`<p class="intro">${p.intro||''}</p>`
     +((p.strengths&&p.strengths.length)?`<div class="chips">${p.strengths.map(s=>`<span class="c">${s}</span>`).join('')}</div>`:'')
     +(facts.length?`<div class="facts">${facts.map(f=>`<div class="f"><div class="fl">${f[0]}</div><div class="fv">${f[1]}</div></div>`).join('')}</div>`:'')
-    +(p.watch?`<div class="watchline">⚠️ <span>${p.watch}</span></div>`:'')+(c.blueprint&&c.blueprint.url?`<a href="${c.blueprint.url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;padding:9px 14px;border-radius:10px;background:var(--blue-bg,#e8f0ff);color:var(--blue,#1f6feb);font-weight:600;font-size:13px;text-decoration:none">📐 ${c.design_firm?c.design_firm+' · ':''}설계 조감도·청사진 보기 ↗</a>`:'');
+    +(p.watch?`<div class="watchline">⚠️ <span>${p.watch}</span></div>`:'')+(c.blueprint&&c.blueprint.url?`<a href="${c.blueprint.url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;padding:9px 14px;border-radius:10px;background:var(--blue-bg,#e8f0ff);color:var(--blue,#1f6feb);font-weight:600;font-size:13px;text-decoration:none">📐 ${c.design_firm?c.design_firm+' · ':''}설계 조감도·청사진 보기 ↗</a>`:'')+massingBlock(c);
 }
 function predict(c){
   const el=document.getElementById('predCard');const p=c.prediction;

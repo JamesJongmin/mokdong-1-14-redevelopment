@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-07-01T07:06:32+09:00",
+    "updated_at": "2026-07-02T21:29:37+09:00",
     "data_basis": "공개 보도 기반 잠정 시드값(2026-06). 정비 단계/구조값은 양천구청·서울시 고시문으로 확정 필요.",
     "disclaimer": "추정치·비공식 정보이며 투자 권유가 아닙니다. 분담금·단계·일정은 각 조합/신탁 및 관계기관 공식 자료로 확인하세요.",
     "totals": {
@@ -11,8 +11,8 @@
     "summary3": {
       "race": {
         "name": "목동6단지",
-        "score": 60,
-        "label": "시공사 선정"
+        "score": 72,
+        "label": "건축 통합심의 의결"
       },
       "feasibility": {
         "name": "목동5단지",
@@ -41,7 +41,8 @@
       "iso_week": 27,
       "race_stage": "설계자 선정 완료",
       "rotation": "주차순환(ISO week, complex_id 오름차순)"
-    }
+    },
+    "race_methodology": "레이스=재건축 실제 진행 속도(입주 근접도) 근사치. 건축 통합심의 통과를 사업시행인가 직전 핵심 관문으로 크게 가중하고, 시공사 선정은 단지별 전략에 따라 시기가 크게 달라 속도 대표성이 낮아 소폭만 반영합니다. 통합심의 결과에 따라 시공사 계약·일정이 바뀔 수 있습니다."
   },
   "stage_scores": {
     "jeongbi_zone": {
@@ -74,7 +75,7 @@
     },
     "constructor": {
       "label": "시공사 선정",
-      "score": 60
+      "score": 50
     },
     "impl_approval": {
       "label": "사업시행인가",
@@ -95,6 +96,14 @@
     "completion": {
       "label": "준공·입주",
       "score": 100
+    },
+    "integrated_review_apply": {
+      "label": "건축 통합심의 신청",
+      "score": 54
+    },
+    "integrated_review_done": {
+      "label": "건축 통합심의 의결",
+      "score": 66
     }
   },
   "complexes": [
@@ -123,7 +132,7 @@
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "신탁(우리자산신탁). 정비구역 2025.12 → 사업시행자 지정 2026.02 → 설계자 희림건축 2026.05. 시공사 미선정.",
+      "notes": "신탁(우리자산신탁) 지정 2026.02.19. 설계 희림(더퍼스트목동) 2026.05.09. 통합심의 미도달. 1,882→3,500·49층.",
       "dates": {
         "jeongbi_zone": "2025.12",
         "union_or_trustee_set": "2026.02",
@@ -156,6 +165,11 @@
         "brand": "래미안",
         "bid_schedule": "",
         "basis": "정비구역 지정 단계. 삼성이 1·3·5단지를 래미안 후보지로 검토한다는 보도 수준으로, 입찰 신호는 아직 없음."
+      },
+      "design_firm": "희림",
+      "blueprint": {
+        "firm": "희림",
+        "url": "https://www.etoday.co.kr/news/view/2583658"
       }
     },
     {
@@ -183,7 +197,7 @@
         "target": "2027"
       },
       "constructor": null,
-      "notes": "신탁(하나자산신탁). 사업시행자 지정 2026.02, 설계자 디에이·삼하 2026.04, 정비사업위 구성.",
+      "notes": "신탁(하나자산신탁) 지정 2026.02.19. 설계 DA·삼하 컨소(NBBJ 협업) 2026.04. 1,640→3,389·49층.",
       "dates": {
         "jeongbi_zone": "2025.12",
         "union_or_trustee_set": "2026.02",
@@ -216,6 +230,11 @@
         "brand": "",
         "bid_schedule": "",
         "basis": "GS가 인근 2·7단지를 눈여겨본다는 거론 수준. 입찰 신호 없음."
+      },
+      "design_firm": "DA·삼하 컨소시엄",
+      "blueprint": {
+        "firm": "DA·삼하 컨소시엄",
+        "url": "https://www.housingwatch.co.kr/news/article.html?no=26775"
       }
     },
     {
@@ -243,7 +262,7 @@
         "target": "2026.05"
       },
       "constructor": null,
-      "notes": "조합방식. 추진위 승인 2025.12, 설계자 ANU 2026.02. 조합설립인가 2026.05 목표(추정).",
+      "notes": "조합 방식. 추진위 승인 2026.01.11(동의율 80%대). 설계사 미확정(확인필요). 1,588→3,317·49층.",
       "dates": {
         "jeongbi_zone": "2025.12",
         "prep_committee": "2025.12"
@@ -276,16 +295,20 @@
         "brand": "래미안",
         "bid_schedule": "",
         "basis": "추진위 단계. 삼성 래미안 후보지로 거론되나 입찰 전."
+      },
+      "blueprint": {
+        "firm": null,
+        "url": "https://www.sisajournal-e.com/news/articleView.html?idxno=419424"
       }
     },
     {
       "complex_id": 4,
       "name": "목동4단지",
       "method": "조합",
-      "race_stage_key": "union_or_trustee_set",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "조합설립인가/사업시행자 지정",
-      "race_score": 35,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 74,
       "feasibility_type": "균형형",
       "feasibility_score": 74,
@@ -303,7 +326,7 @@
         "target": "2026.06"
       },
       "constructor": null,
-      "notes": "조합방식. 정비구역 2025.08, 추진위 2025.11, 창립총회 2026.04, 설계자 나우동인 2026.01. 시공사 입찰 2026.06~07 예상.",
+      "notes": "조합 방식. 설계 나우동인 2026.01.25. 창립총회 2026.04.05. 시공사 입찰 2026.06 목표. 1,382→2,143·49층.",
       "dates": {
         "jeongbi_zone": "2025.08",
         "prep_committee": "2025.11",
@@ -338,6 +361,11 @@
         "brand": "디에이치",
         "bid_schedule": "2026.06 입찰공고 목표(보도)",
         "basis": "조합 창립총회 완료. 현대·포스코가 시공권에 적극적이라는 보도. 입찰 전이라 변동 여지."
+      },
+      "design_firm": "나우동인",
+      "blueprint": {
+        "firm": "나우동인",
+        "url": "https://namu.wiki/w/%EB%AA%A9%EB%8F%99%EC%8B%A0%EC%8B%9C%EA%B0%80%EC%A7%80%EC%95%84%ED%8C%8C%ED%8A%B8/%EC%9E%AC%EA%B1%B4%EC%B6%95%20%EA%B3%BC%EC%A0%95"
       }
     },
     {
@@ -365,7 +393,7 @@
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "신탁(하나자산신탁). 정비구역 2025.09, 사업시행자 지정 2025.12, 설계자 ANU·삼우 2026.02. 대지지분 최상위·사업성 최우수.",
+      "notes": "신탁(하나자산신탁) 지정 2025.12. 설계 ANU·삼우 2026.02.21. 환경영향평가 공람 단계. 1,848→3,930·49층.",
       "dates": {
         "jeongbi_zone": "2025.09",
         "union_or_trustee_set": "2025.12",
@@ -398,16 +426,21 @@
         "brand": "래미안",
         "bid_schedule": "",
         "basis": "사업성 1위 단지로 '삼성 유력' 거론되나 입찰 전 추측."
+      },
+      "design_firm": "ANU·삼우 컨소시엄",
+      "blueprint": {
+        "firm": "ANU·삼우 컨소시엄",
+        "url": "https://v.daum.net/v/20260216061800243"
       }
     },
     {
       "complex_id": 6,
       "name": "목동6단지",
       "method": "조합",
-      "race_stage_key": "constructor",
-      "race_bonus": 0,
-      "race_stage": "시공사 선정",
-      "race_score": 60,
+      "race_stage_key": "integrated_review_done",
+      "race_bonus": 6,
+      "race_stage": "건축 통합심의 의결",
+      "race_score": 72,
       "feasibility_seed": 80,
       "feasibility_type": "균형형",
       "feasibility_score": 80,
@@ -421,11 +454,11 @@
       "units_after": 2173,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "시공사 선정 총회",
-        "target": "2026.06"
+        "event": "사업시행인가",
+        "target": "2026 하반기"
       },
       "constructor": "DL이앤씨 ('아크로 목동 리젠시', 2026.06 선정 확정)",
-      "notes": "조합방식·선두. 정비구역 2024.08(최초), 조합설립 2025.05(14개 중 첫 조합). 통합심의 2026.05 의결, 시공사 총회 2026.06.27.",
+      "notes": "조합·선두. 건축 통합심의 의결 2026.05.28(목동 최초). 시공사 DL이앤씨 2026.06.27(아크로 목동리젠시, 단독응찰 수의계약). 1,362→약2,170·49층.",
       "dates": {
         "jeongbi_zone": "2024.08",
         "prep_committee": "2024",
@@ -459,16 +492,21 @@
         "brand": "아크로",
         "bid_schedule": "2026.06.27 선정총회 완료",
         "basis": "2026.06.27 총회에서 86.2% 찬성으로 DL이앤씨 선정 확정. 목동 1호 아크로, 공사비 약 1.3조원."
+      },
+      "design_firm": "건원",
+      "blueprint": {
+        "firm": "건원",
+        "url": "https://www.fnnews.com/news/202606161045290593"
       }
     },
     {
       "complex_id": 7,
       "name": "목동7단지",
       "method": "조합",
-      "race_stage_key": "prep_committee",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "추진위 구성/신탁 예비지정",
-      "race_score": 20,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 90,
       "feasibility_type": "분양가형",
       "feasibility_score": 90,
@@ -486,7 +524,7 @@
         "target": "2026 상반기"
       },
       "constructor": null,
-      "notes": "조합방식·대장 단지. 정비구역 2025.09. 추진위 구성 단계, 조합설립 2026 하반기 예상. 현대건설 관심.",
+      "notes": "조합 방식(과거 신탁MOU 있었으나 조합 확정). 설계 해안(세븐스텔라) 2026.03.25. 조합 창립총회 2026.06.07·인가 신청 2026.06.24. 시공사 2026.09 예상. 2,550→약4,341·49층.",
       "dates": {
         "jeongbi_zone": "2025.09"
       },
@@ -522,16 +560,21 @@
         "brand": "디에이치/래미안",
         "bid_schedule": "2026.09 입찰공고 예정설(보도)",
         "basis": "대장단지로 다수 대형사 관심. 삼성·현대 2파전 구도가 보도되나 아직 추진위~조합설립 단계."
+      },
+      "design_firm": "해안",
+      "blueprint": {
+        "firm": "해안",
+        "url": "https://biz.heraldcorp.com/article/10691546"
       }
     },
     {
       "complex_id": 8,
       "name": "목동8단지",
       "method": "조합",
-      "race_stage_key": "prep_committee",
+      "race_stage_key": "designer_done",
       "race_bonus": 0,
-      "race_stage": "추진위 구성/신탁 예비지정",
-      "race_score": 20,
+      "race_stage": "설계자 선정 완료",
+      "race_score": 48,
       "feasibility_seed": 75,
       "feasibility_type": "균형형",
       "feasibility_score": 75,
@@ -549,7 +592,7 @@
         "target": "2026.02"
       },
       "constructor": null,
-      "notes": "조합방식. 정비구역 2025.03, 동의율 77.5%. 조합설립 총회 2026.02 예상, 시공사 공고 2026.06~07 예상.",
+      "notes": "조합인가 2026.04.03. 설계 ANU. 환경영향평가 공람. 시공사 2026.08 입찰 예정. 1,352→1,881·49층.",
       "dates": {
         "jeongbi_zone": "2025.03"
       },
@@ -582,6 +625,11 @@
         "brand": "써밋",
         "bid_schedule": "2026.08 입찰공고 목표(보도)",
         "basis": "조합설립 후 8월 공고·연내 선정 목표. 대우 '써밋타운' 핵심 타깃으로 대우·포스코 경쟁 유력 거론."
+      },
+      "design_firm": "ANU",
+      "blueprint": {
+        "firm": "ANU",
+        "url": "https://www.arunews.com/news/articleView.html?idxno=61531"
       }
     },
     {
@@ -609,7 +657,7 @@
         "target": "미정"
       },
       "constructor": null,
-      "notes": "신탁(한국자산신탁). 정비구역 2025.09, 사업시행자 지정 2025.10(동의율 80% 최단기), 설계자 건원건축.",
+      "notes": "신탁(한국자산신탁) 지정 2025.10.30. 설계 건원. 통합심의 접수 보도(단지별 1차출처 확인필요). 2,030→3,957·49층.",
       "dates": {
         "jeongbi_zone": "2025.09",
         "union_or_trustee_set": "2025.10",
@@ -638,6 +686,11 @@
         "brand": "",
         "bid_schedule": "",
         "basis": "사업시행자·설계 선정 단계. 시공사 관심 보도가 사실상 부재."
+      },
+      "design_firm": "건원",
+      "blueprint": {
+        "firm": "건원",
+        "url": "https://www.housingtimes.co.kr/news/articleView.html?idxno=1458"
       }
     },
     {
@@ -665,7 +718,7 @@
         "target": "2026.06"
       },
       "constructor": null,
-      "notes": "신탁(한국토지신탁). 사업시행자 지정 2025.10, 설계자 나우동인 2025.12. 시공사 입찰공고 2026.06.15(현대 vs 대우 거론).",
+      "notes": "신탁(한국토지신탁). 설계 나우동인 2025.12.21. 시공사 입찰중(마감 2026.08.10, 약2.6조). 최고 40층. 2,160→4,248.",
       "dates": {
         "jeongbi_zone": "2025",
         "union_or_trustee_set": "2025.10",
@@ -703,6 +756,11 @@
         "brand": "디에이치",
         "bid_schedule": "2026.08.10 입찰마감(한국토지신탁)",
         "basis": "6월 입찰 절차 돌입. 현설에 6사 참여했고 현대가 디에이치 라운지를 선점하며 가장 적극적."
+      },
+      "design_firm": "나우동인",
+      "blueprint": {
+        "firm": "나우동인",
+        "url": "https://www.theguru.co.kr/news/article.html?no=103247"
       }
     },
     {
@@ -730,7 +788,7 @@
         "target": "2026.10"
       },
       "constructor": null,
-      "notes": "신탁(한국자산신탁). 정비구역 2025.11, 사업시행자 지정 2026.01, 설계자 ANU 2026.04. 시공사 2026.10 예정.",
+      "notes": "신탁(한국자산신탁) 지정 2026.01.22. 설계 ANU 2026.04.12. 시공사 2026.10 예정. 1,595→2,679·41층.",
       "dates": {
         "jeongbi_zone": "2025.11",
         "union_or_trustee_set": "2026.01",
@@ -767,16 +825,21 @@
         "brand": "써밋",
         "bid_schedule": "2026.10 입찰공고 목표(보도)",
         "basis": "정비구역 지정 완료. 다수 관심 속 대우·GS 물밑경쟁 예상. 대우 '써밋타운' 핵심 타깃."
+      },
+      "design_firm": "ANU",
+      "blueprint": {
+        "firm": "ANU",
+        "url": "https://www.sedaily.com/NewsView/2GXQVD0DWG"
       }
     },
     {
       "complex_id": 12,
       "name": "목동12단지",
       "method": "조합",
-      "race_stage_key": "union_or_trustee_set",
+      "race_stage_key": "integrated_review_apply",
       "race_bonus": 0,
-      "race_stage": "조합설립인가/사업시행자 지정",
-      "race_score": 35,
+      "race_stage": "건축 통합심의 신청",
+      "race_score": 54,
       "feasibility_seed": 73,
       "feasibility_type": "균형형",
       "feasibility_score": 73,
@@ -794,7 +857,7 @@
         "target": "2026 하반기"
       },
       "constructor": null,
-      "notes": "조합방식. 정비구역 2025.03, 추진위 2024.09, 조합설립인가 2026.02, 설계자 희림 2026.01. 시공사 가을 총회 목표(GS건설 유력).",
+      "notes": "조합인가 2026.02.27. 설계 희림 2026.01.24. 건축 통합심의 신청 2026.05.29(미의결). GS 유력설(미확정). 1,860→2,810·43층.",
       "dates": {
         "jeongbi_zone": "2025.03",
         "prep_committee": "2024.09",
@@ -827,6 +890,11 @@
         "brand": "",
         "bid_schedule": "2026년 상반기 말 입찰공고 목표설(보도)",
         "basis": "조합설립 인가 완료(목동 2호 조합). 현재 GS건설만 활동해 단독수주 흐름이 유력 거론."
+      },
+      "design_firm": "희림",
+      "blueprint": {
+        "firm": "희림",
+        "url": "https://www.arunews.com/news/articleView.html?idxno=60287"
       }
     },
     {
@@ -854,7 +922,7 @@
         "target": "2026.03"
       },
       "constructor": null,
-      "notes": "신탁(대신자산신탁·목동 신탁 1호). 정비구역 2025.03, 사업시행자 지정 2025.10, 설계자 ANU 2025.12. 시공사 입찰 2026.03 예정(삼성물산 관심). 3,852가구.",
+      "notes": "신탁(대신자산신탁·목동 신탁1호) 지정 2025.10.02. 설계 ANU 2025.12.20. 목동 첫 경쟁입찰 시공사 선정중(5개사, 마감 2026.09.07). 2,280→3,852·49층.",
       "dates": {
         "jeongbi_zone": "2025.03",
         "union_or_trustee_set": "2025.10",
@@ -887,16 +955,21 @@
         "brand": "래미안",
         "bid_schedule": "2026.09.07 입찰마감(보도)",
         "basis": "신탁 1호(대신자산신탁). 삼성물산 우선 공략지로 거론되고 입찰마감 9.7이 보도됨."
+      },
+      "design_firm": "ANU",
+      "blueprint": {
+        "firm": "ANU",
+        "url": "https://www.newsway.co.kr/news/view?ud=2026070116250526047"
       }
     },
     {
       "complex_id": 14,
       "name": "목동14단지",
       "method": "신탁",
-      "race_stage_key": "union_or_trustee_set",
+      "race_stage_key": "integrated_review_apply",
       "race_bonus": 0,
-      "race_stage": "조합설립인가/사업시행자 지정",
-      "race_score": 35,
+      "race_stage": "건축 통합심의 신청",
+      "race_score": 54,
       "feasibility_seed": 82,
       "feasibility_type": "규모형",
       "feasibility_score": 82,
@@ -914,7 +987,7 @@
         "target": "2026.09"
       },
       "constructor": null,
-      "notes": "신탁(KB부동산신탁)·규모 최대(3,100→5,123). 정비구역 2025.03, 사업시행자 지정 2025.10, 통합심의 신청 2026.05. 시공사 입찰 2026.09 예상.",
+      "notes": "신탁(KB부동산신탁) 지정 2025.10.16. 설계 희림·나우동인·가람 컨소. 건축 통합심의 신청 2026.05.25(미의결). 목동 최대 5,123세대·49층.",
       "dates": {
         "jeongbi_zone": "2025.03",
         "union_or_trustee_set": "2025.10"
@@ -950,6 +1023,11 @@
         "brand": "써밋/르엘/디에이치",
         "bid_schedule": "2026.09 입찰공고 예정설(보도)",
         "basis": "최대 단지(약 5천가구). 롯데 vs 대우 경쟁설과 '현대 유력'설이 병존해 특정 승자 예측은 불확실."
+      },
+      "design_firm": "희림·나우동인·가람 컨소시엄",
+      "blueprint": {
+        "firm": "희림·나우동인·가람 컨소시엄",
+        "url": "https://www.dpnews.co.kr/news/articleView.html?idxno=1937"
       }
     }
   ]

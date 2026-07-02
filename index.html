@@ -188,6 +188,7 @@
     <button data-metric="feasibility_score" data-c="var(--green)">💰 사업성</button>
     <button data-metric="interest_score" data-c="var(--orange)">🔥 관심도</button>
   </div>
+  <p id="raceNote" style="margin:2px 0 10px;font-size:12px;line-height:1.5;color:var(--faint,#8b95a1)"></p>
   <div class="rank" id="rankList"></div>
 </div></section>
 
@@ -279,7 +280,7 @@ function rank(metric){
   const list=[...DATA.complexes].sort((a,b)=>(b[metric]||0)-(a[metric]||0));
   document.getElementById('rankList').innerHTML=list.map((c,i)=>{
     const sc=c[metric]||0;let sub;
-    if(metric==='race_score')sub=c.race_stage+(c.constructor?` · ${c.constructor}`:'');
+    if(metric==='race_score')sub=c.race_stage+(c.constructor?` · 시공사 ${c.constructor}`:'')+(c.design_firm?` · 설계 ${c.design_firm}`:'');
     else if(metric==='feasibility_score')sub=(c.feasibility_type||'')+(c.land_share_avg?` · 지분 ${c.land_share_avg}`:' · 구조값 잠정');
     else sub=`최근 30일 뉴스 ${c.news_mentions_30d||0}건`;
     const hl=c.complex_id===FEATURED;
@@ -291,6 +292,7 @@ function rank(metric){
         <div class="bar"><i data-w="${sc}" style="width:0;background:${COLOR[metric]}"></i></div></div>
       <div class="scoreN" style="color:${COLOR[metric]}">${sc}</div></a>`;
   }).join('');
+  const rn=document.getElementById('raceNote');if(rn)rn.textContent=(metric==='race_score'&&DATA.meta&&DATA.meta.race_methodology)?('🏁 산정 기준 · '+DATA.meta.race_methodology):'';
   requestAnimationFrame(()=>document.querySelectorAll('#rankList .bar>i').forEach(i=>{i.style.width=(i.dataset.w||0)+'%';}));
 }
 function calendar(){
@@ -313,7 +315,7 @@ function cards(){
       <div class="cxcover">${cover(c)}<img class="cxphoto" src="assets/photos/${c.complex_id}.jpg" alt="${c.name} 전경" loading="lazy" onerror="this.remove()"><span class="cxnum">${c.complex_id}단지</span>
         <span class="chip ${MCLS(c.method)}">${METHOD_KO(c.method)}</span></div>
       <div class="cxbody">
-        <div class="stage">${c.race_stage||''}</div>
+        <div class="stage">${c.race_stage||''}${c.design_firm?` · 설계 ${c.design_firm}`:''}</div>
         ${(c.profile&&c.profile.strengths&&c.profile.strengths[0])?`<div class="cxtag">${c.profile.strengths[0]}</div>`:''}
         ${(c.prediction&&c.prediction.predicted)?`<div class="cxpred"><span class="pdot" style="background:${CONFCLR[c.prediction.confidence]||'var(--faint)'}"></span>🏗 ${c.prediction.predicted}</div>`:''}
         <div class="mini">

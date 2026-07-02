@@ -133,7 +133,7 @@
 <footer><div class="wrap">© 2026 Mokdong Redevelopment Watch · 비공식 정보 트래커 · 투자 권유 아님<br>광고문의 · 문의/제보 : <a href="mailto:kevin.j.baek@gmail.com">kevin.j.baek@gmail.com</a></div></footer>
 
 <script>
-const ORDER=["jeongbi_zone","prep_committee","union_setup_push","trustee_apply","union_or_trustee_set","designer_ongoing","designer_done","constructor","impl_approval","mgmt_approval","relocation","construction","completion"];
+const ORDER=["jeongbi_zone","prep_committee","union_setup_push","trustee_apply","union_or_trustee_set","designer_ongoing","designer_done","constructor","integrated_review_apply","integrated_review_done","impl_approval","mgmt_approval","relocation","construction","completion"];
 const METHOD_KO=m=>m==='조합'?'조합 방식':'신탁 방식',MCLS=m=>m==='조합'?'union':'trust';
 function qid(){return parseInt(new URLSearchParams(location.search).get('id'))||1;}
 function cover(c){
@@ -199,11 +199,11 @@ function cnews(c,n){
 function profile(c){
   const el=document.getElementById('profileCard');const p=c.profile;
   if(!p){el.innerHTML='<p class="intro">등록된 단지 소개가 아직 없어요.</p>';return;}
-  const facts=[['위치',p.location],['학군',p.school],['교통',p.transit],['평형·규모',p.units_type]].filter(x=>x[1]);
+  const facts=[['위치',p.location],['학군',p.school],['교통',p.transit],['평형·규모',p.units_type],['설계사',c.design_firm]].filter(x=>x[1]);
   el.innerHTML=`<p class="intro">${p.intro||''}</p>`
     +((p.strengths&&p.strengths.length)?`<div class="chips">${p.strengths.map(s=>`<span class="c">${s}</span>`).join('')}</div>`:'')
     +(facts.length?`<div class="facts">${facts.map(f=>`<div class="f"><div class="fl">${f[0]}</div><div class="fv">${f[1]}</div></div>`).join('')}</div>`:'')
-    +(p.watch?`<div class="watchline">⚠️ <span>${p.watch}</span></div>`:'');
+    +(p.watch?`<div class="watchline">⚠️ <span>${p.watch}</span></div>`:'')+(c.blueprint&&c.blueprint.url?`<a href="${c.blueprint.url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;padding:9px 14px;border-radius:10px;background:var(--blue-bg,#e8f0ff);color:var(--blue,#1f6feb);font-weight:600;font-size:13px;text-decoration:none">📐 ${c.design_firm?c.design_firm+' · ':''}설계 조감도·청사진 보기 ↗</a>`:'');
 }
 function predict(c){
   const el=document.getElementById('predCard');const p=c.prediction;

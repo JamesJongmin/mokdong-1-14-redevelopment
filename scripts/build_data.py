@@ -14,7 +14,7 @@ build_data.py — 목동 트래커 점수 재계산 엔진 (표준 라이브러�
 
 사용:  python scripts/build_data.py
 """
-import json, os, sys
+import json, os, re, sys
 from datetime import datetime, timezone, timedelta
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -60,6 +60,106 @@ def interest_score(c, any_news):
     mentions = c.get("news_mentions_30d", 0)
     news_derived = clamp(mentions * 8)   # 12건 ≈ 만점 근처
     return round(clamp(0.4 * seed + 0.6 * news_derived))
+
+
+# 단계 진행 신호 키워드 (기사 제목에서 감지) — 진행 후기 단계일수록 위쪽 우선순위
+STAGE_KEYWORDS = [
+    ("착공", ["착공", "기공"]),
+    ("관리처분", ["관리처분"]),
+    ("이주", ["이주"]),
+    ("사업시행인가", ["사업시행인가", "사업시행계획인가"]),
+    ("건축심의", ["통합심의", "건축심의"]),
+    ("시공사 선정", ["시공사 선정", "시공사선정", "시공자 선정", "시공자선정",
+                  "시공사 확정", "시공사 계약", "시공자 총회"]),
+    ("조합설립인가", ["조합설립인가", "조합 설립인가", "조합설립 인가", "조합설립인가 신청"]),
+]
+STAGE_ORDER = ["착공", "관리처분", "이주", "사업시행인가",
+               "건축심의", "시공사 선정", "조합설립인가"]
+
+
+def extract_complexes(title, tagged):
+    """제목·태그에서 단지 번호(1~14) 추출."""
+    ids = set(x for x in (tagged or []) if isinstance(x, int))
+    for m in re.findall(r"목동\s*제?\s*(\d{1,2})", title or ""):
+        n = int(m)
+        if 1 <= n <= 14:
+            ids.add(n)
+    for m in re.findall(r"(\d{1,2})\s*단지", title or ""):
+        n = int(m)
+        if 1 <= n <= 14:
+            ids.add(n)
+    return ids
+
+
+def daily_implication(data, items, now):
+    """뉴스 제목의 단계 신호 + 3축 1위를 엮어 '오늘 한눈에' 문단을 생성."""
+    def within(days, it):
+        p = it.get("published")
+        if not p:
+            return False
+        try:
+            d = datetime.fromisoformat(p)
+        except Exception:
+            return False
+        if d.tzinfo is None:
+            d = d.replace(tzinfo=KST)
+        return (now - d).days < days
+
+    def collect(days):
+        sig = {}
+        for it in items:
+            if days and not within(days, it):
+                continue
+            title = it.get("title", "") or ""
+            cx = extract_complexes(title, it.get("complexes"))
+            for label, kws in STAGE_KEYWORDS:
+                if any(k in title for k in kws):
+                    sig.setdefault(label, set()).update(cx)
+                    break  # 기사당 대표 신호 1개(우선순위 순)
+        return sig
+
+    sig = collect(7) or collect(30)  # 최근 7일 우선, 없으면 30일
+    signals = []
+    for label in STAGE_ORDER:
+        if label in sig:
+            signals.append({"label": label,
+                            "complexes": sorted(x for x in sig[label] if x)})
+
+    s3 = data["meta"]["summary3"]
+    r, f, i = s3["race"], s3["feasibility"], s3["interest"]
+    lines = [f"레이스 선두는 {r['name']}({r['score']}점) · {r['label']}."]
+    if i["name"] == r["name"]:
+        lines.append(f"관심도도 {i['name']}에 집중(뉴스 {i['mentions']}건), "
+                     f"사업성 1위는 {f['name']}({f['score']}점).")
+    else:
+        lines.append(f"관심도 1위 {i['name']}(뉴스 {i['mentions']}건) · "
+                     f"사업성 1위 {f['name']}({f['score']}점).")
+
+    if signals:
+        parts = []
+        for s in signals[:3]:
+            cx = "·".join(f"{x}단지" for x in s["complexes"])
+            parts.append((s["label"] + " " + cx).strip())
+        lines.append("최근 단계 신호: " + ", ".join(parts) + ".")
+        top = signals[0]
+        n = len(top["complexes"])
+        if top["label"] == "시공사 선정":
+            imp = ("여러 단지가 동시에 시공사 수주전에 진입하며 심의 단계에서 "
+                   "시공·착공 국면으로 이동하는 흐름." if n >= 2 else
+                   "시공사 선정이 시작되며 해당 단지 사업 추진이 가시화되는 국면.")
+        elif top["label"] in ("착공", "관리처분"):
+            imp = "후기 단계 단지가 등장하며 이주·공급 일정이 구체화되는 흐름."
+        elif top["label"] == "이주":
+            imp = "이주 단계가 임박해 인근 전월세 수요 등 파급 변수가 부각되는 국면."
+        elif top["label"] == "사업시행인가":
+            imp = "핵심 인가 관문을 통과하는 단지가 나오며 사업 속도가 빨라지는 흐름."
+        else:  # 조합설립인가 / 건축심의
+            imp = "초기 인가 관문을 통과하는 단지가 늘며 목동 전반이 본궤도에 오르는 흐름."
+        lines.append("함의: " + imp)
+    else:
+        lines.append("함의: 뚜렷한 단계 변동 신호는 없고 기존 우위 구도가 유지되는 국면.")
+
+    return {"date": now.strftime("%Y-%m-%d"), "lines": lines, "signals": signals}
 
 
 def main():
@@ -121,6 +221,9 @@ def main():
         "race_stage": feat.get("race_stage", ""),
         "rotation": "주차순환(ISO week, complex_id 오름차순)",
     }
+
+    # 3.6) 오늘 한눈에 (데일리 임플리케이션)
+    data["meta"]["at_glance"] = daily_implication(data, items, now)
 
     # 4) 타임스탬프
     data["meta"]["updated_at"] = datetime.now(KST).isoformat(timespec="seconds")

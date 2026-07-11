@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-07-08T06:45:11+09:00",
+    "updated_at": "2026-07-11T09:33:26+09:00",
     "data_basis": "공개 보도 기반 잠정 시드값(2026-06). 정비 단계/구조값은 양천구청·서울시 고시문으로 확정 필요.",
     "disclaimer": "추정치·비공식 정보이며 투자 권유가 아닙니다. 분담금·단계·일정은 각 조합/신탁 및 관계기관 공식 자료로 확인하세요.",
     "totals": {
@@ -22,7 +22,7 @@
       "interest": {
         "name": "목동6단지",
         "score": 97,
-        "mentions": 21
+        "mentions": 20
       }
     },
     "weights": {
@@ -42,7 +42,35 @@
       "race_stage": "건축 통합심의 신청",
       "rotation": "주차순환(ISO week, complex_id 오름차순)"
     },
-    "race_methodology": "레이스=재건축 실제 진행 속도(입주 근접도) 근사치. 건축 통합심의 통과를 사업시행인가 직전 핵심 관문으로 크게 가중하고, 시공사 선정은 단지별 전략에 따라 시기가 크게 달라 속도 대표성이 낮아 소폭만 반영합니다. 통합심의 결과에 따라 시공사 계약·일정이 바뀔 수 있습니다."
+    "race_methodology": "레이스=재건축 실제 진행 속도(입주 근접도) 근사치. 건축 통합심의 통과를 사업시행인가 직전 핵심 관문으로 크게 가중하고, 시공사 선정은 단지별 전략에 따라 시기가 크게 달라 속도 대표성이 낮아 소폭만 반영합니다. 통합심의 결과에 따라 시공사 계약·일정이 바뀔 수 있습니다.",
+    "at_glance": {
+      "date": "2026-07-11",
+      "lines": [
+        "레이스 선두는 목동6단지(72점) · 건축 통합심의 의결.",
+        "관심도도 목동6단지에 집중(뉴스 20건), 사업성 1위는 목동5단지(95점).",
+        "최근 단계 신호: 시공사 선정 4단지·6단지·7단지·8단지·10단지·12단지, 조합설립인가 7단지.",
+        "함의: 여러 단지가 동시에 시공사 수주전에 진입하며 심의 단계에서 시공·착공 국면으로 이동하는 흐름."
+      ],
+      "signals": [
+        {
+          "label": "시공사 선정",
+          "complexes": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            12
+          ]
+        },
+        {
+          "label": "조합설립인가",
+          "complexes": [
+            7
+          ]
+        }
+      ]
+    }
   },
   "stage_scores": {
     "jeongbi_zone": {
@@ -119,8 +147,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 78,
       "interest_seed": 70,
-      "interest_score": 71,
-      "news_mentions_30d": 9,
+      "interest_score": 66,
+      "news_mentions_30d": 8,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -190,8 +218,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 76,
       "interest_seed": 64,
-      "interest_score": 54,
-      "news_mentions_30d": 6,
+      "interest_score": 50,
+      "news_mentions_30d": 5,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -261,8 +289,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 72,
       "interest_seed": 60,
-      "interest_score": 29,
-      "news_mentions_30d": 1,
+      "interest_score": 34,
+      "news_mentions_30d": 2,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -332,8 +360,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 74,
       "interest_seed": 58,
-      "interest_score": 33,
-      "news_mentions_30d": 2,
+      "interest_score": 28,
+      "news_mentions_30d": 1,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -477,7 +505,7 @@
       "feasibility_score": 80,
       "interest_seed": 92,
       "interest_score": 97,
-      "news_mentions_30d": 21,
+      "news_mentions_30d": 20,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -549,7 +577,7 @@
       "feasibility_score": 90,
       "interest_seed": 88,
       "interest_score": 95,
-      "news_mentions_30d": 19,
+      "news_mentions_30d": 24,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -622,8 +650,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 75,
       "interest_seed": 62,
-      "interest_score": 54,
-      "news_mentions_30d": 6,
+      "interest_score": 58,
+      "news_mentions_30d": 7,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -693,8 +721,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 76,
       "interest_seed": 64,
-      "interest_score": 30,
-      "news_mentions_30d": 1,
+      "interest_score": 26,
+      "news_mentions_30d": 0,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -761,7 +789,7 @@
       "feasibility_score": 77,
       "interest_seed": 66,
       "interest_score": 86,
-      "news_mentions_30d": 19,
+      "news_mentions_30d": 18,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -836,8 +864,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 76,
       "interest_seed": 62,
-      "interest_score": 30,
-      "news_mentions_30d": 1,
+      "interest_score": 25,
+      "news_mentions_30d": 0,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -911,8 +939,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 73,
       "interest_seed": 60,
-      "interest_score": 48,
-      "news_mentions_30d": 5,
+      "interest_score": 43,
+      "news_mentions_30d": 4,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -982,8 +1010,8 @@
       "feasibility_type": "균형형",
       "feasibility_score": 80,
       "interest_seed": 66,
-      "interest_score": 86,
-      "news_mentions_30d": 14,
+      "interest_score": 84,
+      "news_mentions_30d": 12,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,
@@ -1054,7 +1082,7 @@
       "feasibility_score": 82,
       "interest_seed": 75,
       "interest_score": 90,
-      "news_mentions_30d": 17,
+      "news_mentions_30d": 13,
       "land_share_avg": null,
       "far_current": null,
       "far_planned": null,

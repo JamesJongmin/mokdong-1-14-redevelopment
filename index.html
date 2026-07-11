@@ -103,6 +103,17 @@
 
   .note{background:var(--orange-bg);color:#9A3412;font-size:.84rem;border-radius:14px;padding:14px 16px;margin-top:18px;font-weight:500;letter-spacing:-.01em;line-height:1.55}
 
+  .glance{background:var(--card);border-radius:20px;padding:20px 22px;margin-top:14px;box-shadow:0 1px 3px rgba(0,0,0,.04),0 1px 2px rgba(0,0,0,.03);border:1px solid var(--line2)}
+  .glance .gh{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
+  .glance .gt{font-size:1.02rem;font-weight:800;letter-spacing:-.03em;display:flex;align-items:center;gap:7px}
+  .glance .gt .gi{font-size:1.1rem}
+  .glance .gd{font-size:.78rem;color:var(--gray);font-weight:600;letter-spacing:-.01em}
+  .glance ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .glance li{font-size:.92rem;color:var(--sub);font-weight:500;letter-spacing:-.01em;line-height:1.5}
+  .glance li.imp{color:var(--ink);font-weight:700;padding-top:2px}
+  .glance .sigrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .glance .sig{font-size:.74rem;font-weight:700;background:var(--blue-bg);color:var(--blue-d);padding:4px 10px;border-radius:8px;letter-spacing:-.01em}
+
   footer{margin-top:40px;padding:32px 0 40px;border-top:1px solid var(--line)}
   footer b{font-weight:800;font-size:1rem;letter-spacing:-.03em}
   footer small{display:block;color:var(--gray);font-size:.82rem;line-height:1.7;margin-top:8px;font-weight:500}
@@ -177,6 +188,7 @@
   <p>레이스·사업성·관심도 3가지 점수로 14개 단지를 매일 줄 세웁니다.</p>
   <div class="updated"><span class="dot-live"></span><span id="updated">불러오는 중…</span></div>
   <div class="summary3" id="summary3"></div>
+  <div id="atglance"></div>
   <div id="spotlight"></div>
 </div></header>
 
@@ -275,6 +287,20 @@ function summary(meta){
     card('🏁','var(--blue-bg)','',"레이스 1위",s.race,o=>`${o.label} · ${o.score}점`)+
     card('💰','var(--green-bg)','',"사업성 1위",s.feasibility,o=>`${o.type||''} · ${o.score}점`)+
     card('🔥','var(--orange-bg)','',"관심도 1위",s.interest,o=>`뉴스 ${o.mentions}건 · ${o.score}점`);
+}
+function glance(meta){
+  const g=meta.at_glance,el=document.getElementById('atglance');
+  if(!el)return;
+  if(!g||!g.lines||!g.lines.length){el.innerHTML='';return;}
+  const lines=g.lines.map(t=>`<li class="${t.indexOf('함의:')===0?'imp':''}">${t}</li>`).join('');
+  const sigs=(g.signals||[]).map(s=>{
+    const cx=(s.complexes&&s.complexes.length)?' '+s.complexes.map(x=>x+'단지').join('·'):'';
+    return `<span class="sig">${s.label}${cx}</span>`;}).join('');
+  el.innerHTML=`<div class="glance">
+    <div class="gh"><div class="gt"><span class="gi">📌</span>오늘 한눈에</div><div class="gd">${g.date||''}</div></div>
+    <ul>${lines}</ul>
+    ${sigs?`<div class="sigrow">${sigs}</div>`:''}
+  </div>`;
 }
 function rank(metric){
   const list=[...DATA.complexes].sort((a,b)=>(b[metric]||0)-(a[metric]||0));
@@ -381,7 +407,7 @@ async function init(){
   if(!DATA){document.getElementById('updated').textContent='데이터를 불러올 수 없어요';return;}
   const n=await load('news.json');
   FEATURED=(DATA.meta&&DATA.meta.featured&&DATA.meta.featured.id)||14;
-  summary(DATA.meta||{});spotlight();rank('race_score');calendar();news(n);cards();revealOn();
+  summary(DATA.meta||{});glance(DATA.meta||{});spotlight();rank('race_score');calendar();news(n);cards();revealOn();
   document.querySelectorAll('#seg button').forEach(b=>b.addEventListener('click',()=>{
     document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('active'));
     b.classList.add('active');rank(b.dataset.metric);

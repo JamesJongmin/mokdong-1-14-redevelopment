@@ -34,23 +34,32 @@ def clamp(v, lo=0, hi=100):
     return max(lo, min(hi, v))
 
 
-def feasibility_score(c, weights):
-    """구조값(대지지분/용적률/비례율 등)이 채워지면 가중합, 아니면 시드값 사용."""
+def feasibility_score(c, weights=None):
+    """실데이터(비례율·현용적률·대지지분)를 확보된 만큼 가중 반영하고,
+    데이터가 없는 부분은 시드값으로 보완한다(커버리지 비례 블렌딩).
+      - 비례율(expected_ratio %): 90%→40, 100%→70, 110%→100 (선형, clamp)
+      - 현용적률(far_current %): 낮을수록 사업성↑. 110%→95, 160%→25
+      - 대지지분(land_share_avg 평): 28평→만점
+    데이터가 하나도 없으면 feasibility_seed 를 그대로 사용."""
+    seed = c.get("feasibility_seed", 0)
+    W = {"ratio": 0.45, "far": 0.35, "land": 0.20}
+    comps, wsum = 0.0, 0.0
+    er = c.get("expected_ratio")
+    if er is not None:
+        ratio_c = clamp(40 + (er - 90) * 3.0)
+        comps += ratio_c * W["ratio"]; wsum += W["ratio"]
+    far = c.get("far_current")
+    if far is not None:
+        far_c = clamp((160 - far) / 50.0 * 70 + 25)   # 용적률 낮을수록 ↑
+        comps += far_c * W["far"]; wsum += W["far"]
     ls = c.get("land_share_avg")
-    if ls is None:
-        return c.get("feasibility_seed", 0)
-    w = weights["feasibility"]
-    # 0~100 정규화(잠정 기준값 — 실데이터 확보 시 조정)
-    land = clamp((ls / 25.0) * 100)                      # 25평 지분을 만점 기준
-    ratio = clamp(c.get("expected_ratio") or 100)        # 비례율 100%≈기준
-    far_c = c.get("far_current") or 130
-    far_inv = clamp((1 - (far_c - 100) / 150) * 100)     # 용적률 낮을수록 ↑
-    loc = c.get("location_premium", 70)
-    scale = c.get("scale_efficiency", 70)
-    s = (land * w["land_share"] + ratio * w["expected_ratio"] +
-         far_inv * w["far_current_inverse"] + loc * w["location_premium"] +
-         scale * w["scale_efficiency"])
-    return round(clamp(s))
+    if ls is not None:
+        land_c = clamp((ls / 28.0) * 100)
+        comps += land_c * W["land"]; wsum += W["land"]
+    if wsum == 0:
+        return seed
+    # comps = data_score * wsum. 미확보분(1-wsum)은 시드로 보완.
+    return round(clamp(comps + seed * (1 - wsum)))
 
 
 def interest_score(c, any_news):

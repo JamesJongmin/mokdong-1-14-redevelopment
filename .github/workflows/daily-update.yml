@@ -1,0 +1,49 @@
+name: 목동 트래커 일일 데이터 갱신
+
+on:
+  schedule:
+    # 매일 22:00 UTC = 07:00 KST 실행
+    - cron: '0 22 * * *'
+  workflow_dispatch:        # 수동 실행 버튼
+
+permissions:
+  contents: write            # GITHUB_TOKEN 으로 push 허용
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 뉴스 수집 (fetch_news.py)
+        run: python3 scripts/fetch_news.py || (sleep 10 && python3 scripts/fetch_news.py)
+
+      - name: 점수 재계산 (build_data.py)
+        run: python3 scripts/build_data.py
+
+      - name: 검증 (구문 + JSON 유효성)
+        run: |
+          python3 -m py_compile scripts/*.py
+          python3 -c "import json; json.load(open('data.json')); json.load(open('news.json')); print('VALID_OK')"
+
+      - name: 커밋 & 푸시 (변경 있을 때만)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json news.json
+          if git diff --cached --quiet; then
+            echo "변경 없음 — push 생략"
+          else
+            git commit -m "chore: 일일 데이터 갱신 $(date -u +%Y-%m-%d)"
+            git push
+          fi

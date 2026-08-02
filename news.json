@@ -1,8 +1,17 @@
 {
-  "generated_at": "2026-08-02T07:59:35+09:00",
+  "generated_at": "2026-08-03T08:00:16+09:00",
   "window_days": 30,
-  "count": 96,
+  "count": 85,
   "items": [
+    {
+      "title": "[정비사업탐방] 목동7단지 재건축 본궤도… 대형건설사 ‘눈독’ - 매일일보",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5YWHluaHMtOW1FYk9ISUw4dmFDMzFya2RXYkRwZmNOVk1xSUFuRTBPNUt6ZFVRLVd0Yy1OWmhjamw3dy1La20waWljTmM5U255cXE0cHRKOUxGY21lRzRXNWdqSjM?oc=5",
+      "source": "매일일보",
+      "published": "2026-08-02T12:36:51+09:00",
+      "complexes": [
+        7
+      ]
+    },
     {
       "title": "목동3단지 재건축, 조합설립 위기…상가·대형평형 산넘어 산 - v.daum.net",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5OUnZYVGFGYi1xcTVPSkc4UnQxTmw5a2Vjc2tweDlRQ0lqN2hHLXdOVlFseWZHN3pGTm1aMnRWVjdQRTJoM2lXcHZiQjU1a00?oc=5",
@@ -22,19 +31,10 @@
       ]
     },
     {
-      "title": "김종건 목동8단지 조합장 \"14개 단지 중 첫 입주 목표로 속도전\" [인터뷰] - news.nate.com",
+      "title": "김종건 목동8단지 조합장 \"14개 단지 중 첫 입주 목표로 속도전\" [인터뷰] - 네이트",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBmZV9wVEY2WXJwQUFDV3pUbjZkejdVUWdRR09oLTM5VWhRemFzMTFuT01kRjUzb3RvMnlRcWhXck92cW1IRDJVSkZwbTZ1UDVoTTFV?oc=5",
-      "source": "news.nate.com",
+      "source": "네이트",
       "published": "2026-08-01T09:34:00+09:00",
-      "complexes": [
-        8
-      ]
-    },
-    {
-      "title": "김종건 목동8단지 조합장 “14개 단지 중 첫 입주 목표로 속도전” [인터뷰] - 서울경제",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yc0IxT0tUYk4xSkVZaDZLM0VpOThzR3JpTzFQMjlQLTZpdWFOa3JaSzFLUW5FajlLQlJNV2ZONWYzamgwNktXcGE3ZU1lN1VoaWw5OVd1QWdaMjhlVXh2LTczOTFId9IBU0FVX3lxTE0tZHo0cGJmOEQtX1ZEYkVEZXlrcERXUW8wUUIyRlZscDg4dGFpcmNKTmVaSWw3SE9rZzEwUEZlZHJwYjhjeFhyb2xOVm1nMkJhWWIw?oc=5",
-      "source": "서울경제",
-      "published": "2026-08-01T09:33:23+09:00",
       "complexes": [
         8
       ]
@@ -49,15 +49,6 @@
       ]
     },
     {
-      "title": "서울시, 목동13단지 재건축 통합심의 '보류'…목동 재건축 브레이크 - news.nate.com",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9IMFNXaldTQ0FVOGNQYzZZUnVjMWxPN1lxbjNCZkZZc0h0Q1h6ZjN5MW50TXVnS1lzMXpyZU1aNHdQUWRFNGFBaUFxMjFldEdTdGxn?oc=5",
-      "source": "news.nate.com",
-      "published": "2026-07-31T20:06:00+09:00",
-      "complexes": [
-        13
-      ]
-    },
-    {
       "title": "서울시, 목동13단지 재건축 통합심의 ‘보류’…목동 재건축 브레이크 - 아시아투데이",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9lTWpOYUlSVEY2TUUzTzJQZmIxWDVvOWNldUw0dm94bHN1YzU4azBjUFVVMXJDOVFadm9RaVdjVXdMeTBWQVpQZnFsTXotUjJ4T0FueTZfRk5zRWU3a3dTU2wyOUFlRy1nUFhWUThB?oc=5",
       "source": "아시아투데이",
@@ -68,19 +59,11 @@
     },
     {
       "title": "목동 재건축 수주전 본격화···대형사 ‘브랜드 타운’ 구축 경쟁 - 시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4yYlM3bzZrOHpHbGs5am1tcV9qMUtVV1NveVpFaTdGa2xfZEpwR0s3b2FIMDM2LWk5RVlaMC1BWVhBY1FXaFNJc0ItSURzYW90MzlnNWNhQnNNcHlWRGNrUThrSFpWaEZrZzBJNXF6bjRmcUJfdkHSAXZBVV95cUxOMmJTN282azh6R2xrOWptbXFfajFLVVdTb3laRWk3RmtsX2RKcEdLN29hSDAzNi1pOUVZWjAtQVlYQWNRV2hTSXNCLUlEc2FvdDM5ZzVjYUJzTXB5VkRja1E4a0haVmhGa2cwSTVxem40ZnFCX3ZB?oc=5",
-      "source": "시사저널e",
-      "published": "2026-07-31T18:00:15+09:00",
-      "complexes": [
-        8
-      ]
-    },
-    {
-      "title": "목동 재건축 수주전 본격화···대형사 ‘브랜드 타운’ 구축 경쟁 - 시사저널e",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9PS3BmbWZpWHdDOHpsYzNpekJWZk14UEhjeUlySzk0b25pdEZzdk0yMmNIQU5aX0Z3VGJTeWlaVUl2UzV5TDNUTXdJMjZsZ19IWDBoZ3BKWXBER1RBTWpJVm1zUW5GNXJ3ZW00R1NsbnYwQdIBdkFVX3lxTE4yYlM3bzZrOHpHbGs5am1tcV9qMUtVV1NveVpFaTdGa2xfZEpwR0s3b2FIMDM2LWk5RVlaMC1BWVhBY1FXaFNJc0ItSURzYW90MzlnNWNhQnNNcHlWRGNrUThrSFpWaEZrZzBJNXF6bjRmcUJfdkE?oc=5",
       "source": "시사저널e",
       "published": "2026-07-31T17:36:26+09:00",
       "complexes": [
+        8,
         12
       ]
     },
@@ -103,24 +86,6 @@
       ]
     },
     {
-      "title": "'2.3조 최대어' 목동13단지, 통합심의 '보류'…목동 재건축 첫 '브레이크' - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBwaU5OYkJ0VmZabkhhbzV3cjVTM1E0Xy1YX2hRUVRlTlZCZFg5ZnJiS09FZVpZN2ZzRm43MEFqeXdReVhJdmpsX0RPbWVmR1FrZ0VEaA?oc=5",
-      "source": "v.daum.net",
-      "published": "2026-07-31T16:33:28+09:00",
-      "complexes": [
-        13
-      ]
-    },
-    {
-      "title": "'2.3조 최대어' 목동13단지, 통합심의 '보류'…목동 재건축 첫 '브레이크' - news.nate.com",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qU1haMDdkUTdNMHg5Y2RSWUtfYUt0R0pGclE2SzdPdUxOajBLcDFCaElPRWVjUVdleV9UUVJWQlowMFFvVmVZUXZ2UjlSeFhmT1J1X1BmNHZaZzdSMmN6OGpFOFFnMmRxcmtOdzRQNUg2ZmN0eWlYZg?oc=5",
-      "source": "news.nate.com",
-      "published": "2026-07-31T16:32:00+09:00",
-      "complexes": [
-        13
-      ]
-    },
-    {
       "title": "'2.3조 최대어' 목동13단지, 통합심의 '보류'…목동 재건축 첫 '브레이크' - 아이뉴스24",
       "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9NaGxZSjZzcVBJSmdWalRDdm5Cb0FfUHdOX29uTXh2TXZLd2d2UGVLamhIWWxqUExsb0sxa213TmMzSFFiRzZXV2Zvcw?oc=5",
       "source": "아이뉴스24",
@@ -136,15 +101,6 @@
       "published": "2026-07-31T16:00:00+09:00",
       "complexes": [
         3
-      ]
-    },
-    {
-      "title": "서울시, 목동13단지 재건축 통합심의 '보류' - news.nate.com",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE13bldBYlh0SUNzdXd0MlUwSFQyNnRIRTlfcUY5T196blRLb3JuSEw1bXIyZ2ZZd2JXWVZqQ3RETUFoS3VtMlFBUnB6TlB6RG1VOGN6QU1vdjJPZ0RycjNKRUVnQTJGeVViWkNoRVV5UEhLb0lLMnBJZg?oc=5",
-      "source": "news.nate.com",
-      "published": "2026-07-31T15:21:00+09:00",
-      "complexes": [
-        13
       ]
     },
     {
@@ -203,7 +159,7 @@
     },
     {
       "title": "‘2.3조 대어’ 목동13단지 재건축 통합심의 ‘보류’ - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1ERlJacFY1UnVLMFY1Sk96T0taRUFlWGI3VVVzZmRGWkFNb2dpUFhfWkRCclhtY2s1Q3V1NGg2SkR5WmpxM0E?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA3S21xUnlkSm1DMVB5dTdNd215X1ByaDAzWU5ZUlNJb1k5MXZvcTd4eW50RUFKeXZnWjRzX2hEbndpeGRnTDNXMUdROFptUWtxc09UeA?oc=5",
       "source": "v.daum.net",
       "published": "2026-07-31T10:52:40+09:00",
       "complexes": [
@@ -211,9 +167,9 @@
       ]
     },
     {
-      "title": "‘2.3조 대어’ 목동13단지 재건축 통합심의 ‘보류’ - 아시아경제",
+      "title": "‘2.3조 대어’ 목동13단지 재건축 통합심의 ‘보류’ - asiae.co.kr",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRaWx5aDljVkR0RU9fcnJiNnQ3cy1RSkVRc1VSU1N5ajJOYnpyZzVkaXNuMW41ZlUtU1ZFc2JiRFJZb2JxRjJYTjdQcXdtRHBTcUFDc0tVVTBGQnBva05SVw?oc=5",
-      "source": "아시아경제",
+      "source": "asiae.co.kr",
       "published": "2026-07-31T10:50:45+09:00",
       "complexes": [
         13
@@ -241,15 +197,6 @@
       "complexes": []
     },
     {
-      "title": "김종건 목동8단지 조합장 \"14개 단지 중 첫 입주 목표\" [인터뷰] - news.nate.com",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4yX2xfNDZQOXFfSVRVdUhQeUc3aF95a0FCeHRWM2htc3dtVmo3X25RdGRUOFEyMmtBdlJTRmlNY0JfVWVvTUVaU2MwYkM2Q0hubENZ?oc=5",
-      "source": "news.nate.com",
-      "published": "2026-07-30T18:40:00+09:00",
-      "complexes": [
-        8
-      ]
-    },
-    {
       "title": "김종건 목동8단지 조합장 “14개 단지 중 첫 입주 목표” [인터뷰] - 서울경제",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9kb0FieERhQm1Qei1LWG0tZmRjazRWWmg0bXMyVFBocUZzaEJEbVM3Z0dXanA5ZVdYM2hLb3FLM2dZX0JFY1JjVG8xckROUFN3dXfSAVNBVV95cUxONlF4VlBZa040VXdhY0hXOGlPRlRncTRGOGtqRWQ3Q1B3blRvYndqa3pnNWdQTUpoX1NNd0lNYTQ3c0dPRGVHc2FPN1FLNFdXVFJtSQ?oc=5",
       "source": "서울경제",
@@ -273,13 +220,6 @@
       "complexes": [
         8
       ]
-    },
-    {
-      "title": "목동 재건축, '동시다발' 입찰에 건설사들 셈법 복잡 - 더구루",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ua01xQnVtR0pYYmh4OG5WVGtBVEhGWXhjQTZ1ai1qVkNsMC10WEFFdkk4TzNZZjlEcHF5NkpJV1hLSDdRLXVSVXVIS01ZOEpZYTUxSzFHZjFLbUx3MzZDeA?oc=5",
-      "source": "더구루",
-      "published": "2026-07-30T15:27:38+09:00",
-      "complexes": []
     },
     {
       "title": "‘1조1,118억원’ 목동8단지, 재건축 시공자 선정 착수 - 한국주택경제신문",
@@ -332,13 +272,20 @@
       "complexes": []
     },
     {
-      "title": "고도제한 우려에 목동 재건축 속도전…수주 병목·이주난 '복병' - news.nate.com",
+      "title": "고도제한 우려에 목동 재건축 속도전…수주 병목·이주난 '복병' - 네이트",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBueWR1YnVDZVhFRzVWS2VYRG5SUV9qRlR6MUFSRDFwYnZNdTNZRFJzalhHUXpPTmJQNzFXRDhVeTZHXzNRekZraEZqZV9wTlBRanZV?oc=5",
-      "source": "news.nate.com",
+      "source": "네이트",
       "published": "2026-07-29T16:11:00+09:00",
       "complexes": [
         14
       ]
+    },
+    {
+      "title": "고도제한 우려에 목동 재건축 속도전…수주 병목·이주난 '복병' - v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9tRjJVSlZZR1REbnE4MnE1a2NDaEM5NkZOdnB1dnRRODFkMFJDRWx4Qi1zSVFNQi1FQmJJalBkeFgwc09sTEx4dDQ5cFdYUHEwM0NKSg?oc=5",
+      "source": "v.daum.net",
+      "published": "2026-07-29T16:11:00+09:00",
+      "complexes": []
     },
     {
       "title": "고도제한 우려에 목동 재건축 속도전…수주 병목·이주난 복병 - 아주경제",
@@ -348,9 +295,9 @@
       "complexes": []
     },
     {
-      "title": "[30조 목동 패권전-④DL이앤씨] 첫 깃발 꽂은 '아크로'…'3조 최대어' 14단지 '전력투구' - news.nate.com",
+      "title": "[30조 목동 패권전-④DL이앤씨] 첫 깃발 꽂은 '아크로'…'3조 최대어' 14단지 '전력투구' - 네이트",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1wekZzaEt5UjZtYjFwLWNaclgwc3BGSWl0TVJsNXo5cWhqdTVWLXJ6d01xRXVnX2JuTHpKTVFGU2F1VTQyNGE2RURmaFFxQ1kzM1lr?oc=5",
-      "source": "news.nate.com",
+      "source": "네이트",
       "published": "2026-07-29T10:54:00+09:00",
       "complexes": [
         14
@@ -426,10 +373,17 @@
       ]
     },
     {
-      "title": "현대건설, 도시정비 왕좌 굳힌다…목동·한강로 수주 총력 - 한국금융신문",
+      "title": "현대건설, 도시정비 왕좌 굳힌다…목동·한강로 수주 총력 - fntimes.com",
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBWcEVvZ0g3SXBMbjYyRDZJQWF6cTNDZ2Rhd1oweUVkNWQ1UFFrZGZKZ1RVVlJRLTNkZlV5bGNGd3VOYXlDRWt4LWFfMjFrWFhtYTFpdENmWFZ6SG94M2w3UUpIRE1qSnlNTVhKTzRXUU14eUJLTURNQ3BCanI?oc=5",
-      "source": "한국금융신문",
+      "source": "fntimes.com",
       "published": "2026-07-27T15:33:36+09:00",
+      "complexes": []
+    },
+    {
+      "title": "올해 10조 넘길까…삼성물산, 여의도·성수·목동 정비사업 ‘정조준’ - 스마트투데이",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1abExjcUdyaDliOWZEQjJDSlZVejhUZzJLVU1MTXRFRUJFSFZ4NEt6OU9rMVoyLW5xR0lZWTdnSmVDZlNnUHRJWnNDMTdPd284VS1GVkN1dlVMV3ViZWd3?oc=5",
+      "source": "스마트투데이",
+      "published": "2026-07-27T13:51:00+09:00",
       "complexes": []
     },
     {
@@ -454,6 +408,13 @@
       "complexes": []
     },
     {
+      "title": "양천구, 목동 재건축 ‘100년 하수도체계’ 구축 - 시정일보",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1oRjF5dngwdUJUUE1CdHczemNNS1F4U216N0F3ZVBRb1F1Q1cwMThNQm5kSUtZWXBucjBzMF9pVXJwaHY0MnpBTTFJY21RbzVMbC02aDkzSzhJSmxBUkZldUhiS25GRkFHNjMw?oc=5",
+      "source": "시정일보",
+      "published": "2026-07-25T15:35:00+09:00",
+      "complexes": []
+    },
+    {
       "title": "​[30조 목동 패권전-③대우건설] '써밋 라운지' 띄우고 승부수…8단지 앞세워 11·14단지 정조준 - 데일리한국",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9MclE5RjNnYjNHaG9yTlA2bjdyNXNyQm9TZkpZRXlOdFVYMVFQazFvZGZ0SEg2VUsxNlluZW5YWlRkNkdCWlgzbUg4VzlLUG5ya0Q2eGxzX054WmlLUjBOOVp0RmZPc3ZqS3NXczRja9IBc0FVX3lxTE0wU2pEMkR6TGNMUE92cmM4NlJmQTVONVJSMGd1THBKUll2dGpJNGlXei1Hb2pRQVRDVWhiOHpwZzRHN2dsX2FLcGhPM0VibURwVmZYMXFqSm8tcThVV3ROb01iSFRvS2pDZDBrMHhaQlV5cWM?oc=5",
       "source": "데일리한국",
@@ -473,20 +434,6 @@
       ]
     },
     {
-      "title": "＇하이엔드＇로 승부...대우건설, 목동 재건축 출격 [뉴스+현장] - 한국경제TV",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5XZFRfbzhHcjBHeU54LUNjUUhPVG1iUHRpX29jMXplZXNySm90YWFhNGNTZ1FhTlF3Wi1CNzZzV043R0NMclZjdFczWm9JRHB3MVQtRklWSTFFSzNNRW1rb2FTUmo4Z3I4U1c3Mk1ORDdMbjEwRUxR?oc=5",
-      "source": "한국경제TV",
-      "published": "2026-07-23T20:36:00+09:00",
-      "complexes": []
-    },
-    {
-      "title": "'하이엔드'로 승부...대우건설, 목동 재건축 출격 [뉴스+현장] - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4ydzJvOVRsNUNLUEZQcnpmR1JYY1c4S1pibFVqQXJhaTdlRHVZNFd1VGRyT0VKaEZhV0tpRVQ0ZVNoTmVfVzhad2s1NXpvanc?oc=5",
-      "source": "v.daum.net",
-      "published": "2026-07-23T17:42:47+09:00",
-      "complexes": []
-    },
-    {
       "title": "목동12단지 재건축, 시공자 선정 위한 ‘현설’ 개최...4개건설사 참여 - 하우징타임즈",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1fdVNQQVY1TC0tSVhGdVJBNXRMdEM2OGJyZlBzQkxWVEZkRVpRaFB1bkMwUUFkN1p1cXU0dkV3WHdSNGV2M2R6NFpJQm53cWhEeW03dWEyRlJWQVFHYUowNUw1b3NsaHBQQ3RXSF9Tak4?oc=5",
       "source": "하우징타임즈",
@@ -496,9 +443,9 @@
       ]
     },
     {
-      "title": "[30조 목동 패권전-②현대건설] '사업·상징성' 7·14단지 품고 2·4·10단지 눈독 - news.nate.com",
+      "title": "[30조 목동 패권전-②현대건설] '사업·상징성' 7·14단지 품고 2·4·10단지 눈독 - 네이트",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE56U01kSm54dnotaEFhRXphalJUSDlBaFdLS2RERENOeEFoMk1CbHV1M3hqMHpKT1IxeEVEaWtqalVBeGtXNF9Gd0lqS1dwUzlBNG5j?oc=5",
-      "source": "news.nate.com",
+      "source": "네이트",
       "published": "2026-07-21T07:11:00+09:00",
       "complexes": [
         10,
@@ -524,12 +471,13 @@
       ]
     },
     {
-      "title": "\"목동 움직인다\"⋯재건축 가속에 거래·집값 '꿈틀' - 이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBfbkdyWWM0TFpNM2dwQ0F2VnphbzVRRHlqWGtocTlETTh3aG9RZkgyZlRWUzc2R20yMWMxOVZZTVBmaHJ5Tlg3dTV0b1hBVEhoZ3ZIcg?oc=5",
-      "source": "이투데이",
+      "title": "\"목동 움직인다\"⋯재건축 가속에 거래·집값 '꿈틀' - v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBRM1l4UlR1UTVIWDdXdkxXV3YwMDNmM01GX1RyZ1RKWjVtaFBxbXhUTmJHS0k5bFBsQ3NEXzFyR0ZieEV0VEE?oc=5",
+      "source": "v.daum.net",
       "published": "2026-07-19T16:00:00+09:00",
       "complexes": [
-        6
+        6,
+        7
       ]
     },
     {
@@ -539,15 +487,6 @@
       "published": "2026-07-19T16:00:00+09:00",
       "complexes": [
         14
-      ]
-    },
-    {
-      "title": "\"목동 움직인다\"⋯재건축 가속에 거래·집값 '꿈틀' - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5DTVZkNExBQTJtWlZtTEJjMUdCb01qNkxYdlFJaXNmZVlsQXhKRG01ODdOR1dnQ0tOWU5ubFlLaWhsMTY5eGpLUnZiZw?oc=5",
-      "source": "v.daum.net",
-      "published": "2026-07-19T16:00:00+09:00",
-      "complexes": [
-        7
       ]
     },
     {
@@ -596,15 +535,6 @@
       ]
     },
     {
-      "title": "목동12단지 시공사 선정 본격화…GS·대우·HDC현산·포스코이앤씨 ‘출사표’ - 디벨로퍼뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBZYXJ1QWt2Sk55aWY3NHQ0QmRwSmhfVUMtZVM3RFAxakN5VWZpUXFSa3N3aEVLU3dSUm0xeTN6RHJ2V3VPcFRMR3NfQ0hmN04xaU4xaW0teUM2dGhBT05EckhHb2VPUWhN?oc=5",
-      "source": "디벨로퍼뉴스",
-      "published": "2026-07-15T16:26:59+09:00",
-      "complexes": [
-        12
-      ]
-    },
-    {
       "title": "[도시정비시장 풍향계] 목동12단지 재건축 현설에 GS건설 등 4곳 참석 - 대한경제",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9aZ2ZxYkNJUlhmdWlpUklWSHZSUXRWOWJKNkNvRGtNU0w5ZmRsbE94aEJOZGR0YllwNEZtNUlpc2ZHdHJTYXYwdi0xbFdLUlZJbnB5UWJGZldHTTh3bU1NWnpjUy1PZUZYcHdYdXhTVFhkZTA?oc=5",
       "source": "대한경제",
@@ -614,21 +544,12 @@
       ]
     },
     {
-      "title": "30조 목동 재건축 대전 막 올랐다…상반기 강남 이어 하반기 격전지 - news1.kr",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52RTEyZGNwSjY4eENGXzh6MldRUUZCdk9kU3VPdlVMbHdERzNtcGdXUTB5WjRTSFdCS2xuT1VZaC00bzRKVzJ0WC1Ma1lzZ1M5M1hFZy1kalZvSWM?oc=5",
-      "source": "news1.kr",
-      "published": "2026-07-15T16:00:00+09:00",
-      "complexes": [
-        1
-      ]
-    },
-    {
-      "title": "'1.8조' 목동12단지 시공사 입찰⋯대우·포스코·GS·현산 참전 - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5YWnJna0dYMk1JREtaTmpCYVRUUjQyakx4WW40Z2FwT2lFeVptUmhId0pjNEIzUERoaXFXQ25fRDB0TTJLS0dKN0pyZw?oc=5",
+      "title": "30조 목동 재건축 대전 막 올랐다…상반기 강남 이어 하반기 격전지 - v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBDVlRHQmlPTU9IQ1lMZHFWSGwxUGc2b2xacDhWQmJMVzQzSHJaQ3lLLWVjS01UX3hWUFdXdDRIOVNkZGx2OVdQaU5yTjAzTFZybEUyMw?oc=5",
       "source": "v.daum.net",
       "published": "2026-07-15T16:00:00+09:00",
       "complexes": [
-        12
+        1
       ]
     },
     {
@@ -641,9 +562,9 @@
       ]
     },
     {
-      "title": "공사비 약 1조7,888억원 목동12단지, 시공자 현설에 4곳 - 한국주택경제신문",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBoMlRRY29DRzlsTVgtY3lPcnRsbWtGNU5qN3JsdkY3TFk3dnN2dXFFSXlTT0pIZE53OVJ5UERET0hfeS1VLWVrRXk2SFhNaVBGRDQ4ZVZyai1OSjE0RlJKLXJzT3FyamVV?oc=5",
-      "source": "한국주택경제신문",
+      "title": "'1.8조' 목동12단지 시공사 입찰⋯대우·포스코·GS·현산 참전 - v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5YWnJna0dYMk1JREtaTmpCYVRUUjQyakx4WW40Z2FwT2lFeVptUmhId0pjNEIzUERoaXFXQ25fRDB0TTJLS0dKN0pyZw?oc=5",
+      "source": "v.daum.net",
       "published": "2026-07-15T16:00:00+09:00",
       "complexes": [
         12
@@ -659,9 +580,18 @@
       ]
     },
     {
-      "title": "목동12단지 현설에 대우·GS 등 4개사 참석…첫 경쟁입찰 성사? - MTN 머니투데이방송",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1fUXFza0o3Y1g0WlJDaVpTa21BX3BOVG02RUdfZjExdVdFLVJSeDJrdnFzRGlGQTBsN1Vpc1V5RXM3bVZ6M2U5ZjQ5N0Q3NEU4Q1haS3IycVp1NWE4RURTTk1fV2c?oc=5",
-      "source": "MTN 머니투데이방송",
+      "title": "공사비 약 1조7,888억원 목동12단지, 시공자 현설에 4곳 - 한국주택경제신문",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBoMlRRY29DRzlsTVgtY3lPcnRsbWtGNU5qN3JsdkY3TFk3dnN2dXFFSXlTT0pIZE53OVJ5UERET0hfeS1VLWVrRXk2SFhNaVBGRDQ4ZVZyai1OSjE0RlJKLXJzT3FyamVV?oc=5",
+      "source": "한국주택경제신문",
+      "published": "2026-07-15T16:00:00+09:00",
+      "complexes": [
+        12
+      ]
+    },
+    {
+      "title": "목동12단지 현설에 대우·GS 등 4개사 참석…첫 경쟁입찰 성사? - v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4yUlBNeXlkM3R3TUpWR0dkb2x1emphUkZROVNqVU5vRVV2aDh0Q2wzRWpPMm9zbHZUc0FZaElYby1JMThzaDg4cm1Paw?oc=5",
+      "source": "v.daum.net",
       "published": "2026-07-15T16:00:00+09:00",
       "complexes": [
         12
@@ -669,7 +599,7 @@
     },
     {
       "title": "성수2지구·목동12단지, 단독입찰 무게…출혈경쟁 피한다[부동산AtoZ] - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5tdXlQdlNnWl9Lam9NU2J6Zk1LbWJPSzFYSDlOS3RfMV9SNk53N0xHQ2cybzU5UHBuRk5HZ0xUU1M4WFBCMlE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1xa0FsOWFnS3c5clhjMEhEMG9nSWNUelduR1VNQUFpZXdrSHJpZGdnVmNKSlFpVTc4VHlFOUF1Yy12aXZNLTlSbUdFS2U4Wms?oc=5",
       "source": "v.daum.net",
       "published": "2026-07-15T16:00:00+09:00",
       "complexes": [
@@ -690,15 +620,6 @@
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4zQXh4aWhrVlc1dXFyZEZOZElQSWFJdDh1VGY0NnI3RkdKN3htcEV2cmxPODRiRF9teGszUlB3RkJ5VVpPZm51R3h3Z2VJNUJIQUZoR3ZuVXlza3FpNUg3MWJtRQ?oc=5",
       "source": "더구루",
       "published": "2026-07-14T15:12:27+09:00",
-      "complexes": [
-        12
-      ]
-    },
-    {
-      "title": "목동12단지·성수2지구 시공사 선정 돌입…하반기 정비사업 수주전 본격화 - 아주경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBQZGtOX2tKa25acnd0NW5FU1l6NnlUTlZMUkxzbnlhdW0tM1RmMk5ZZmUyaUQxX0JmWEhhNlIzSUstRUhJeHNtUHA3cjRlcjdEN0lzYWZyaVhiZ9IBWEFVX3lxTFBDQno5VUZETm1nbWQ1UDUxRFBVc1RfczdXNDR3ZVRhdGJ1eU1uRk1zejZLaFFWeThCT1NqLWlwZUNGa3l1d1hXODJRU05LVU9tV3MzdkI1Z3M?oc=5",
-      "source": "아주경제",
-      "published": "2026-07-13T17:42:33+09:00",
       "complexes": [
         12
       ]
@@ -731,12 +652,12 @@
       ]
     },
     {
-      "title": "\"나오는 족족 팔려\"… 목동 14개 단지 급매 동났다 [르포] - v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1Ob0NUaHVHOHFPQW9qRDRVcWhBZGZYLURDZ0Q0WHp4VXlxSHFybTUwMHhsV0piQXlYNlNsZ25xS1Jacl84UXFqbmFOZkM5Vkx0VURyVQ?oc=5",
+      "title": "목동12단지·성수2지구 시공사 선정 돌입…하반기 정비사업 수주전 본격화 - v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ZckQ4TzRCcVZUZHZweGNPVUlmQjZvLUZESFBwckFSQl8xQ2NfdVh1Uno5UWxncGFiVGRRcWtLSktab04tdnU1bkZtaw?oc=5",
       "source": "v.daum.net",
       "published": "2026-07-13T16:00:00+09:00",
       "complexes": [
-        1
+        12
       ]
     },
     {
@@ -755,24 +676,6 @@
       "published": "2026-07-09T16:00:00+09:00",
       "complexes": [
         7
-      ]
-    },
-    {
-      "title": "목동 7단지 재건축 조합설립 인가 ··· 사업 속도 - LG헬로비전",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1zcGZvXzV0Z0I3T1hKNEdWQU5aQ3puMktHbmFxNzFoSzJhODNOamlQSFRlTXQxenNNSy10NEt4a2VELVpHSDlTdlFkTm43U0tUanhJeUc5NFZYRE9idzNOdHcwRnRtQlU5YV9wcmljcjc4UdIBdkFVX3lxTE1rTTF5REpjcC1USDl6WWF2cjE2Y1hQSEpPYjZaMF9zR2RsUm9XRHhFWkVMbVZyUjZJb1Z6amdFenQ0MmZRNVZQZlEyUG1YOHRES1ZNcVBBSnowZEZOX3F0WDJybG5OeG1VRXJuRExDNFplMDlJZVE?oc=5",
-      "source": "LG헬로비전",
-      "published": "2026-07-09T16:00:00+09:00",
-      "complexes": [
-        7
-      ]
-    },
-    {
-      "title": "[서울아파트거래] '재건축 시공사 선정 절차' 목동 10단지 전용 127.21㎡ 31억에 거래 - 비즈니스포스트",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1TYWh3RXh4VUxRYWE2czVkd3kwVGpyQ3hVdVo5YnFtaVk2QWNYZ2s0NXpvYnZrMDZyRmJpSWZhX0dBcjZQMjB3ZDBlSldtVTFOWi1SR25QVFkxYmRBM0hXXzdFbnVSSkhqazdJRGtBekI5a1E?oc=5",
-      "source": "비즈니스포스트",
-      "published": "2026-07-09T16:00:00+09:00",
-      "complexes": [
-        10
       ]
     },
     {

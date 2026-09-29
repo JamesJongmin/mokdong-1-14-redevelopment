@@ -735,10 +735,10 @@
       "complex_id": 9,
       "name": "목동9단지",
       "method": "신탁",
-      "race_stage_key": "designer_done",
+      "race_stage_key": "integrated_review_done",
       "race_bonus": 0,
-      "race_stage": "설계자 선정 완료",
-      "race_score": 48,
+      "race_stage": "건축 통합심의 의결",
+      "race_score": 66,
       "feasibility_seed": 76,
       "feasibility_type": "균형형",
       "feasibility_score": 69,
@@ -752,15 +752,16 @@
       "units_after": 3957,
       "expected_ratio": null,
       "next_milestone": {
-        "event": "시공사 선정",
+        "event": "시공사 선정 / 사업시행인가",
         "target": "미정"
       },
       "constructor": "미선정 (신탁·한국자산신탁)",
-      "notes": "신탁(한국자산신탁) 지정 2025.10.30. 설계 건원. 통합심의 접수 보도(단지별 1차출처 확인필요). 2,030→3,957·49층.",
+      "notes": "신탁(한국자산신탁) 지정 2025.10.30. 설계 건원. 건축 통합심의 통과 2026.09.22(13단지와 동시, 6단지 이어 통과). 2,030→3,957·49층.",
       "dates": {
         "jeongbi_zone": "2025.09",
         "union_or_trustee_set": "2025.10",
-        "designer_done": "2026.01"
+        "designer_done": "2026.01",
+        "integrated_review_done": "2026.09"
       },
       "eta": {},
       "profile": {
@@ -798,7 +799,7 @@
         "units_after": 3957
       },
       "metric_confidence": "세대·용적률 보도(정비계획 확정), 대지지분·비례율 불명",
-      "metrics_updated": "2026-07-22 (웹 리서치 교차검증)"
+      "metrics_updated": "2026-09-29 (통합심의 통과 반영·다수 매체 교차확인)"
     },
     {
       "complex_id": 10,
@@ -1032,10 +1033,10 @@
       "complex_id": 13,
       "name": "목동13단지",
       "method": "신탁",
-      "race_stage_key": "integrated_review_apply",
-      "race_bonus": -4,
-      "race_stage": "건축 통합심의 신청",
-      "race_score": 50,
+      "race_stage_key": "integrated_review_done",
+      "race_bonus": 0,
+      "race_stage": "건축 통합심의 의결",
+      "race_score": 66,
       "feasibility_seed": 80,
       "feasibility_type": "균형형",
       "feasibility_score": 53,
@@ -1049,16 +1050,17 @@
       "units_after": 3852,
       "expected_ratio": 97.2,
       "next_milestone": {
-        "event": "통합심의 재심의 / 시공사 입찰마감",
-        "target": "2026.09"
+        "event": "시공사 선정 / 사업시행인가",
+        "target": "2026 하반기"
       },
       "constructor": "경쟁입찰 진행 (삼성물산·대우·DL·HDC현산·제일건설 현설, 마감 2026.09.07)",
-      "notes": "신탁(대신자산신탁·목동 신탁1호) 지정 2025.10.02. 설계 ANU 2025.12.20. 건축 통합심의 보류 2026.07.30(목동 14개 단지 중 최초 보류). 목동 첫 경쟁입찰 시공사 선정중(삼성물산·대우·DL·HDC현산·제일건설 5개사, 마감 2026.09.07). 2,280→3,852·49층.",
+      "notes": "신탁(대신자산신탁·목동 신탁1호) 지정 2025.10.02. 설계 ANU 2025.12.20. 건축 통합심의 보류 2026.07.30 후 재심의 통과 2026.09.22(9단지와 동시). 목동 첫 경쟁입찰 시공사 선정중(삼성물산·대우·DL·HDC현산·제일건설 5개사, 마감 2026.09.07). 2,280→3,852·49층.",
       "dates": {
         "jeongbi_zone": "2025.03",
         "union_or_trustee_set": "2025.10",
         "designer_done": "2025.12",
-        "integrated_review_apply": "2026.07"
+        "integrated_review_apply": "2026.07",
+        "integrated_review_done": "2026.09"
       },
       "eta": {
         "constructor": "2026.03"
@@ -1100,7 +1102,7 @@
         "units_after": 3852
       },
       "metric_confidence": "세대·계획용적률 확정(시행자 지정 고시), 현용적률 보도(159%·목동 최고), 비례율 추정(97.2%·목동 최저), 대지지분 불명",
-      "metrics_updated": "2026-08-06 (통합심의 보류 반영·웹 교차검증)"
+      "metrics_updated": "2026-09-29 (통합심의 통과 반영·다수 매체 교차확인)"
     },
     {
       "complex_id": 14,
